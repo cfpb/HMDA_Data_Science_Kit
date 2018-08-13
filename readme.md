@@ -1,18 +1,18 @@
 **Table of Contents:**
-- Repository purpose and scope
-- What is HMDA
-- HMDA Datasets
-- Integration of Census Data with HMDA
-- Official HMDA data publications
-- Official HMDA documentation
-- Working With HMDA Data
-- Getting Started: Basic Requirements
+- [Repository purpose and scope](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#repository-purpose-and-scope)
+- [What is HMDA](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#what-is-hmda)
+- [HMDA Datasets](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#hmda-datasets)
+- [Integration of Census Data with HMDA](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#integration-of-census-data-with-hmda)
+- [Official HMDA data publications](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#hmda-publications)
+- [Official HMDA documentation]()
+- [Working With HMDA Data](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#working-with-hmda-data)
+- [Getting Started: Basic Requirements](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#getting-started-basic-requirements)
 
 
-##### Repository Purpose and Scope:
+#### Repository Purpose and Scope:
 The primary goal of this repository is to provide data users with tools to enable them to produce accurate analytics results. Additionally, this repository provides an overview of HMDA resources, publications, and guidelines for proper use. This repository does not provide statutory interpretation or compliance assistance. 
 
-##### What Is HMDA?
+#### What Is HMDA?
 HMDA refers to the [Home Mortgage Disclosure Act of 1975](https://www.gpo.gov/fdsys/pkg/USCODE-2011-title12/pdf/USCODE-2011-title12-chap29.pdf).
 HMDA requires many financial institutions to maintain, report, and publicly disclose loan-level information about mortgages. HMDA was originally enacted by Congress in 1975 and is implemented by [Regulation C](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/regulation-c-home-mortgage-disclosure-act/). 
 
@@ -25,7 +25,7 @@ The senate bill S2155 modified some reporting requirements for the 2018 data col
 - To aid public officials in targeting public investments from the private sector to areas where they are needed. 
 - The FIRREA amendments of 1989 require the collection and disclosure of data about applicant and borrower characteristics to assist in identifying possible discriminatory lending patterns and enforcing antidiscrimination statutes.
 
-##### HMDA Datasets
+#### HMDA Datasets
 Three raw data files are published annually under HMDA authority. File formats (and schemas) vary by data source. The National Archives (NARA) use a .DAT format, the FFIEC site maintained by the Federal Reserve Board (FRB) use a .CSV format (with Census data appended) and the FFIEC site maintained by the BCFP us a pipe-delimited .TXT format (with Census data appended). Links to HMDA datasets are available in this [file](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/data_links/hmda_data_links.md).
 
 These datasets include:
@@ -36,14 +36,14 @@ These datasets include:
 - The HMDA Reporter Panel: This dataset contains additional information regarding financial institutions such as identifier links to the National Information Center (NIC) and hierarchy information such as parent and top holder. The HMDA Reporter Panel is assembled by the Bureau on behalf of the FFIEC (beginning in 2017). Panel schemas can be found in this [folder]().
 
 
-##### Integration of Census Data with HMDA
+#### Integration of Census Data with HMDA
 HMDA data is often joined to Census data to show context for the mortgage data. The FFIEC joins the following to the HMDA LAR data: area population, minority population percentage, FFIEC median family income, tract to MSA/MD median family income percentage, number of owner-occupied units, and the number of 1-4 family units. These data are joined at the tract level to provide context for mortgage activity in the relevant geography. The base data for this join are made available by the FFIEC on this [website](https://www.ffiec.gov/censusapp.htm). The year of the Census data correspond to the HMDA collection year.
 
 The FFIEC Census flat file fields of interest are (column number :name): 0:HMDA Year, 1:MSA, 2:State, 3:County, 4:Tract, 14:Area Population, 20: Minority Population Percentage, 915:Number of Owner-Occupied Units, 899:Number of 1-4 Family Units, 580:Tract Median Family Income, 12:Tract to MSA Median Family Income Percentage, 952:Median Age of Housing Stock, 13:FFIEC Median Family Income. For examples on how to handle this file and join Census data to LAR data please see this [directory]().
 
 With the exception of FFIEC median family income percentage, the base data are available in the American Community Survey (ACS) or the Summary File from the [US Census Bureau](). The FFIEC median family income data are made available by the FFIEC on this [website](https://www.ffiec.gov/Medianincome.htm). Please note that the data provided by the FRB on behalf of the FFIEC incorporates annual changes made to geographic boundaries. These provided data update Census base data on a 5 year cycle, for example activity years 2012-2016 used the 2010 SF1/ACS 5 year datasets and the 2017 activity year changes to the 2015 ACS 5 year dataset. Some reference fields also change during this update cycle. For these reasons it is recommended to use the FFIEC Census data as these data will provide consistency with other HMDA publications, such as Aggregate and Disclosure reports.
 
-##### HMDA Publications
+#### HMDA Publications
 **2017 and beyond is provided by the BCFP on behalf of the FFIEC**
 - [BCFP HMDA publication page](https://ffiec.cfpb.gov/data-publication/)
 - [Modified LAR (MLAR)](https://ffiec.cfpb.gov/data-publication/modified-lar) is the LAR data for a single institution with the following fields redacted: application date, action date, loan ID.
@@ -73,10 +73,12 @@ With the exception of FFIEC median family income percentage, the base data are a
 - [HMDA Bulletin 2006](https://www.federalreserve.gov/pubs/bulletin/2007/articles/hmda/default.htm)
 - [HMDA Bulletin 2005](https://www.federalreserve.gov/pubs/bulletin/2006/hmda/default.htm)
 
-##### Working With HMDA Data
+#### HMDA Data Documentation
+
+#### Working With HMDA Data
 The HMDA data are complex and care must be taken to ensure that analytics results are accurate. Please see [Working With HMDA Data]() for explanations of how to load, segment the data, handle NA values, and create accurate time-series tabulations.
 
-##### Getting Started: Basic Requirements
+#### Getting Started: Basic Requirements
 To begin using the HMDA data you will first need to download the data. Please see [HMDA data links](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/data_links/hmda_data_links.md) to begin downloading the data.
 
 The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code. 
