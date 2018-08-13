@@ -4,7 +4,7 @@
 - [HMDA Datasets](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#hmda-datasets)
 - [Integration of Census Data with HMDA](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#integration-of-census-data-with-hmda)
 - [Official HMDA data publications](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#hmda-publications)
-- [Official HMDA documentation]()
+- [Official HMDA documentation](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#hmda-data-documentation)
 - [Working With HMDA Data](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#working-with-hmda-data)
 - [Getting Started: Basic Requirements](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#getting-started-basic-requirements)
 
