@@ -74,6 +74,15 @@ With the exception of FFIEC median family income percentage, the base data are a
 - [HMDA Bulletin 2005](https://www.federalreserve.gov/pubs/bulletin/2006/hmda/default.htm)
 
 #### HMDA Data Documentation
+- [2018 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2018/2018-hmda-fig.pdf)
+- [2017 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2017/2017-hmda-fig.pdf)
+- [FFIEC Getting it Right Guides](https://www.ffiec.gov/Hmda/guide.htm)
+- [BCFP Small Entity Compliance Guide](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/cfpb_hmda_small-entity-compliance-guide.pdf)
+- [BCFP Regulator Implementation Resrouces](https://www.consumerfinance.gov/policy-compliance/guidance/implementation-guidance/hmda-implementation/)
+- [2017 Institution Coverage](https://files.consumerfinance.gov/f/201510_cfpb_2017-hmda-institutional-coverage.pdf)
+- [2018 Institution Coverage](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/201709_cfpb_2018-hmda-institutional-coverage.pdf)
+- [2018 Transaction Coverage](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/201709_cfpb_2018-hmda-institutional-coverage.pdf)
+- [HMDA Loan Scenarios](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/HMDA-Loan-Scenarios.pdf)
 
 #### Working With HMDA Data
 The HMDA data are complex and care must be taken to ensure that analytics results are accurate. Please see [Working With HMDA Data]() for explanations of how to load, segment the data, handle NA values, and create accurate time-series tabulations.
