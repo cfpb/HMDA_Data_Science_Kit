@@ -47,8 +47,10 @@ For examples on how to handle Census data and join Census data to LAR data pleas
 - [2018 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2018/2018-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2018.
 - [2017 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2017/2017-hmda-fig.pdf)
 - [FFIEC Getting it Right Guides](https://www.ffiec.gov/Hmda/guide.htm): Outlines the the file format, data fields, business rules, and valid values for data submitted in 2017.
-- [BCFP Small Entity Compliance Guide](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/cfpb_hmda_small-entity-compliance-guide.pdf)
-- [BCFP Regulator Implementation Resrouces](https://www.consumerfinance.gov/policy-compliance/guidance/implementation-guidance/hmda-implementation/)
+- [BCFP Small Entity Compliance Guide](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/cfpb_hmda_small-entity-compliance-guide.pdf): The purpose of this guide is to provide an easy-to-use summary of Regulation C, as amended by
+the HMDA Rule, and to highlight information that financial institutions and those that work
+with them might find helpful when implementing the HMDA Rule.
+- [BCFP Regulatory Implementation Resrouces](https://www.consumerfinance.gov/policy-compliance/guidance/implementation-guidance/hmda-implementation/): Landing page for regulation implementation resources.
 - [2018 Institution Coverage](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/201709_cfpb_2018-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2018.
 - [2017 Institution Coverage](https://files.consumerfinance.gov/f/201510_cfpb_2017-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2017.
 - [2018 Transaction Coverage](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/201709_cfpb_2018-hmda-institutional-coverage.pdf): Outlines which transactions are covered by Regulation C.
