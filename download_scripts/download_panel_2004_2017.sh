@@ -17,8 +17,5 @@ curl https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda
 curl https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2012/Panel.ultimate.2006.dat?download=true --create-dirs -o ../data/panel/panel_ult_2006.dat
 curl https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2012/Panel.ultimate.2005.dat?download=true --create-dirs -o ../data/panel/panel_ult_2005.dat
 curl https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2012/Panel.ultimate.2004.dat?download=true --create-dirs -o ../data/panel/panel_ult_2004.dat
-curl https://www.ffiec.gov/hmdarawdata/OTHER/2016HMDAReporterPanel.zip --create-dirs -o ../data/panel/panel_ult_2016.zip
-curl https://www.ffiec.gov/hmdarawdata/OTHER/2015HMDAReporterPanel.zip --create-dirs -o ../data/panel/panel_ult_2015.zip
-curl https://www.ffiec.gov/hmdarawdata/OTHER/2014HMDAReporterPanel.zip --create-dirs -o ../data/panel/panel_ult_2014.zip
 
 for f in ../data/panel/*.zip; do unzip -p "$f" > "${f%.zip}.txt"; done
