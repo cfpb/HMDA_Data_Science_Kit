@@ -1,14 +1,35 @@
 #!bin/bash
+#Downloads LAR data if it does not exist
 
-#download Ulitmate LAR Data from 2004-2013 and LAR data from 2014-2017
-#if ! [ -f /home/$outputfile ]; then
-#  curl -o /home/$outputfile "url"
-#fi
-curl https://www.ffiec.gov/hmdarawdata/LAR/National/2016HMDALAR%20-%20National.zip --create-dirs -o ../data/lar/lar_2016.zip
-curl https://www.ffiec.gov/hmdarawdata/LAR/National/2015HMDALAR%20-%20National.zip --create-dirs -o ../data/lar/lar_2015.zip
-curl https://www.ffiec.gov/hmdarawdata/LAR/National/2014HMDALAR%20-%20National.zip --create-dirs -o ../data/lar/lar_2014.zip
+if [ ! -f ../data/lar/lar_2017.txt ]; then
+	echo "LAR 2017 not found, downloading."
+	curl https://s3.amazonaws.com/cfpb-hmda-public/prod/dynamic-data/2017_lar.txt --create-dirs -o ../data/lar/lar_2017.txt
 
-#working
+elif [ -f ../data/lar/lar_2017.txt ]; then
+	echo "LAR 2017 present."
+fi
+
+if [ ! -f ../data/lar/lar_2016.zip ]; then
+    echo "LAR 2016 not found, downloading."
+    curl https://www.ffiec.gov/hmdarawdata/LAR/National/2016HMDALAR%20-%20National.zip --create-dirs -o ../data/lar/lar_2016.zip
+elif [ -f ../data/lar/lar_2016.zip ]; then
+	echo "LAR 2016 present."
+fi
+
+if [ ! -f ../data/lar/lar_2015.zip ]; then
+    echo "File not found, downloading."
+    curl https://www.ffiec.gov/hmdarawdata/LAR/National/2015HMDALAR%20-%20National.zip --create-dirs -o ../data/lar/lar_2015.zip
+elif [ -f ../data/lar/lar_2015.zip ]; then
+	echo "LAR 2015 present."
+fi
+
+if [ ! -f ../data/lar/lar_2014.zip ]; then
+    echo "LAR 2016 not found, downloading."
+    curl https://www.ffiec.gov/hmdarawdata/LAR/National/2014HMDALAR%20-%20National.zip --create-dirs -o ../data/lar/lar_2014.zip
+elif [ -f ../data/lar/lar_2014.zip ]; then
+	echo "LAR 2014 present."
+fi
+
 wget -nc -t=10 https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2013/Lars.ultimate.2013.dat.zip -P ../data/lar
 wget -nc -t=10 https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2012/Lars.ultimate.2012.dat.zip -P ../data/lar
 wget -nc -t=10 https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTL11/Lars.ultimate.2011.dat.zip -P ../data/lar
