@@ -28,7 +28,7 @@ The senate bill S2155 modified some reporting requirements for the 2018 data col
 - The FIRREA amendments of 1989 require the collection and disclosure of data about applicant and borrower characteristics to assist in identifying possible discriminatory lending patterns and enforcing antidiscrimination statutes.
 
 #### HMDA Datasets
-Three raw data files are published annually under HMDA authority. File formats (and schemas) vary by data source. The National Archives (NARA) use a .DAT format, the FFIEC site maintained by the Federal Reserve Board (FRB) use a .CSV format (with Census data appended) and the FFIEC site maintained by the BCFP us a pipe-delimited .TXT format (with Census data appended). Links to HMDA datasets are available in this [file](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/data_links/hmda_data_links.md).
+Three raw data files are published annually under HMDA authority. File formats (and schemas) vary by data source. The National Archives (NARA) use a .DAT format, the FFIEC site maintained by the Federal Reserve Board (FRB) use a .CSV format (with Census data appended) and the FFIEC site maintained by the BCFP us a pipe-delimited .TXT format (with Census data appended). Links to HMDA datasets are available in this [file](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
 
 These datasets include:
 - The Loan Application Register (LAR): This dataset contains application and origination activity on covered transactions made by covered institutions. The LAR is distinct from many other mortgage datasets as it includes both application and origination data as well as borrower demographic information. The LAR has had several distinct schemas including a change from aggregate to transaction level data in 1990. LAR schemas are available in this [folder]() and a discussion of changes to underlying data (such as the benchmark for the rate spread variable) can be found in the [Working with HMDA Data]() document.
@@ -41,7 +41,7 @@ These datasets include:
 #### Integration of Census Data with HMDA
 HMDA data is often joined to Census data to show context for the mortgage data. The FFIEC joins the following to the HMDA LAR data: area population, minority population percentage, FFIEC median family income, tract to MSA/MD median family income percentage, number of owner-occupied units, and the number of 1-4 family units. These data are joined at the tract level to provide context for mortgage activity in the relevant geography. The base data for this join are made available by the FFIEC on this [website](https://www.ffiec.gov/censusapp.htm). The year of the Census data correspond to the HMDA collection year. 
 
-For examples on how to handle Census data and join Census data to LAR data please see this [directory]().
+For examples on how to handle Census data and join Census data to LAR data please see the [Census directory]().
 
 #### HMDA Data Documentation
 - [2018 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2018/2018-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2018.
@@ -58,10 +58,10 @@ For examples on how to handle Census data and join Census data to LAR data pleas
 The HMDA data are complex and care must be taken to ensure that analytics results are accurate. Please see [Working With HMDA Data]() for explanations of how to load, segment the data, handle NA values, and create accurate time-series tabulations.
 
 #### HMDA Publications
-For a list of HMDA publications, see this [directory]()
+For a list of HMDA publications, see [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/federal_pubs.md)
 
 #### Getting Started: Basic Requirements
-To begin using the HMDA data you will first need to download the data. Please see [HMDA data links](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/data_links/hmda_data_links.md) to begin downloading the data.
+To begin using the HMDA data you will first need to download the data. Please see [HMDA data links](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md) to begin downloading the data.
 
 The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code. 
 
