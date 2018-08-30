@@ -1,6 +1,6 @@
 
-DROP TABLE IF EXISTS hmda_lar_2004;
-CREATE TABLE hmda_lar_2004
+DROP TABLE IF EXISTS hmda_lar_2006;
+CREATE TABLE hmda_lar_2006
 (  year varchar,
     rid varchar,
     agency varchar,
@@ -47,11 +47,11 @@ CREATE TEMPORARY TABLE lar_load
 
 COPY lar_load
         -- Change this path to your local data path.
-    FROM '/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat';
+    FROM '/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/lar/lar_ult_2006.dat';
 
 COMMIT;
 
-INSERT INTO hmda_lar_2004 (
+INSERT INTO hmda_lar_2006 (
     year,
     rid,
     agency,
