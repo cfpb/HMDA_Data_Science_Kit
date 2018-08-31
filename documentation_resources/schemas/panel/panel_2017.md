@@ -1,3 +1,7 @@
+File format is pipe delimited
+
+The file specification is pulled from [here](https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2017_publicstatic_dataformat.zip).
+
 | Field Number | Field Name                   | Data Type    | Length |
 |--------------|------------------------------|--------------|--------|
 | 1            | Activity Year                | Numeric      | 4      |
