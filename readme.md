@@ -63,7 +63,19 @@ For a list of HMDA publications, see [here](https://github.com/cfpb/HMDA_Data_Sc
 #### Getting Started: Basic Requirements
 To begin using the HMDA data you will first need to download the data. Please see [HMDA data links](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md) to begin downloading the data.
 
+To download the data using a script:
+`bash download_scripts/download_and_unzip_all.sh`
+
+For troubleshooting downloads please go [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/download_scripts/readme.md)
+
+To create a HMDA database on an existing Postgres installation:
+`bash hmda_load_scripts/create_hmda_db.sh`
+
+To create and populate HMDA tables on an existing Postgres installation:
+`bash hmda_load_scripts/create_tables_2004_2017.sh`
+
+
 The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code. 
 
-The Python resources assume that a functioning installation of [Python 3.5](https://www.python.org/downloads/) or greater is present.
+The Python resources assume that a functioning installation of [Python 3.5 or greater](https://www.python.org/downloads/) or greater is present.
 
