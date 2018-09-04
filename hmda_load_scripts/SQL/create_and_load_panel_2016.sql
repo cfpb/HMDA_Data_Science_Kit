@@ -24,27 +24,29 @@ CREATE TABLE panel_2016 (
     respondent_rssd VARCHAR,
     parent_rssd VARCHAR,
     respondent_state_fips VARCHAR);
+
  CREATE TEMPORARY TABLE panel_load
     (PANEL VARCHAR); -- LAR contains an entire LAR record
- COPY panel_load
+
+COPY panel_load
 FROM '/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/panel/panel_2016.txt' 
     ENCODING 'latin1';
 COMMIT;
  INSERT INTO panel_2016 (
     activity_year,
-    resp_id,
-    agency,
-    parent_resp_id,
+    respondent_id,
+    agency_code,
+    parent_respondent_id,
     parent_name,
+    filler,
     parent_city,
     parent_state,
     region,
     assets,
-    olc,
-    resp_name,
-    filler,
-    resp_city,
-    resp_state,
+    other_lender_code,
+    respondent_name,
+    respondent_city,
+    respondent_state,
     filler2,
     filler3,
     top_holder_rssd,
@@ -52,9 +54,9 @@ COMMIT;
     top_holder_city,
     top_holder_state,
     top_holder_country,
-    resp_rssd,
+    respondent_rssd,
     parent_rssd,
-    resp_state_fips
+    respondent_state_fips
     )
  SELECT 
     SUBSTRING(PANEL, 1, 4),
