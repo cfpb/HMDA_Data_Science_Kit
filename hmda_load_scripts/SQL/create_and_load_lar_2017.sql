@@ -1,6 +1,6 @@
 
 DROP TABLE IF EXISTS lar_2017;
-CREATE TABLE hmda_lar_2017 (  
+CREATE TABLE lar_2017 (  
     record_id VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR, 
