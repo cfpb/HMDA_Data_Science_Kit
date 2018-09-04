@@ -26,5 +26,5 @@ CREATE TABLE ts_2016(
 
 COPY ts_2016
 -- Change to your local data path
-FROM '/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/ts/ts_2016_fixed.txt'
+FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2016_fixed.txt'
 	DELIMITER E'\t' ENCODING 'latin1';

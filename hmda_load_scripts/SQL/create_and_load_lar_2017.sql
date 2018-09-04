@@ -45,7 +45,7 @@ CREATE TABLE hmda_lar_2017 (
     one_to_four_units VARCHAR);
 
 COPY lar_2017
-FROM '/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/lar/lar_2017.txt'
+FROM '{data_path}HMDA_Data_Science_Kit/data/lar/lar_2017.txt'
 DELIMITER '|' ENCODING 'latin1';
 COMMIT;
 

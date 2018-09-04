@@ -49,5 +49,5 @@ CREATE TABLE lar_2015 (
 )
 
 COPY lar_2015
-FROM '/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/lar/2015HMDALAR - National.csv'
+FROM '{data_path}HMDA_Data_Science_Kit/data/lar/2015HMDALAR - National.csv'
     DELIMITER ',' ENCODING 'latin1';
