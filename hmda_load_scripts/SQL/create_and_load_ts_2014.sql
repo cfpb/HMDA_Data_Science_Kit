@@ -22,9 +22,9 @@ CREATE TABLE ts_2014(
 	region_code_panel VARCHAR,
 	lar_count VARCHAR,
 	edit_status VARCHAR
-)
+);
 
 COPY ts_2014
 -- Change to your local data path
-FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2014.txt'
+FROM '/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/ts/ts_2014.txt'
 	DELIMITER E'\t' ENCODING 'latin1';

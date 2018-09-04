@@ -16,10 +16,10 @@ CREATE TABLE ts_2017 (
 	parent_city VARCHAR,
 	parent_state VARCHAR,
 	parent_zip VARCHAR
-	)
+	);
 
 COPY ts_2017
-FROM --'{data_path}HMDA_Data_Science_Kit/data/ts/ts_2017.txt'
-'{data_path}HMDA_Data_Science_Kit/data/ts/ts_2017.txt'
+FROM --'/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/ts/ts_2017.txt'
+'/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/ts/ts_2017.txt'
     DELIMITER '|' ENCODING 'latin1';
 COMMIT;

@@ -63,7 +63,6 @@ psql $PGUSER $PGDATABASE << EOF
 	\i 'SQL/create_and_load_lar_2016.sql'
 	\i 'SQL/create_and_load_lar_2017.sql'
 
-
 EOF
 
 #check file line count with wc -l
