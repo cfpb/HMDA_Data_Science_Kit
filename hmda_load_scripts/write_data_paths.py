@@ -4,14 +4,16 @@ import os
 from os import listdir
 from os.path import isfile, join
 
-mypath = "SQL/"
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+dir_path = dir_path[:-39]
+
+mypath = dir_path+"HMDA_Data_Science_Kit/hmda_load_scripts/SQL/"
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 ts_files = [mypath+f for f in onlyfiles if f[-11:-9]=="ts"]
 lar_files = [mypath+f for f in onlyfiles if f[-12:-9]=="lar"]
 panel_files = [mypath+f for f in onlyfiles if f[-14:-9]=="panel"]
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-dir_path = dir_path[:-39]
 
 ts_replacement_text = dir_path
 lar_replacement_text = dir_path

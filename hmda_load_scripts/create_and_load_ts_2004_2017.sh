@@ -17,20 +17,18 @@ echo "creating HMDA tables for 2004-2017"
 psql $PGUSER $PGDATABASE << EOF
 	\c hmda;
 	set schema 'hmda_public';
-	\i 'SQL/create_and_load_ts_2004.sql'
-	\i 'SQL/create_and_load_ts_2005.sql'
-	\i 'SQL/create_and_load_ts_2006.sql'
-	\i 'SQL/create_and_load_ts_2007.sql'
-	\i 'SQL/create_and_load_ts_2008.sql'
-	\i 'SQL/create_and_load_ts_2009.sql'
-	\i 'SQL/create_and_load_ts_2010.sql'
-	\i 'SQL/create_and_load_ts_2011.sql'
-	\i 'SQL/create_and_load_ts_2012.sql'
-	\i 'SQL/create_and_load_ts_2013.sql'
-	\i 'SQL/create_and_load_ts_2014.sql'
-	\i 'SQL/create_and_load_ts_2015.sql'
-	\i 'SQL/create_and_load_ts_2016.sql'
-	\i 'SQL/create_and_load_ts_2017.sql'
-
-
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2004.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2005.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2006.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2007.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2008.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2009.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2010.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2011.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2012.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2013.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2014.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2015.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2016.sql'
+	\i 'hmda_load_scripts/SQL/create_and_load_ts_2017.sql'
 EOF
