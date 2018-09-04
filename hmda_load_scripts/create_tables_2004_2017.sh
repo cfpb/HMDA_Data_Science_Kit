@@ -12,7 +12,9 @@ export PGUSER=${PGUSER-postgres} #enter your PG username
 export PGPASSWORD=${PGPASSWORD-} #PG password
 
 python3 hmda_load_scripts/write_data_paths.py
+python3 hmda_load_scripts/remove_tab_ts_2016.py
 bash hmda_load_scripts/create_hmda_db.sh
+
 echo "creating HMDA tables for 2004-2017"
 psql $PGUSER $PGDATABASE << EOF
 	\c hmda;
