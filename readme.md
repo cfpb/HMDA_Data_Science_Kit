@@ -59,23 +59,48 @@ The HMDA data are complex and care must be taken to ensure that analytics result
 
 #### HMDA Publications
 For a list of HMDA publications, see [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/federal_pubs.md)
-
-#### Getting Started: Basic Requirements
-To begin using the HMDA data you will first need to download the data. Please see [HMDA data links](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md) to begin downloading the data.
-
-To download the data using a script:
-`bash download_scripts/download_and_unzip_all.sh`
-
-For troubleshooting downloads please go [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/download_scripts/readme.md)
-
-To create a HMDA database on an existing Postgres installation:
-`bash hmda_load_scripts/create_hmda_db.sh`
-
-To create and populate HMDA tables on an existing Postgres installation:
-`bash hmda_load_scripts/create_tables_2004_2017.sh`
-
+  
+#### Getting Started: Basic Requirements and Instructions
 
 The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code. 
 
-The Python resources assume that a functioning installation of [Python 3.5 or greater](https://www.python.org/downloads/) or greater is present.
+The Python resources assume that a functioning installation of [Python 3.5 or greater](https://www.python.org/downloads/) or greater is present. Convention in these instructions and code resources will use python3 to invoke python scripts. If two versions of Python are not present, this command may need to be changed to python, without the 3.
+
+To begin using the HMDA data you will first need to download the data. Please see [HMDA data links](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md) to begin downloading the data.
+
+The following instructions assume that shell and Python commands are entered in the base repository directory. If running scripts outside that directory paths may not work as expected.
+
+This repository has a requirements.txt file that can be used to install Python libraries used:
+- `pip install -r requirements.txt` 
+
+To download all Ultimate HMDA Data files using a script:
+- `bash download_scripts/download_and_unzip_all.sh`
+
+Alternatively the LAR, TS, and Panel sets can be downloaded separately by invoking the commands below:
+- `bash download_scripts/download_panel_2004_2017.sh`
+- `bash download_scripts/download_ts_2004_2017.sh`
+- `bash download_scripts/download_lar_2004_2017.sh`
+
+Please note, the LAR data will need to be unzipped if datasets are downloaded individually, to do so, run the command below:
+- `bash download_scripts/unzip_and_rename_lar.sh`
+For troubleshooting downloads please go [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/download_scripts/readme.md)
+
+To create a HMDA database on an existing Postgres installation:
+- `bash hmda_load_scripts/create_hmda_db.sh`
+
+To create and populate HMDA tables on an existing Postgres installation:  
+- `bash hmda_load_scripts/create_tables_2004_2017.sh`
+
+This script rewrites the data path of files in the hmda_load_scripts/SQL/ directory replacing {data_path} with the directory path that is one level above this git repository folder structure. For example: {data_path}HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat' on a Mac will become /Users/<username>/HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat'.
+
+This change can be undone by running the following:
+- `python3 hmda_load_scripts/reset_path.py`
+
+Alternatively, each dataset may be loaded individually using one of the commands below:  
+- `bash hmda_load_scripts/create_lar_2004_2017.sh`
+- `bash hmda_load_scripts/create_ts_2004_2017.sh`
+- `bash hmda_load_scripts/create_panel_2004_2017.sh`
+
+
+
 
