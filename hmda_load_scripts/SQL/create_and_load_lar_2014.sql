@@ -46,7 +46,7 @@ CREATE TABLE lar_2014 (
     owner_occupied_units VARCHAR,
     one_to_four_units VARCHAR,
     app_date_indicator VARCHAR
-)
+);
 
 COPY lar_2014
 FROM '{data_path}HMDA_Data_Science_Kit/data/lar/2014HMDALAR - National.csv'
