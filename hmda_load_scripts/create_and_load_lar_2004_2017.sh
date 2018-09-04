@@ -11,7 +11,7 @@ export PGDATABASE=${PGDATABASE-postgres} #initial connection database, HMDA db w
 export PGUSER=${PGUSER-postgres} #enter your PG username
 export PGPASSWORD=${PGPASSWORD-} #PG password
 
-python3 write_data_paths.py
+python3 hmda_load_scripts/write_data_paths.py
 
 echo "creating HMDA tables for 2004-2017"
 psql $PGUSER $PGDATABASE << EOF
