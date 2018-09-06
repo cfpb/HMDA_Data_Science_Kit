@@ -86,7 +86,55 @@ while getopts "sptlFh" OPTION; do
         		F)		FORCE="true"
 						NC=""
 						;;
-
+				a)		echo "Panel Files:"
+						echo "panel_2017"
+						echo "panel_2016"
+						echo "panel_2015"
+						echo "panel_2014"
+						echo "panel_2013"
+						echo "panel_2012"
+						echo "panel_2011"
+						echo "panel_2010"
+						echo "panel_2009"
+						echo "panel_2008"
+						echo "panel_2007"
+						echo "panel_2006"
+						echo "panel_2005"
+						echo "panel_2004"
+						echo ""
+						echo "Transmittal Sheet Files:"
+						echo "ts_2017"
+						echo "ts_2016"
+						echo "ts_2015"
+						echo "ts_2014"
+						echo "ts_2013"
+						echo "ts_2012"
+						echo "ts_2011"
+						echo "ts_2010"
+						echo "ts_2009"
+						echo "ts_2008"
+						echo "ts_2007"
+						echo "ts_2006"
+						echo "ts_2005"
+						echo "ts_2004"
+						echo ""
+						echo "LAR Files:"
+						echo "lar_2017"
+						echo "lar_2016"
+						echo "lar_2015"
+						echo "lar_2014"
+						echo "lar_2013"
+						echo "lar_2012"
+						echo "lar_2011"
+						echo "lar_2010"
+						echo "lar_2009"
+						echo "lar_2008"
+						echo "lar_2007"
+						echo "lar_2006"
+						echo "lar_2005"
+						echo "lar_2004"
+						exit 0
+						;;
                 h)
                         echo "Usage:"
                         echo "download_options.sh -h "
@@ -107,22 +155,28 @@ while getopts "sptlFh" OPTION; do
                         echo " 	  p for panel, t for transmittal sheet and l for LAR"
                         echo " 	  and a four digit number indicating the desired year, such as 2017."
                         echo " 	  example: panel_2017 for the 2017 panel file, lar_2017 for the 2017 LAR file"
-                        echo "    or ts_2017 for the 2017 Transmittal Sheet file."
+                        echo "    or ts_2017 for the 2017 Transmittal Sheet file"
+                        echo "   -a 	show all files available for download"
                         echo "   -h     help (this output)"
                         exit 0
                         ;;
 
         esac
 done
-echo "making data storage directories"
+
+#create directories to store downloaded files
+echo "making data storage directories for LAR, TS, and Panel"
 mkdir data/lar
 mkdir data/ts
 mkdir data/panel
+
 #no option behavior: attempt no clobber (-nc) download of each file for LAR/TS/Panel
 if [ $# -eq 0 ]; then
         echo "No options selected, running full script"
         echo "(run $0 -h for help)"
+        echo "(run $0 -a to show a list of files available for download"
         echo ""
+
     #iterate over TS URL array
     YEAR=2004 #set start year to 2004, this code does not support downloads prior to 2004
 	for i in "${ts_url_list[@]}"
@@ -164,8 +218,8 @@ if [ $# -eq 0 ]; then
 		YEAR=$((YEAR+1))
 		wget -q -nc -c -t=10 --show-progress -O  data/lar/${LAR_FILENAME} "${i}"
 	done
+	exit 0
 fi
-
 #option -p or -t or -l behavior: attempt no clobber download of each file for LAR/TS/Panel
 #if -F is also passed force download of each file type passed
 
@@ -188,13 +242,15 @@ if [ "${LAR}" = "true" ]; then
 	done
 fi
 
-
+#option -p or -t or -l behavior: attempt no clobber download of each file for LAR/TS/Panel
+#if -F is also passed force download of each file type passed
 if [ "$TS" = "true" ]; then
 	if [ "${NC}" = "-nc" ]; then
 		echo "downloading TS files if not present"
 	elif [ "${NC}" = "" ]; then
 		echo "Force downloading all TS files"
 	fi
+
 	    #iterate over TS URL array
     YEAR=2004 #set start year to 2004, this code does not support downloads prior to 2004
 	for i in "${ts_url_list[@]}"
@@ -211,7 +267,8 @@ if [ "$TS" = "true" ]; then
 	done #end loop
 fi
 
-
+#option -p or -t or -l behavior: attempt no clobber download of each file for LAR/TS/Panel
+#if -F is also passed force download of each file type passed
 if [ "${PANEL}" = "true" ]; then
 	if [ "${NC}" = "-nc" ]; then
 		echo "downloading Panel files if not present"
@@ -238,11 +295,43 @@ fi
 #if -F is also passed force download of file
 #check if file in list of available files to download
 if [ "$SPECIFIC_FILE" != "" ]; then
-	if [ "${NC}" = "-nc" ]
-		echo "downloading $SPECIFIC_FILE if not exists"
+	if [ "${NC}" = "-nc" ]; then
+		echo "downloading ${SPECIFIC_FILE} if not exists"
 	elif [ "${NC}" = "" ]; then
-		echo "Force downloading $SPECIFIC_FILE"
-	wget -q ${NC} -c -t=10 --show-progress -o data/${FILE_TYPE}/${SPECIFIC_FILE} ${URL}
+		echo "Force downloading ${SPECIFIC_FILE}"
+	fi
+
+	#set file type .DAT, .TXT, .ZIP for the $SPECIFC_FILE variable
+	#set $URL for specific file by checking arrays by dataset, use year - 2004 for index reference
+
+	NO_EXT="${SPECIFIC_FILE%.*}"
+	YEAR=${NO_EXT:(-4)}
+	URL_INDEX="$((YEAR - 2004))"
+
+	if [ "${SPECIFIC_FILE:0:1}" = "p" ]; then
+		URL=${panel_url_list[$URL_INDEX]}
+		FOLDER="panel"
+		if [ $YEAR -gt 2013 ]; then
+			FILE_EXT=".zip"
+		else
+			FILE_EXT=".dat"
+		fi
+
+	elif [ "${SPECIFIC_FILE:0:1}" = "t" ]; then
+		URL=${ts_url_list[$URL_INDEX]}
+		FOLDER="ts"
+		if [ $YEAR -gt 2013 ]; then
+			FILE_EXT=".zip"
+		else
+			FILE_EXT=".dat"
+		fi
+
+	elif [ "${SPECIFIC_FILE:0:1}" = "l" ]; then
+		URL=${lar_url_list[URL_INDEX]}
+		FOLDER="lar"
+		FILE_EXT=".zip"
+	fi
+	#download the specific file using passed force parameter
+	wget -q ${NC} -c -t=10 --show-progress -O data/$FOLDER/"${SPECIFIC_FILE}${FILE_EXT}" "${URL}"
 fi
-#wget construction
-#wget + FORCE(-nc or blank) + filepath + filename + URL
+
