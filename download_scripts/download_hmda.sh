@@ -71,7 +71,7 @@ SPECIFIC_FILE=""
 #option setting: declare variables based on option flags passed
 #this section defines what options are available in this script and provides basic instructions for use
 
-while getopts "sptlFh" OPTION; do
+while getopts "asptlFh" OPTION; do
         case ${OPTION} in
 
         		s) 		SPECIFIC_FILE=${2}
@@ -86,7 +86,9 @@ while getopts "sptlFh" OPTION; do
         		F)		FORCE="true"
 						NC=""
 						;;
-				a)		echo "Panel Files:"
+
+				a)		
+						echo "Panel Files:"
 						echo "panel_2017"
 						echo "panel_2016"
 						echo "panel_2015"
