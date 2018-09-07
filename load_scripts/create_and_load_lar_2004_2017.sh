@@ -17,20 +17,20 @@ echo "creating HMDA tables for 2004-2017"
 psql $PGUSER $PGDATABASE << EOF
 	\c hmda;
 	set schema 'hmda_public';
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2004.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2005.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2006.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2007.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2008.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2009.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2010.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2011.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2012.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2013.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2014.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2015.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2016.sql'
-	\i 'hmda_load_scripts/SQL/create_and_load_lar_2017.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2004.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2005.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2006.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2007.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2008.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2009.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2010.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2011.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2012.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2013.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2014.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2015.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2016.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2017.sql'
 
 
 EOF
