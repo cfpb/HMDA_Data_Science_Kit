@@ -140,7 +140,7 @@ while getopts "asptlFh" OPTION; do
                 h)
                         echo "Usage:"
                         echo "download_options.sh -h "
-                        echo "download_options.sh -f "
+                        echo "download_options.sh -F "
                         echo "download_options.sh -s "
                         echo "download_options.sh -p "
                         echo "download_options.sh -t "
@@ -184,13 +184,16 @@ if [ $# -eq 0 ]; then
 	for i in "${ts_url_list[@]}"
 	do #wget each URL in the TS array
 	   #specify file type for filename by year
-	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ] || [ ${YEAR} = 2017 ]; then
+	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
 			FILE_TYPE=".zip"
 		else
 			FILE_TYPE=".dat"
 	   fi
 	   TS_FILENAME="ts_${YEAR}${FILE_TYPE}" #set TS filename based on year
 	   YEAR=$((YEAR+1))
+	   if [ "${FORCE}" = "true" ]; then
+	   		rm data/ts/${TS_FILENAME}
+	   fi
 	   wget -q -nc -c -t=10 --show-progress -O data/ts/${TS_FILENAME} "${i}" #write file to disk
 	done #end loop
 	
@@ -206,6 +209,9 @@ if [ $# -eq 0 ]; then
 		fi
 		PANEL_FILENAME="panel_${YEAR}${FILE_TYPE}"
 		YEAR=$((YEAR+1))
+		if [ "${FORCE}" = "true" ]; then
+			rm data/panel/${PANEL_FILENAME}
+		fi
 		wget -q -nc -c -t=10 --show-progress -O data/panel/${PANEL_FILENAME} "${i}"
 	done
 	
@@ -218,6 +224,9 @@ if [ $# -eq 0 ]; then
 		#specify file type for filename by year
 		LAR_FILENAME="lar_${YEAR}.zip"
 		YEAR=$((YEAR+1))
+		if [ "${FORCE}" = "true" ]; then
+			rm data/lar/${LAR_FILENAME}
+		fi
 		wget -q -nc -c -t=10 --show-progress -O  data/lar/${LAR_FILENAME} "${i}"
 	done
 	exit 0
@@ -240,6 +249,9 @@ if [ "${LAR}" = "true" ]; then
 		#specify file type for filename by year
 		LAR_FILENAME="lar_${YEAR}.zip"
 		YEAR=$((YEAR+1))
+		if [ "${FORCE}" = "true" ]; then
+			rm data/lar/${LAR_FILENAME}
+		fi
 		wget -q ${NC} -c -t=10 --show-progress -O  data/lar/${LAR_FILENAME} "${i}"
 	done
 fi
@@ -260,11 +272,14 @@ if [ "$TS" = "true" ]; then
 	   #specify file type for filename by year
 	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ] || [ ${YEAR} = 2017 ]; then
 			FILE_TYPE=".zip"
-		else
+	   else
 			FILE_TYPE=".dat"
 	   fi
 	   TS_FILENAME="ts_${YEAR}${FILE_TYPE}" #set TS filename based on year
 	   YEAR=$((YEAR+1))
+	   if [ "${FORCE}" = "true" ]; then
+	   		rm data/ts/${TS_FILENAME}
+	   fi
 	   wget -q ${NC} -c -t=10 --show-progress -O data/ts/${TS_FILENAME} "${i}" #write file to disk
 	done #end loop
 fi
@@ -289,6 +304,9 @@ if [ "${PANEL}" = "true" ]; then
 		fi
 		PANEL_FILENAME="panel_${YEAR}${FILE_TYPE}"
 		YEAR=$((YEAR+1))
+		if [ "${FORCE}" = "true" ]; then
+			rm data/panel/${PANEL_FILENAME}
+		fi
 		wget -q ${NC} -c -t=10 --show-progress -O data/panel/${PANEL_FILENAME} "${i}"
 	done
 fi
@@ -322,8 +340,10 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 	elif [ "${SPECIFIC_FILE:0:1}" = "t" ]; then
 		URL=${ts_url_list[$URL_INDEX]}
 		FOLDER="ts"
-		if [ $YEAR -gt 2013 ]; then
+		if [ $YEAR -gt 2013 ] && [ $YEAR -lt 2017 ]; then
 			FILE_EXT=".zip"
+		elif [ $YEAR -eq 2017 ]; then
+			FILE_EXT=".txt"
 		else
 			FILE_EXT=".dat"
 		fi
@@ -332,6 +352,10 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 		URL=${lar_url_list[URL_INDEX]}
 		FOLDER="lar"
 		FILE_EXT=".zip"
+	fi
+	#remove specific file if force flag was passed
+	if [ "${FORCE}" = "true" ]; then
+		rm data/$FOLDER/"${SPECIFIC_FILE}${FILE_EXT}"
 	fi
 	#download the specific file using passed force parameter
 	wget -q ${NC} -c -t=10 --show-progress -O data/$FOLDER/"${SPECIFIC_FILE}${FILE_EXT}" "${URL}"
