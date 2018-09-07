@@ -8,7 +8,6 @@ HOST="localhost" #host address of the database
 PORT="5432" #connection port of the database
 
 if [ $# -gt 0 ]; then
-	#while [ "${1}" != "" ]; 
 	for var in "$@"
 	do #iterate over passed command line arguments as long as one remains
 	    case $1 in
@@ -90,4 +89,32 @@ psql $PGDATABASE $PGUSER  << EOF
 	\i 'load_scripts/SQL/create_and_load_ts_2015.sql'
 	\i 'load_scripts/SQL/create_and_load_ts_2016.sql'
 	\i 'load_scripts/SQL/create_and_load_ts_2017.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2004.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2005.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2006.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2007.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2008.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2009.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2010.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2011.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2012.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2013.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2014.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2015.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2016.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2017.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2004.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2005.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2006.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2007.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2008.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2009.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2010.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2011.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2012.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2013.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2014.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2015.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2016.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2017.sql'
 EOF
