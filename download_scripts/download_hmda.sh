@@ -139,12 +139,12 @@ while getopts "asptlFh" OPTION; do
 						;;
                 h)
                         echo "Usage:"
-                        echo "download_options.sh -h "
-                        echo "download_options.sh -F "
-                        echo "download_options.sh -s "
-                        echo "download_options.sh -p "
-                        echo "download_options.sh -t "
-                        echo "download_options.sh -l "
+                        echo "download_hmda.sh -h "
+                        echo "download_hmda.sh -F "
+                        echo "download_hmda.sh -s "
+                        echo "download_hmda.sh -p "
+                        echo "download_hmda.sh -t "
+                        echo "download_hmda.sh -l "
                         echo "Options may be combined, use the following format:"
                         echo "download_options.sh -Fpt"
                         echo ""
@@ -186,6 +186,8 @@ if [ $# -eq 0 ]; then
 	   #specify file type for filename by year
 	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
 			FILE_TYPE=".zip"
+		elif [ $YEAR} = 2017 ]; then
+			FILE_TYPE=".txt"
 		else
 			FILE_TYPE=".dat"
 	   fi
@@ -202,8 +204,10 @@ if [ $# -eq 0 ]; then
 	for i in "${panel_url_list[@]}"
 	do #wget each URL in Panel array
 		#specify file type for filename by year
-		if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ] || [ ${YEAR} = 2017 ]; then
+		if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
 			FILE_TYPE=".zip"
+		elif [ ${YEAR} = 2017 ]; then
+			FILE_TYPE=".txt"
 		else
 			FILE_TYPE=".dat"
 		fi
@@ -270,8 +274,10 @@ if [ "$TS" = "true" ]; then
 	for i in "${ts_url_list[@]}"
 	do #wget each URL in the TS array
 	   #specify file type for filename by year
-	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ] || [ ${YEAR} = 2017 ]; then
+	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
 			FILE_TYPE=".zip"
+	   elif [ ${year} = 2017 ]; then
+	   		FILE_TYPE=".txt"
 	   else
 			FILE_TYPE=".dat"
 	   fi
@@ -297,8 +303,10 @@ if [ "${PANEL}" = "true" ]; then
 	for i in "${panel_url_list[@]}"
 	do #wget each URL in Panel array
 		#specify file type for filename by year
-		if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ] || [ ${YEAR} = 2017 ]; then
+		if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
 			FILE_TYPE=".zip"
+		elif [ ${YEAR} = 2017 ]; then
+			FILE_TYPE=".txt"
 		else
 			FILE_TYPE=".dat"
 		fi
@@ -331,7 +339,9 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 	if [ "${SPECIFIC_FILE:0:1}" = "p" ]; then
 		URL=${panel_url_list[$URL_INDEX]}
 		FOLDER="panel"
-		if [ $YEAR -gt 2013 ]; then
+		if [ $YEAR = 2017 ]; then
+			FILE_EXT=".txt"
+		elif [ $YEAR -gt 2013 ]; then
 			FILE_EXT=".zip"
 		else
 			FILE_EXT=".dat"
