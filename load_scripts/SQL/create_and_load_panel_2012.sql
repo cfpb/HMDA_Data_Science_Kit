@@ -20,7 +20,7 @@ CREATE TABLE panel_2012 (
   (PANEL VARCHAR); -- LAR contains an entire LAR record
  COPY panel_load
         --Change to your local path
-FROM '{data_path}HMDA_Data_Science_Kit/data/panel/panel_ult_2012.dat' 
+FROM '{data_path}HMDA_Data_Science_Kit/data/panel/panel_2012.dat' 
     ENCODING 'latin1';
 COMMIT;
  INSERT INTO panel_2012 (

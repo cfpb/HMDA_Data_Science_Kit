@@ -21,7 +21,7 @@ CREATE TEMPORARY TABLE ts_load
 
 COPY ts_load 
 -- Change to your local data path
-FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_ult_2004.dat' 
+FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2004.dat' 
     ENCODING 'latin1';
 COMMIT;
 
@@ -40,8 +40,7 @@ INSERT INTO ts_2004 (
 	parent_state,
 	parent_zip,
 	edit_status,
-	id_tax
-)
+	id_tax)
 
 SELECT 
 	SUBSTRING(TS, 1, 4),
@@ -49,7 +48,7 @@ SELECT
 	SUBSTRING(TS, 6, 10),
 	SUBSTRING(TS, 16, 30),
 	SUBSTRING(TS, 46, 40),
-	SUBSTRING(TS, 86,25),
+	SUBSTRING(TS, 86, 25),
 	SUBSTRING(TS, 111,2),
 	SUBSTRING(TS, 113, 10),
 	SUBSTRING(TS, 123, 30),
@@ -59,7 +58,7 @@ SELECT
 	SUBSTRING(TS, 220, 10),
 	SUBSTRING(TS, 230, 1),
 	SUBSTRING(TS, 231, 10)
-
+	
 FROM ts_load;
 COMMIT;
 DROP TABLE IF EXISTS ts_load; 

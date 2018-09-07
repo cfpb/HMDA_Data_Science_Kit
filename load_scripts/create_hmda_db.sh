@@ -67,6 +67,7 @@ export PGHOST="${PGHOST-${HOST}}" #host address of the database
 export PGPORT="${PGPORT-${PORT}}" #connection port of the database
 
 echo "creating HMDA database and hmda_public schema"
+#format is psql dbnam username
 psql $PGDATABASE $PGUSER << EOF
 	CREATE DATABASE hmda;
 	\c hmda
