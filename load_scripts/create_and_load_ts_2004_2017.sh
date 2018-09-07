@@ -59,7 +59,9 @@ export PGDATABASE="${PGDATABASE-${DATABASE}}" #Sets connection database
 export PGHOST="${PGHOST-${HOST}}" #host address of the database
 export PGPORT="${PGPORT-${PORT}}" #connection port of the database
 
+echo "setting data paths for SQL load"
 python3 load_scripts/write_data_paths.py
+echo "removing extra tab in ts 2016"
 python3 load_scripts/remove_tab_ts_2016.py
 echo "creating HMDA tables for 2004-2017"
 psql $PGDATABASE $PGUSER << EOF
