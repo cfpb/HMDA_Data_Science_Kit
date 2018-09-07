@@ -4,7 +4,8 @@ from os import listdir
 from os.path import isfile, join
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-dir_path = dir_path[:-39]
+dir_path = dir_path[:-34]
+#print(dir_path)
 text_to_search = dir_path
 replacement_text = '{data_path}'
 
