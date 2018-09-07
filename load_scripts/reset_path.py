@@ -8,7 +8,7 @@ dir_path = dir_path[:-39]
 text_to_search = dir_path
 replacement_text = '{data_path}'
 
-mypath = dir_path+"HMDA_Data_Science_Kit/hmda_load_scripts/SQL/"
+mypath = dir_path+"HMDA_Data_Science_Kit/load_scripts/SQL/"
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 ts_files = [mypath+f for f in onlyfiles if f[-11:-9]=="ts"]
 lar_files = [mypath+f for f in onlyfiles if f[-12:-9]=="lar"]
