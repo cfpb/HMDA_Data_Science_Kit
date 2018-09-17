@@ -187,7 +187,7 @@ if [ $# -eq 0 ]; then
 	   #specify file type for filename by year
 	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
 			FILE_TYPE=".zip"
-		elif [ $YEAR} eq 2017 ]; then
+		elif [ ${YEAR} = 2017 ]; then
 			FILE_TYPE=".zip"
 		else
 			FILE_TYPE=".dat"
@@ -307,7 +307,7 @@ if [ "${PANEL}" = "true" ]; then
 		if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
 			FILE_TYPE=".zip"
 		elif [ ${YEAR} = 2017 ]; then
-			FILE_TYPE=".txt"
+			FILE_TYPE=".zip"
 		else
 			FILE_TYPE=".dat"
 		fi
@@ -341,7 +341,7 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 		URL=${panel_url_list[$URL_INDEX]}
 		FOLDER="panel"
 		if [ $YEAR = 2017 ]; then
-			FILE_EXT=".txt"
+			FILE_EXT=".zip"
 		elif [ $YEAR -gt 2013 ]; then
 			FILE_EXT=".zip"
 		else
