@@ -21,7 +21,7 @@ declare -a lar_url_list=(${lar_2004_url} ${lar_2005_url} ${lar_2006_url} ${lar_2
 	${lar_2011_url} ${lar_2012_url} ${lar_2013_url} ${lar_2014_url} ${lar_2015_url} ${lar_2016_url} ${lar_2017_url})
 
 #TS URL list for data downloading
-ts_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/dynamic-data/2017_ts.txt"
+ts_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2017_public_ts_txt.zip"
 ts_2016_url="https://www.ffiec.gov/hmdarawdata/OTHER/2016HMDAInstitutionRecords.zip"
 ts_2015_url="https://www.ffiec.gov/hmdarawdata/OTHER/2015HMDAInstitutionRecords.zip"
 ts_2014_url="https://www.ffiec.gov/hmdarawdata/OTHER/2014HMDAInstitutionRecords.zip"
@@ -168,6 +168,7 @@ done
 
 #create directories to store downloaded files
 echo "making data storage directories for LAR, TS, and Panel"
+mkdir data
 mkdir data/lar
 mkdir data/ts
 mkdir data/panel
@@ -187,7 +188,7 @@ if [ $# -eq 0 ]; then
 	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
 			FILE_TYPE=".zip"
 		elif [ $YEAR} = 2017 ]; then
-			FILE_TYPE=".txt"
+			FILE_TYPE=".zip"
 		else
 			FILE_TYPE=".dat"
 	   fi
@@ -277,7 +278,7 @@ if [ "$TS" = "true" ]; then
 	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
 			FILE_TYPE=".zip"
 	   elif [ ${year} = 2017 ]; then
-	   		FILE_TYPE=".txt"
+	   		FILE_TYPE=".zip"
 	   else
 			FILE_TYPE=".dat"
 	   fi
@@ -353,7 +354,7 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 		if [ $YEAR -gt 2013 ] && [ $YEAR -lt 2017 ]; then
 			FILE_EXT=".zip"
 		elif [ $YEAR -eq 2017 ]; then
-			FILE_EXT=".txt"
+			FILE_EXT=".zip"
 		else
 			FILE_EXT=".dat"
 		fi
