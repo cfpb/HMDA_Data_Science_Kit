@@ -236,9 +236,9 @@ if [ $# -eq 0 ]; then
 	done
 	exit 0
 fi
+
 #option -p or -t or -l behavior: attempt no clobber download of each file for LAR/TS/Panel
 #if -F is also passed force download of each file type passed
-
 if [ "${LAR}" = "true" ]; then
 	if [ "${NC}" = "-nc" ]; then
 		echo "downloading LAR files if not present"
@@ -277,7 +277,7 @@ if [ "$TS" = "true" ]; then
 	   #specify file type for filename by year
 	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
 			FILE_TYPE=".zip"
-	   elif [ ${year} = 2017 ]; then
+	   elif [ ${YEAR} = 2017 ]; then
 	   		FILE_TYPE=".zip"
 	   else
 			FILE_TYPE=".dat"
