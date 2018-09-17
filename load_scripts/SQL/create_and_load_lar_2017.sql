@@ -1,7 +1,7 @@
 
 DROP TABLE IF EXISTS lar_2017;
 CREATE TABLE lar_2017 (  
-    record_id VARCHAR,
+    activity_year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR, 
     loan_type VARCHAR,
@@ -37,15 +37,18 @@ CREATE TABLE lar_2017 (
     rate_spread VARCHAR,
     hoepa_status VARCHAR,
     lien_status VARCHAR,
+    edit_status VARCHAR,
+    sequence_number VARCHAR,
     population VARCHAR,
     minority_population_percent VARCHAR,
     ffiec_median_income VARCHAR,
     tract_to_msa_income_percent VARCHAR,
     owner_occupied_units VARCHAR,
-    one_to_four_units VARCHAR);
+    one_to_four_units VARCHAR,
+    application_date_indicator VARCHAR);
 
 COPY lar_2017
-FROM '{data_path}HMDA_Data_Science_Kit/data/lar/lar_2017.txt'
+FROM '/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/lar/lar_2017.txt'
 DELIMITER '|' ENCODING 'latin1';
 COMMIT;
 
