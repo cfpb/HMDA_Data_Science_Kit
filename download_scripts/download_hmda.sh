@@ -1,7 +1,7 @@
 #!bin/bash
 
 #LAR URL list for data downloading
-lar_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/dynamic-data/2017_lar.txt"
+lar_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2017_public_lar_txt.zip"
 lar_2016_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2016HMDALAR%20-%20National.zip"
 lar_2015_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2015HMDALAR%20-%20National.zip"
 lar_2014_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2014HMDALAR%20-%20National.zip"
