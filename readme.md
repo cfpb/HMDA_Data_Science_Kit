@@ -60,46 +60,102 @@ The HMDA data are complex and care must be taken to ensure that analytics result
 #### HMDA Publications
 For a list of HMDA publications, see [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/federal_pubs.md)
   
+
 #### Getting Started: Basic Requirements and Instructions
 
+#### Requirements
 The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code. 
 
 The Python resources assume that a functioning installation of [Python 3.5 or greater](https://www.python.org/downloads/) or greater is present. Convention in these instructions and code resources will use python3 to invoke python scripts. If two versions of Python are not present, this command may need to be changed to python, without the 3.
 
-To begin using the HMDA data you will first need to download the data. Please see [HMDA data links](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md) to begin downloading the data.
-
-The following instructions assume that shell and Python commands are entered in the base repository directory. If running scripts outside that directory paths may not work as expected.
-
-This repository has a requirements.txt file that can be used to install Python libraries used:
+This repository has a requirements.txt file that can be used to install the Python libraries used in the repository:
 - `pip install -r requirements.txt` 
 
-To download all Ultimate HMDA Data files using a script:
-- `bash download_scripts/download_and_unzip_all.sh`
+#### Downloading and Unzipping Data
+To begin using the HMDA data you will first need to download the data. A list of data resources is available in [HMDA data links](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
 
-Alternatively the LAR, TS, and Panel sets can be downloaded separately by invoking the commands below:
-- `bash download_scripts/download_panel_2004_2017.sh`
-- `bash download_scripts/download_ts_2004_2017.sh`
-- `bash download_scripts/download_lar_2004_2017.sh`
+These data can be downloaded manually from the links listed or the following script can be run from the HMDA_Data_Science_Kit directory:  
+- `bash download_scripts/download_hmda.sh`
 
-Please note, the LAR data will need to be unzipped if datasets are downloaded individually, to do so, run the command below:
+The script can download HMDA ultimate data files for LAR, Transmittal Sheet, and Panel for the years 2004 through 2017.
+
+Running the script without flags will download all LAR, Transmittal Sheet, and Panel files that are not present. 
+
+The script accepts the following option flags:
+-a: Prints to console the available files for download. 
+-s: Allows a specific file to be downloaded if it is not present. The name convention for specific files is as follows: lar_<year>, panel_<year>, or ts_<year>.
+-p: Downloads all Panel files that are not present.
+-t: Downloads all Transmittal Sheet files that are not present.
+-l: Downloads all LAR files that are not present.
+-F: Deletes the file or file types to be downloaded (the files are then redownloaded).
+-h: Prints to console the instructions for using the script.
+
+Usage examples:
+To download LAR files: `bash download_scripts/download_hmda.sh -l`
+To download Panel files: `bash download_scripts/download_hmda.sh -p`
+To download Transmittal Sheet files: `bash download_scripts/download_hmda.sh -t`
+To download a specific file: `bash download_scripts/download_hmda.sh -s filename`
+To delete and download Panel files: `bash download_scripts/download_hmda.sh -Fp`
+To delete and download a specific file: `bash download_scripts/download_hmda.sh -Fs filename`
+To delete and download LAR 2004: `bash download_scripts/download_hmda.sh -Fs lar_2004`
+
+Download Troubleshooting:
+Sometimes files from the National Archives fail to download correctly. An indicator that this happens is the presence of a file with the correct name (such as LAR_20013.zip) that has a filesize of 4kb. In these cases the file must be deleted and redownloaded. One way to do this is:
+ - `bash download_scripts/download_hmda.sh -Fs <filename>`.
+
+Unzipping Compressed Files:
+All of the LAR files, and several of the Panel and Transmittal Sheets download as zip files. Prior to loading these data the files must be unzipped. To do so, run the following script:
+- `bash download_scripts/unzip_all.sh`
+
+The above script will unzip all the zipped files and standardize the names of the files.
+
+Alternatively, the LAR, Panel, and Transmittal Sheet files can be unzipped as groups using the following commands:
 - `bash download_scripts/unzip_and_rename_lar.sh`
-For troubleshooting downloads please go [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/download_scripts/readme.md)
+- `bash download_scripts/unzip_panel.sh`
+- `bash download_scripts/unzip_ts.sh`
 
-To create a HMDA database on an existing Postgres installation:
-- `bash hmda_load_scripts/create_hmda_db.sh`
 
-To create and populate HMDA tables on an existing Postgres installation:  
-- `bash hmda_load_scripts/create_tables_2004_2017.sh`
+### Creating Postgres Tables and Loading Data
 
-This script rewrites the data path of files in the hmda_load_scripts/SQL/ directory replacing {data_path} with the directory path that is one level above this git repository folder structure. For example: {data_path}HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat' on a Mac will become /Users/<username>/HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat'.
+The default installation of Postgres should create both a Postgres role (superuser account) and a Postgres database. The default behavior of the load scripts uses these for login. If the role or the database are not present then a user and/or database will need to be specified when running the load scripts. Examples are provided later in this section.
+
+Available option flags for the load scripts are as follows:
+-u: Sets the user role for the Postgres connection, default is postgres.
+-p: Sets the password for the Postgres connection, default is blank.
+-d: Sets the database for connection, default is postgres.
+-h: Sets the database host, default is localhost.
+-o: Sets the database connection port, the default is 5432.
+--help: Displays the options available for the script.
+
+The script below creates a HMDA database on an existing Postgres installation, creates the hmda_public schema, creates tables, and loads data:
+- `bash load_scripts/create_hmda_db.sh`
+
+To load subsets of the HMDA data (LAR, Transmittal Sheet, or Panel) use the scripts below. These scripts will create a database named 'hmda' if one does not exist. They will also create a hmda_public schema in which all the data tables will be created and populated.
+- `bash load_scripts/create_and_load_lar_2004_2017.sh`
+- `bash load_scripts/create_and_load_ts_2004_2017.sh`
+- `bash load_scripts/create_andload_panel_2004_2017.sh`
+
+Using Options Flags:
+All of the load scripts support the same option flags. The example below use the create_hmda_db.sh script, but any script can be substituted.
+
+To specify a username:
+- `bash load_scripts/create_hmda_db.sh -u <username>`
+
+To specify a password:
+- `bash load_scripts/create_hmda_db.sh -p <password>`
+
+To specify a database:
+- `bash load_scripts/create_hmda_db.sh -d <database>`
+
+To specify a username and password:
+- `bash load_scripts/create_hmda_db.sh -u <username> -p <password>`
+
+
+The SQL scripts provided in HMDA_Data_Science_Kit/load_scripts/SQL require an update to the path for the data sources before they can be used. The placeholder is {data_path}. This placeholder is replaced with the full path to the HMDA data when any of the load scripts are run. For example {data_path}HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat' on a Mac will become /Users/<username>/HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat'.
 
 This change can be undone by running the following:
 - `python3 hmda_load_scripts/reset_path.py`
 
-Alternatively, each dataset may be loaded individually using one of the commands below:  
-- `bash hmda_load_scripts/create_lar_2004_2017.sh`
-- `bash hmda_load_scripts/create_ts_2004_2017.sh`
-- `bash hmda_load_scripts/create_panel_2004_2017.sh`
 
 
 
