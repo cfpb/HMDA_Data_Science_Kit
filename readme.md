@@ -154,7 +154,7 @@ To specify a username and password:
 The SQL scripts provided in HMDA_Data_Science_Kit/load_scripts/SQL require an update to the path for the data sources before they can be used. The placeholder is {data_path}. This placeholder is replaced with the full path to the HMDA data when any of the load scripts are run. For example {data_path}HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat' on a Mac will become /Users/<username>/HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat'.
 
 This change can be undone by running the following:
-- `python3 hmda_load_scripts/reset_path.py`
+- `python3 load_scripts/reset_path.py`
 
 
 
