@@ -15,7 +15,7 @@ if [ $# -gt 0 ]; then
 	        -u | --user )           shift
 	                                USER=$1
 	                                echo "user: $USER"
-	                                ;;
+	                                ;
 
 	        -p | --password )       shift
 									PASSWORD=$1
@@ -60,7 +60,14 @@ export PGHOST="${PGHOST-${HOST}}" #host address of the database
 export PGPORT="${PGPORT-${PORT}}" #connection port of the database
 
 echo "setting data paths for SQL load"
-python3 hmda_load_scripts/write_data_paths.py
+bash load_scripts/write_data_paths.sh
+
+echo "creating HMDA database and hmda_public schema"
+psql $PGDATABASE $PGUSER << EOF
+	CREATE DATABASE hmda;
+	\c hmda
+	CREATE SCHEMA hmda_public;
+EOF
 
 echo "creating HMDA tables for 2004-2017"
 psql $PGUSER $PGDATABASE << EOF
