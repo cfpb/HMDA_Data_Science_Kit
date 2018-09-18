@@ -82,13 +82,13 @@ The script can download HMDA ultimate data files for LAR, Transmittal Sheet, and
 Running the script without flags will download all LAR, Transmittal Sheet, and Panel files that are not present. 
 
 The script accepts the following option flags:
--a: Prints to console the available files for download. 
--s: Allows a specific file to be downloaded if it is not present. The name convention for specific files is as follows: lar_<year>, panel_<year>, or ts_<year>.
--p: Downloads all Panel files that are not present.
--t: Downloads all Transmittal Sheet files that are not present.
--l: Downloads all LAR files that are not present.
--F: Deletes the file or file types to be downloaded (the files are then redownloaded).
--h: Prints to console the instructions for using the script.
+- -a: Prints to console the available files for download. 
+- -s: Allows a specific file to be downloaded if it is not present. The name convention for specific files is as follows: lar_<year>, panel_<year>, or ts_<year>.
+- -p: Downloads all Panel files that are not present.
+- -t: Downloads all Transmittal Sheet files that are not present.
+- -l: Downloads all LAR files that are not present.
+- -F: Deletes the file or file types to be downloaded (the files are then redownloaded).
+- -h: Prints to console the instructions for using the script.
 
 Usage examples:
 To download LAR files: `bash download_scripts/download_hmda.sh -l`
@@ -120,12 +120,12 @@ Alternatively, the LAR, Panel, and Transmittal Sheet files can be unzipped as gr
 The default installation of Postgres should create both a Postgres role (superuser account) and a Postgres database. The default behavior of the load scripts uses these for login. If the role or the database are not present then a user and/or database will need to be specified when running the load scripts. Examples are provided later in this section.
 
 Available option flags for the load scripts are as follows:
--u: Sets the user role for the Postgres connection, default is postgres.
--p: Sets the password for the Postgres connection, default is blank.
--d: Sets the database for connection, default is postgres.
--h: Sets the database host, default is localhost.
--o: Sets the database connection port, the default is 5432.
---help: Displays the options available for the script.
+- -u: Sets the user role for the Postgres connection, default is postgres.
+- -p: Sets the password for the Postgres connection, default is blank.
+- -d: Sets the database for connection, default is postgres.
+- -h: Sets the database host, default is localhost.
+- -o: Sets the database connection port, the default is 5432.
+- --help: Displays the options available for the script.
 
 The script below creates a HMDA database on an existing Postgres installation, creates the hmda_public schema, creates tables, and loads data:
 - `bash load_scripts/create_hmda_db.sh`
