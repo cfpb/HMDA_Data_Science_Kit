@@ -69,7 +69,7 @@ psql $PGDATABASE $PGUSER << EOF
 EOF
 
 echo "creating HMDA LAR tables for 2004-2017"
-psql $PGUSER $PGDATABASE << EOF
+psql $PGDATABASE $PGUSER << EOF
 	\c hmda;
 	set schema 'hmda_public';
 	\i 'load_scripts/SQL/create_and_load_lar_2004.sql'
