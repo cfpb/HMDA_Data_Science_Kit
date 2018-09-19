@@ -15,7 +15,7 @@ if [ $# -gt 0 ]; then
 	        -u | --user )           shift
 	                                USER=$1
 	                                echo "user: $USER"
-	                                ;
+	                                ;;
 
 	        -p | --password )       shift
 									PASSWORD=$1
@@ -70,7 +70,7 @@ psql $PGDATABASE $PGUSER << EOF
 EOF
 
 echo "creating HMDA tables for 2004-2017"
-psql $PGUSER $PGDATABASE << EOF
+psql $PGDATABASE $PGUSER << EOF
 	\c hmda;
 	set schema 'hmda_public';
 	\i 'load_scripts/SQL/create_and_load_panel_2004.sql'
