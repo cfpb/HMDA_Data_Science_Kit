@@ -7,7 +7,7 @@
 - [Official HMDA documentation](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#hmda-data-documentation)
 - [Official HMDA data publications](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#hmda-publications)
 - [Working With HMDA Data](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#working-with-hmda-data)
-- [Getting Started: Basic Requirements](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#Getting-Started:-Basic-Requirements-and-Instructions)
+- [Getting Started: Basic Requirements](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#Basic-Requirements-and-Instructions)
 
 
 
@@ -61,7 +61,7 @@ The HMDA data are complex and care must be taken to ensure that analytics result
 For a list of HMDA publications, see [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/federal_pubs.md)
   
 
-#### Getting Started: Basic Requirements and Instructions
+#### Basic Requirements and Instructions
 
 #### Requirements
 The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code. 
