@@ -1,0 +1,27 @@
+File format is pipe delimited
+
+The file specification is pulled from [here](https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2017_publicstatic_dataformat.zip).
+
+| Field Number | Field Name                   | Data Type    | Length |
+|--------------|------------------------------|--------------|--------|
+| 1            | Activity Year                | Numeric      | 4      |
+| 2            | Respondent ID                | Alphanumeric | 10     |
+| 3            | Agency code                  | Numeric      | 1      |
+| 4            | Parent Respondent ID         | Alphanumeric | 10     |
+| 5            | Parent Name                  | Alphanumeric | 30     |
+| 6            | Parent City                  | Alphanumeric | 25     |
+| 7            | Parent State                 | Alphanumeric | 2      |
+| 8            | Region                       | Numeric      | 2      |
+| 9            | Assets                       | Numeric      | 10     |
+| 10           | Other Lender Code            | Numeric      | 1      |
+| 11           | Respondent Name              | Alphanumeric | 30     |
+| 13           | Respondent City              | Alphanumeric | 25     |
+| 14           | Respondent State             | Alphanumeric | 2      |
+| 17           | Top Holder RSSD              | Numeric      | 10     |
+| 18           | Top Holder Name              | Alphanumeric | 30     |
+| 19           | Top Holder City              | Alphanumeric | 25     |
+| 20           | Top Holder State             | Alphanumeric | 2      |
+| 21           | Top Holder Country           | Alphanumeric | 40     |
+| 22           | Respondent RSSD              | Numeric      | 10     |
+| 23           | Parent RSSD                  | Numeric      | 10     |
+| 24           | Respondent FIPS State Number | Alphanumeric | 2      |
