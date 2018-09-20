@@ -1,5 +1,5 @@
 **Table of Contents:**
-- [Repository purpose and scope](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#repository-purpose-and-scope)
+- [Repository purpose and scope](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#repository-purpose-and-scope)
 - [What is HMDA](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#what-is-hmda)
 - [HMDA Datasets](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#hmda-datasets)
 - [Integration of Census Data with HMDA](https://github.com/Kibrael/HMDA_Data_Science_Kit/blob/readme/readme.md#integration-of-census-data-with-hmda)
