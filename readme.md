@@ -7,7 +7,7 @@
 - [Official HMDA documentation](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#hmda-data-documentation)
 - [Official HMDA data publications](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#hmda-publications)
 - [Working With HMDA Data](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#working-with-hmda-data)
-- [Getting Started: Basic Requirements](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#Getting Started: Basic Requirements and Instructions)
+- [Getting Started: Basic Requirements](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#Getting-Started: Basic-Requirements-and-Instructions)
 
 
 
