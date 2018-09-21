@@ -1,7 +1,7 @@
 
 DROP TABLE IF EXISTS lar_2016;
 CREATE TABLE lar_2016 (  
-    year VARCHAR,
+    activity_year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR,
     loan_type VARCHAR,
@@ -49,5 +49,5 @@ CREATE TABLE lar_2016 (
 );
 
 COPY lar_2016
-FROM '{data_path}HMDA_Data_Science_Kit/data/lar/lar_2016.csv'
+FROM '/Users/fureym/hmda/HMDA_Data_Science_Kit/data/lar/lar_2016.csv'
     DELIMITER ',' ENCODING 'latin1';

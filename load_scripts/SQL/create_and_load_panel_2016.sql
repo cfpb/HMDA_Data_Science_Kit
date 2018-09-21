@@ -29,7 +29,7 @@ CREATE TABLE panel_2016 (
     (PANEL VARCHAR); -- LAR contains an entire LAR record
 
 COPY panel_load
-FROM '{data_path}HMDA_Data_Science_Kit/data/panel/panel_2016.txt' 
+FROM '/Users/fureym/hmda/HMDA_Data_Science_Kit/data/panel/panel_2016.txt' 
     ENCODING 'latin1';
 COMMIT;
  INSERT INTO panel_2016 (

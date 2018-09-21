@@ -14,13 +14,13 @@ CREATE TABLE panel_2008 (
     parent_name VARCHAR,
     parent_city VARCHAR,
     parent_state VARCHAR,
-    as_of_year VARCHAR,
+    activity_year VARCHAR,
     respondent_rssd VARCHAR);
  CREATE TEMPORARY TABLE panel_load
   (PANEL VARCHAR); -- LAR contains an entire LAR record
  COPY panel_load
         --Change to your local path
-FROM '{data_path}HMDA_Data_Science_Kit/data/panel/panel_2008.dat' 
+FROM '/Users/fureym/hmda/HMDA_Data_Science_Kit/data/panel/panel_2008.dat' 
     ENCODING 'latin1';
 COMMIT;
  INSERT INTO panel_2008 (
@@ -38,7 +38,7 @@ COMMIT;
     parent_name,
     parent_city,
     parent_state,
-    as_of_year,
+    activity_year,
     respondent_rssd
     )
  SELECT 

@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS ts_2014;
 CREATE TABLE ts_2014(
-	as_of_date VARCHAR,
+	activity_year VARCHAR,
 	respondent_id VARCHAR,
 	agency_code VARCHAR,
 	id_tax VARCHAR,
@@ -26,5 +26,5 @@ CREATE TABLE ts_2014(
 
 COPY ts_2014
 -- Change to your local data path
-FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2014.txt'
+FROM '/Users/fureym/hmda/HMDA_Data_Science_Kit/data/ts/ts_2014.txt'
 	DELIMITER E'\t' ENCODING 'latin1';

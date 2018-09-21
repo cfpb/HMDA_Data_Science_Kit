@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS ts_2009;
 CREATE TABLE ts_2009 (
-	as_of_date VARCHAR,
+	activity_year VARCHAR,
 	agency_code VARCHAR,
 	respondent_id VARCHAR,
 	respondent_name VARCHAR,
@@ -21,12 +21,12 @@ CREATE TEMPORARY TABLE ts_load
 
 COPY ts_load 
 -- Change to your local data path
-FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2009.dat' 
+FROM '/Users/fureym/hmda/HMDA_Data_Science_Kit/data/ts/ts_2009.dat' 
     ENCODING 'latin1';
 COMMIT;
 
 INSERT INTO ts_2009 (
-	as_of_date,
+	activity_year,
 	agency_code,
 	respondent_id,
 	respondent_name,

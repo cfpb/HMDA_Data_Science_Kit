@@ -1,7 +1,7 @@
 
 DROP TABLE IF EXISTS lar_2006;
 CREATE TABLE lar_2006(   
-    year VARCHAR,
+    activity_year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR,
     loan_type VARCHAR,
@@ -48,12 +48,12 @@ CREATE TEMPORARY TABLE lar_load
 
 COPY lar_load
 -- Change this path to your local data path.
-FROM '{data_path}HMDA_Data_Science_Kit/data/lar/lar_2006.dat';
+FROM '/Users/fureym/hmda/HMDA_Data_Science_Kit/data/lar/lar_2006.dat';
 
 COMMIT;
 
 INSERT INTO lar_2006 (
-    year,
+    activity_year,
     respondent_id,
     agency_code,
     loan_type,

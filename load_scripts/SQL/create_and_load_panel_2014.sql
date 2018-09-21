@@ -27,7 +27,7 @@ CREATE TABLE panel_2014 (
  CREATE TEMPORARY TABLE panel_load
     (PANEL VARCHAR); -- LAR contains an entire LAR record
  COPY panel_load
-FROM '{data_path}HMDA_Data_Science_Kit/data/panel/panel_2014.txt' 
+FROM '/Users/fureym/hmda/HMDA_Data_Science_Kit/data/panel/panel_2014.txt' 
     ENCODING 'latin1';
 COMMIT;
  INSERT INTO panel_2014 (
