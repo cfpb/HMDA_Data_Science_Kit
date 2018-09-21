@@ -19,6 +19,6 @@ CREATE TABLE ts_2017 (
 
 COPY ts_2017
 FROM 
-'/Users/fureym/hmda/HMDA_Data_Science_Kit/data/ts/ts_2017.txt'
+'{data_path}HMDA_Data_Science_Kit/data/ts/ts_2017.txt'
     DELIMITER '|' ENCODING 'latin1';
 COMMIT;

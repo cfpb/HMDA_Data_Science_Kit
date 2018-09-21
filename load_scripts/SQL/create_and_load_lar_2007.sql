@@ -48,7 +48,7 @@ CREATE TEMPORARY TABLE lar_load
 
 COPY lar_load
 -- Change this path to your local data path.
-FROM '/Users/fureym/hmda/HMDA_Data_Science_Kit/data/lar/lar_2007.dat';
+FROM '{data_path}HMDA_Data_Science_Kit/data/lar/lar_2007.dat';
 
 COMMIT;
 
