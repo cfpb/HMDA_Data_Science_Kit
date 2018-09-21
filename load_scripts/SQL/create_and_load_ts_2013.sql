@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS ts_2013;
+DROP TABLE IF EXISTS hmda_public.ts_2013;
 CREATE TABLE ts_2013 (
 	as_of_date VARCHAR,
 	agency_code VARCHAR,
@@ -25,7 +25,7 @@ FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2013.dat'
     ENCODING 'latin1';
 COMMIT;
 
-INSERT INTO ts_2013 (
+INSERT INTO hmda_public.ts_2013 (
 	as_of_date,
 	agency_code,
 	respondent_id,

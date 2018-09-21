@@ -47,8 +47,8 @@ CREATE TABLE lar_2017 (
     one_to_four_units VARCHAR,
     application_date_indicator VARCHAR);
 
-COPY lar_2017
+COPY hmda_public.lar_2017
 FROM '/Users/roellk/HMDA/HMDA_Data_Science_Kit/data/lar/lar_2017.txt'
 DELIMITER '|' ENCODING 'latin1';
-COMMIT;
+
 

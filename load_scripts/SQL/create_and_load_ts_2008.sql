@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS ts_2008;
-CREATE TABLE ts_2008 (
+DROP TABLE IF EXISTS hmda_public.ts_2008;
+CREATE TABLE hmda_public.ts_2008 (
 	as_of_date VARCHAR,
 	agency_code VARCHAR,
 	respondent_id VARCHAR,
@@ -25,7 +25,7 @@ FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2008.dat'
     ENCODING 'latin1';
 COMMIT;
 
-INSERT INTO ts_2008 (
+INSERT INTO hmda_public.ts_2008 (
 	as_of_date,
 	agency_code,
 	respondent_id,

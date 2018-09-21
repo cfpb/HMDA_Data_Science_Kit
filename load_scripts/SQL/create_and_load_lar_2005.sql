@@ -1,6 +1,6 @@
 
-DROP TABLE IF EXISTS lar_2005;
-CREATE TABLE lar_2005(   
+DROP TABLE IF EXISTS hmda_public.lar_2005;
+CREATE TABLE hmda_public.lar_2005(   
     year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR,
@@ -50,7 +50,7 @@ FROM '{data_path}HMDA_Data_Science_Kit/data/lar/lar_2005.dat';
 
 COMMIT;
 
-INSERT INTO lar_2005 (
+INSERT INTO hmda_public.lar_2005 (
     year,
     respondent_id,
     agency_code,
