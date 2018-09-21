@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS ts_2016;
 CREATE TABLE ts_2016(
-	as_of_date VARCHAR,
+	activity_year VARCHAR,
 	respondent_id VARCHAR,
 	agency_code VARCHAR,
 	id_tax VARCHAR,

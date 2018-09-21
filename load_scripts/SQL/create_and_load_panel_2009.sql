@@ -14,7 +14,7 @@ CREATE TABLE panel_2009 (
     parent_name VARCHAR,
     parent_city VARCHAR,
     parent_state VARCHAR,
-    as_of_year VARCHAR,
+    activity_year VARCHAR,
     respondent_rssd VARCHAR);
  CREATE TEMPORARY TABLE panel_load
   (PANEL VARCHAR); -- LAR contains an entire LAR record
@@ -38,7 +38,7 @@ COMMIT;
     parent_name,
     parent_city,
     parent_state,
-    as_of_year,
+    activity_year,
     respondent_rssd
     )
  SELECT 

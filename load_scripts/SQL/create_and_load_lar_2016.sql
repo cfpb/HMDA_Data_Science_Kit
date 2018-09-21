@@ -1,7 +1,7 @@
 
 DROP TABLE IF EXISTS lar_2016;
 CREATE TABLE lar_2016 (  
-    year VARCHAR,
+    activity_year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR,
     loan_type VARCHAR,
