@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS hmda_public.ts_2014;
 CREATE TABLE ts_2014(
-	as_of_date VARCHAR,
+	activity_year VARCHAR,
 	respondent_id VARCHAR,
 	agency_code VARCHAR,
 	id_tax VARCHAR,

@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS hmda_public.ts_2008;
 CREATE TABLE hmda_public.ts_2008 (
-	as_of_date VARCHAR,
+	activity_year VARCHAR,
 	agency_code VARCHAR,
 	respondent_id VARCHAR,
 	respondent_name VARCHAR,
@@ -26,7 +26,7 @@ FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2008.dat'
 COMMIT;
 
 INSERT INTO hmda_public.ts_2008 (
-	as_of_date,
+	activity_year,
 	agency_code,
 	respondent_id,
 	respondent_name,

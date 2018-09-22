@@ -1,7 +1,6 @@
-
 DROP TABLE IF EXISTS hmda_public.lar_2004;
 CREATE TABLE hmda_public.lar_2004(   
-    year VARCHAR,
+    activity_year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR,
     loan_type VARCHAR,
@@ -53,7 +52,7 @@ FROM '{data_path}HMDA_Data_Science_Kit/data/lar/lar_2004.dat';
 COMMIT;
 
 INSERT INTO hmda_public.lar_2004 (
-    year,
+    activity_year,
     respondent_id,
     agency_code,
     loan_type,

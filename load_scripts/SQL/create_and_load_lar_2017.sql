@@ -1,4 +1,3 @@
-
 DROP TABLE IF EXISTS lar_2017;
 CREATE TABLE lar_2017 (  
     activity_year VARCHAR,

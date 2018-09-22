@@ -1,7 +1,6 @@
-
 DROP TABLE IF EXISTS hmda_public.lar_2015;
 CREATE TABLE hmda_public.lar_2015 (  
-    year VARCHAR,
+    activity_year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR,
     loan_type VARCHAR,
