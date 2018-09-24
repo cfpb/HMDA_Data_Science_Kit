@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS panel_2015;
-CREATE TABLE panel_2015 (
+DROP TABLE IF EXISTS hmda_public.panel_2015;
+CREATE TABLE hmda_public.panel_2015 (
     activity_year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR,
@@ -30,7 +30,7 @@ CREATE TABLE panel_2015 (
 FROM '{data_path}HMDA_Data_Science_Kit/data/panel/panel_2015.txt' 
     ENCODING 'latin1';
 COMMIT;
- INSERT INTO panel_2015 (
+ INSERT INTO hmda_public.panel_2015 (
     activity_year,
     respondent_id,
     agency_code,

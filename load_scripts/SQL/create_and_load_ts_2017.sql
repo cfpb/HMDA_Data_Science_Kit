@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS ts_2017;
-CREATE TABLE ts_2017 (
+DROP TABLE IF EXISTS hmda_public.ts_2017;
+CREATE TABLE hmda_public.ts_2017 (
 	activity_year VARCHAR,
 	respondent_id VARCHAR,
 	agency_code VARCHAR,
@@ -17,7 +17,7 @@ CREATE TABLE ts_2017 (
 	lar_count VARCHAR
 	);
 
-COPY ts_2017
+COPY hmda_public.ts_2017
 FROM 
 '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2017.txt'
     DELIMITER '|' ENCODING 'latin1';

@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS panel_2017;
-CREATE TABLE panel_2017 (
+DROP TABLE IF EXISTS hmda_public.panel_2017;
+CREATE TABLE hmda_public.panel_2017 (
 	activity_year VARCHAR,
 	respondent_id VARCHAR,
 	agency_code VARCHAR,
@@ -22,7 +22,7 @@ CREATE TABLE panel_2017 (
 	parent_rssd VARCHAR,
 	respondent_state_fips VARCHAR);
 
-COPY panel_2017
+COPY hmda_public.panel_2017
 FROM '{data_path}HMDA_Data_Science_Kit/data/panel/panel_2017.txt' 
 	DELIMITER '|' ENCODING 'latin1';
 COMMIT;

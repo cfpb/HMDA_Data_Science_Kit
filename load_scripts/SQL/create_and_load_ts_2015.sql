@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS ts_2015;
-CREATE TABLE ts_2015(
+DROP TABLE IF EXISTS hmda_public.ts_2015;
+CREATE TABLE hmda_public.ts_2015(
 	activity_year VARCHAR,
 	respondent_id VARCHAR,
 	agency_code VARCHAR,
@@ -24,7 +24,7 @@ CREATE TABLE ts_2015(
 	edit_status VARCHAR
 );
 
-COPY ts_2015
+COPY hmda_public.ts_2015
 -- Change to your local data path
 FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2015.txt'
 	DELIMITER E'\t' ENCODING 'latin1';
