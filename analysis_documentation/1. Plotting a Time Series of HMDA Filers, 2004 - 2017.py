@@ -197,7 +197,7 @@ def time_series(sql = 'sql_commands/filer_count_time_series.sql', start = 2004, 
 # In[ ]:
 
 
-time_series().to_csv('analysis_output/data/filer_count_time_series.csv', sep = "|")
+time_series().to_csv('analysis_output/tables/filer_count_time_series.csv', sep = "|")
 time_series()
 
 
