@@ -118,4 +118,5 @@ python/DS_Store
 #ipbny checkpoints
 .ipynb_checkpoints
 Python/.ipynb_checkpoints
+.ipynb
 
