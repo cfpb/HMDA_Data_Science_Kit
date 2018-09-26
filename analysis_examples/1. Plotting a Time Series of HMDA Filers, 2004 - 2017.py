@@ -217,14 +217,14 @@ def time_series(sql_command=None,cur=None,start=2004,end=2017,
     """ 
     This function requires a path to a SQL command in a file that pulls years
     as the first column and groups by years. The function also requires a cursor definition. 
-    The default start year is 2004, the default
-    end year is 2017, the default column1 name is "Year" and the default column2
-    name is "Filers." 
+    The default start year is 2004, the default end year is 2017, 
+    the default column1 name is "Year" and the default column2 name is "Filers." 
     
-    This function produces a time series analysis, taking in a two-column output from a SQL command file
-    in which years are the first column, a start year and an end year to produce a Pandas dataframe. 
+    This function produces a time series analysis, 
+    taking in a two-column output from a SQL command file
+    in which years are the first column, 
+    a start year and an end year to produce a Pandas dataframe. 
     """
-    #The following 
     years = list(range(start, (end+1)))
     results_list = []
     for year in years:
@@ -296,12 +296,12 @@ def bar_chart(data=data, title=None,
     """
     if data is not None:
         if x_label is None:
-            x_label = data.columns[0] #Uses the year column from the time_series data frame as x.
-            x = data[x_label] #Uses the year column from the time_series data frame as x.
+            x_label = data.columns[0] 
+            x = data[x_label] 
         x = data[x_label] #Uses the year column from the time_series data frame as x.
         if y_label is None:
-            y_label = data.columns[1] #Uses the count of filers from the time_series data frame as y.
-            y = data[y_label] #Uses the count of filers from the time_series data frame as y.
+            y_label = data.columns[1] 
+            y = data[y_label] 
         y = data[y_label] #Uses the count of filers from the time_series data frame as y.
         fig = plt.figure(figsize = figsize) #Adjusts the size of the bar chart. 
         plt.bar(x, y, color = color) #Creates a bar chart using x and y, setting the color as blue. 
