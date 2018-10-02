@@ -1,4 +1,4 @@
-Year|Filers
+activity_year|count
 2004|8871
 2005|8873
 2006|8902
