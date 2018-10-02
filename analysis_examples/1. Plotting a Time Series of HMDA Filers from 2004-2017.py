@@ -71,7 +71,7 @@ import matplotlib.pyplot as plt #imports the Matplot library and renames it "plt
 
 #Establish connection parameters
 #If you have established a username and password, change user and password below to your own username and password.
-connection_params = {"user":"fureym", 
+connection_params = {"user":"user", 
                      "password":"", 
                      "dbname":"hmda", 
                      "host":"localhost"}
@@ -229,11 +229,9 @@ results_df.head() #Shows the top 5 rows of the dataframe
 
 # 
 # ### Using a Function to Create a Timeseries of Counts
-# Now, one may be able to iterate over the number of years needed to create the time series. To make this simple and avoid writing out a list of years, a function called "time series" may be created with the code above to pass in a sql_command file, a start-year, and an end-year, producing a dataframe of output. One may set as default the parameters for producing a time series of filers between 2004 and 2017.
+# A function may be created to iterate over a number of files of Transmittal Sheet data. The code below demonstrates a function that passes in a sql_command file, a start-year, and an end-year, producing a dataframe of output. The default for the function produces a time series between years 2004 and 2017.
 # 
-# One may also change the column names to "Year" and "Filers," and use the "loc" function to reorder the columns.
-# 
-# 
+# As shown below, the Pandas "loc" function may be used to reorder columns.
 
 # In[ ]:
 
@@ -363,10 +361,4 @@ def bar_chart(x_data=None, y_data=None, title="Chart Title", x_label=None, y_lab
 #Create a bar chart using the function defined above.
 bar_chart(x_data=time_series_df['activity_year'], y_data=time_series_df['count'],
          title="Number of HMDA Filers, 2004-2017", figsize=(10,5))
-
-
-# In[ ]:
-
-
-
 
