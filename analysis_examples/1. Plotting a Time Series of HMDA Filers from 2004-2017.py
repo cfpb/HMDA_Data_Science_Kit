@@ -71,7 +71,7 @@ import matplotlib.pyplot as plt #imports the Matplot library and renames it "plt
 
 #Establish connection parameters
 #If you have established a username and password, change user and password below to your own username and password.
-connection_params = {"user":"user", 
+connection_params = {"user":"postgres", 
                      "password":"", 
                      "dbname":"hmda", 
                      "host":"localhost"}
@@ -229,7 +229,7 @@ results_df.head() #Shows the top 5 rows of the dataframe
 
 # 
 # ### Using a Function to Create a Timeseries of Counts
-# A function may be created to iterate over a number of files of Transmittal Sheet data. The code below demonstrates a function that passes in a sql_command file, a start-year, and an end-year, producing a dataframe of output. The default for the function produces a time series between years 2004 and 2017.
+# The code below demonstrates a function that passes in a sql_command file, a start-year, and an end-year, producing a dataframe of output. The default for the function produces a time series between years 2004 and 2017.
 # 
 # As shown below, the Pandas "loc" function may be used to reorder columns.
 
