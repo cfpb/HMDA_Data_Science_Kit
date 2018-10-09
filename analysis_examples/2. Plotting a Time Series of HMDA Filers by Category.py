@@ -4,7 +4,7 @@
 # # Plotting a Time Series of HMDA Filers by Category
 
 # ### Scope of Notebook
-# This notebook will build on the previous analsis example of counting the number of institutions that have filed HMDA data from 2004-2017, by demonstrating how to filter counts by a particular category. The code below will focus on counts taken from the Transmittal Sheet dataset inside the HMDA collections.
+# This notebook will build on the [previous analysis example](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/analysis_examples/1.%20Plotting%20a%20Time%20Series%20of%20HMDA%20Filers%20from%202004-2017.ipynb) of counting the number of institutions that have filed HMDA data from 2004-2017, by demonstrating how to filter counts by a particular category. The code below will focus on counts taken from the Transmittal Sheet dataset inside the HMDA collections.
 # 
 # The example will show how to pull Transmittal Sheet data from a local Postgres database, filter by a particular category, write the data to a pipe-delimited text file, and produce a graph in the Jupyter notebook as well as save the graph to a .png file.
 # 
@@ -45,7 +45,7 @@ import matplotlib.pyplot as plt #imports the Matplot library and renames it "plt
 
 
 # ### Connect to the Database
-# The connection to the database, which was demonstrated in the previous example, will use a locally hosted database and the hmda database created during initial setup. Please see Analysis Example 1 for further details on connecting using a locally hosted database. 
+# The connection to the database, which was demonstrated in the [previous example](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/analysis_examples/1.%20Plotting%20a%20Time%20Series%20of%20HMDA%20Filers%20from%202004-2017.ipynb), will use a locally hosted database and the hmda database created during initial setup. Please see Analysis Example 1 for further details on connecting using a locally hosted database. 
 
 # In[ ]:
 
@@ -120,7 +120,7 @@ sql_base = """SELECT
 
 
 # ### Selecting the Number of Filers by a Particular State
-# The code above may be placed in another sql file, which may be called by the the time series function defined in the previous example.  
+# The code above may be placed in another sql file, which may be called by the the time series function defined in the previous example. The code below may be used to select for the number of filers who have their headquarters in New York. Respondent_state refers to the headquarters location of the institution and does not necessarily reflect lending patterns in that geography.
 
 # In[ ]:
 
@@ -142,7 +142,7 @@ results_df.head() #Shows the top 5 rows of the dataframe
 
 
 # ### Using A Function to Create a Timeseries of Counts by Category
-# Drawing from the previous analysis example, a function may defined to create a Pandas dataframe of filer counts by a category. The sql command above that variabalizes by category may be placed in file. 
+# A function may defined to create a Pandas dataframe of filer counts by a category. The sql command above that variabalizes by category may be placed in file. 
 # 
 # The code below demonstrates a function that passes in a sql_command file, a start-year, an end-year, and an extention to the sql_command file. The default for the function produces a time series between years 2004 and 2017 in the form of a Pandas dataframe.
 # 
@@ -153,7 +153,7 @@ results_df.head() #Shows the top 5 rows of the dataframe
 
 def time_series_by_category(sql_file=None, cur=None, extention=None, start=2004, end=2017):
     """ 
-    This function requires a path to a SQL fie and a cursor object. 
+    This function requires a path to a SQL file and a cursor object. 
     The default start year is 2004, the default end year is 2017.
     
     This function will call the passed SQL file against each of the years 
