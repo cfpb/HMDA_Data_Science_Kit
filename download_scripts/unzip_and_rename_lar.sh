@@ -15,7 +15,7 @@ unzip data/lar/lar_2008.zip -d data/lar
 unzip data/lar/lar_2007.zip -d data/lar
 unzip data/lar/lar_2006.zip -d data/lar
 unzip data/lar/lar_2005.zip -d data/lar
- 
+unzip data/lar/lar_2004.zip -d data/lar
 
 mv data/lar/2017_public_lar.txt data/lar/lar_2017.txt
 mv data/lar/2016HMDALAR\ -\ National.csv data/lar/lar_2016.csv
