@@ -23,6 +23,6 @@ CREATE TABLE hmda_public.panel_2017 (
 	respondent_state_fips VARCHAR);
 
 COPY hmda_public.panel_2017
-FROM '{data_path}HMDA_Data_Science_Kit/data/panel/panel_2017.txt' 
+FROM '/Users/mattlevitan/HMDA_Data_Science_Kit/data/panel/panel_2017.txt' 
 	DELIMITER '|' ENCODING 'latin1';
 COMMIT;

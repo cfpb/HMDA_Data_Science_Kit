@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #LAR URL list for data downloading
 lar_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2017_public_lar_txt.zip"
@@ -37,7 +37,7 @@ ts_2005_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-
 ts_2004_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTS04/u2004ts.public.dat"
 
 #store download URLs in list for later iteration
-declare -a ts_url_list=(${ts_2004_url} ${ts_2005_url} ${ts_2006_url} ${ts_2007_url} ${ts_2008_url} ${ts_2009_url} ${ts_2010_url} 
+declare -a ts_url_list=(${ts_2004_url} ${ts_2005_url} ${ts_2006_url} ${ts_2007_url} ${ts_2008_url} ${ts_2009_url} ${ts_2010_url}
 	${ts_2011_url} ${ts_2012_url} ${ts_2013_url} ${ts_2014_url} ${ts_2015_url} ${ts_2016_url} ${ts_2017_url})
 
 #Panel URL list for data downloading
@@ -62,7 +62,7 @@ declare -a panel_url_list=(${panel_2004_url} ${panel_2005_url} ${panel_2006_url}
 
 #declaration of variables used in later logic
 FORCE="false" #set force download (overwrite) to false
-TS="false" #set download of TS files to false 
+TS="false" #set download of TS files to false
 LAR="false" #set download of LAR files to false
 PANEL="false" #set download of Panel files to false
 NC="-nc" #part of a wget call construction for omitting downloads of files already present, can be overridden by -F
@@ -87,7 +87,7 @@ while getopts "asptlFh" OPTION; do
 						NC=""
 						;;
 
-				a)		
+				a)
 						echo "Panel Files:"
 						echo "panel_2017"
 						echo "panel_2016"
@@ -199,7 +199,7 @@ if [ $# -eq 0 ]; then
 	   fi
 	   wget -q -nc -c -t=10 --show-progress -O data/ts/${TS_FILENAME} "${i}" #write file to disk
 	done #end loop
-	
+
 	#iterate over Panel URL array
 	YEAR=2004 #set start year to 2004, this code does not support downloads prior to 2004
 	for i in "${panel_url_list[@]}"
@@ -219,7 +219,7 @@ if [ $# -eq 0 ]; then
 		fi
 		wget -q -nc -c -t=10 --show-progress -O data/panel/${PANEL_FILENAME} "${i}"
 	done
-	
+
 	#iterate over LAR URL array
 	YEAR=2004 #set start year to 2004, this code does not support downloads prior to 2004
 	for i in "${lar_url_list[@]}"
@@ -371,4 +371,3 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 	#download the specific file using passed force parameter
 	wget -q ${NC} -c -t=10 --show-progress -O data/$FOLDER/"${SPECIFIC_FILE}${FILE_EXT}" "${URL}"
 fi
-
