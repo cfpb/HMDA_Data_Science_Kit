@@ -1,20 +1,20 @@
-**Table of Contents:**
-- [Repository purpose and scope](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#repository-purpose-and-scope)
-- [What is HMDA](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#what-is-hmda)
-- [HMDA Datasets](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#hmda-datasets)
-- [Integration of Census Data with HMDA](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#integration-of-census-data-with-hmda)
+### Table of Contents
 
-- [Official HMDA documentation](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#hmda-data-documentation)
-- [Official HMDA data publications](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#hmda-publications)
-- [Working With HMDA Data](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#working-with-hmda-data)
-- [Getting Started: Basic Requirements](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#basic-requirements-and-instructions)
+- [Repository purpose and scope](#repository-purpose-and-scope)
+- [What is HMDA](#what-is-hmda)
+- [HMDA Datasets](#hmda-datasets)
+- [Integration of Census Data with HMDA](#integration-of-census-data-with-hmda)
+- [Official HMDA documentation](#hmda-data-documentation)
+- [Official HMDA data publications](#hmda-publications)
+- [Working With HMDA Data](#working-with-hmda-data)
+- [Getting Started: Basic Requirements](#basic-requirements-and-instructions)
 
+## Repository Purpose and Scope:
 
-
-#### Repository Purpose and Scope:
 The primary goal of this repository is to provide data users with tools to enable them to produce accurate analytics results. Additionally, this repository provides an overview of HMDA resources, publications, and guidelines for proper use. This repository does not provide statutory interpretation or compliance assistance. 
 
-#### What Is HMDA?
+## What Is HMDA?
+
 HMDA refers to the [Home Mortgage Disclosure Act of 1975](https://www.gpo.gov/fdsys/pkg/USCODE-2011-title12/pdf/USCODE-2011-title12-chap29.pdf).
 HMDA requires many financial institutions to maintain, report, and publicly disclose loan-level information about mortgages. HMDA was originally enacted by Congress in 1975 and is implemented by [Regulation C](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/regulation-c-home-mortgage-disclosure-act/). 
 
@@ -22,12 +22,14 @@ Congress amended HMDA in 2010 and the Bureau finalized a rule implementing chang
 
 The senate bill S2155 modified some reporting requirements for the 2018 data collection. These changes will be outlined in upcoming publications.
 
-**What is the purpose of HMDA?**
+#### What is the purpose of HMDA?
+
 - To provide the public with information that will help show whether financial institutions are serving the housing credit needs of the neighborhoods and communities in which they are located. 
 - To aid public officials in targeting public investments from the private sector to areas where they are needed. 
 - The FIRREA amendments of 1989 require the collection and disclosure of data about applicant and borrower characteristics to assist in identifying possible discriminatory lending patterns and enforcing antidiscrimination statutes.
 
-#### HMDA Datasets
+## HMDA Datasets
+
 Three raw data files are published annually under HMDA authority. File formats (and schemas) vary by data source. The National Archives (NARA) use a .DAT format, the FFIEC site maintained by the Federal Reserve Board (FRB) use a .CSV format (with Census data appended) and the FFIEC site maintained by the BCFP us a pipe-delimited .TXT format (with Census data appended). Links to HMDA datasets are available in this [file](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
 
 These datasets include:
@@ -37,13 +39,14 @@ These datasets include:
 
 - The HMDA Reporter Panel: This dataset contains additional information regarding financial institutions such as identifier links to the National Information Center (NIC) and hierarchy information such as parent and top holder. The HMDA Reporter Panel is assembled by the Bureau on behalf of the FFIEC (beginning in 2017). Panel schemas can be found in this [folder]().
 
+## Integration of Census Data with HMDA
 
-#### Integration of Census Data with HMDA
 HMDA data is often joined to Census data to show context for the mortgage data. The FFIEC joins the following to the HMDA LAR data: area population, minority population percentage, FFIEC median family income, tract to MSA/MD median family income percentage, number of owner-occupied units, and the number of 1-4 family units. These data are joined at the tract level to provide context for mortgage activity in the relevant geography. The base data for this join are made available by the FFIEC on this [website](https://www.ffiec.gov/censusapp.htm). The year of the Census data correspond to the HMDA collection year. 
 
 For examples on how to handle Census data and join Census data to LAR data please see the [Census directory]().
 
-#### HMDA Data Documentation
+## HMDA Data Documentation
+
 - [2018 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2018/2018-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2018.
 - [2017 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2017/2017-hmda-fig.pdf): Outlines the the file format, data fields, business rules, and valid values for data submitted in 2017.
 - [BCFP Small Entity Compliance Guide](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/cfpb_hmda_small-entity-compliance-guide.pdf): The purpose of this guide is to provide an easy-to-use summary of Regulation C, as amended by the HMDA Rule, and to highlight information that financial institutions and those that work with them might find helpful when implementing the HMDA Rule.
@@ -54,16 +57,18 @@ For examples on how to handle Census data and join Census data to LAR data pleas
 - [2018 Transaction Coverage](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/201709_cfpb_2018-hmda-institutional-coverage.pdf): Outlines which transactions are covered by Regulation C.
 - [HMDA Loan Scenarios](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/HMDA-Loan-Scenarios.pdf): Fictional scenarios designed to assist in compilation of LAR data to meet requirements under Regulation C.
 
-#### Working With HMDA Data
+## Working With HMDA Data
+
 The HMDA data are complex and care must be taken to ensure that analytics results are accurate. Please see [Working With HMDA Data]() for explanations of how to load, segment the data, handle NA values, and create accurate time-series tabulations.
 
-#### HMDA Publications
+## HMDA Publications
+
 For a list of HMDA publications, see [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/federal_pubs.md)
   
+## Basic Requirements and Instructions
 
-#### Basic Requirements and Instructions
+### Requirements
 
-#### Requirements
 The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code. 
 
 The Python resources assume that a functioning installation of [Python 3.5 or greater](https://www.python.org/downloads/) or greater is present. Convention in these instructions and code resources will use python3 to invoke python scripts. If two versions of Python are not present, this command may need to be changed to python, without the 3.
@@ -71,7 +76,8 @@ The Python resources assume that a functioning installation of [Python 3.5 or gr
 This repository has a requirements.txt file that can be used to install the Python libraries used in the repository:
 - `pip install -r requirements.txt` 
 
-#### Downloading and Unzipping Data
+### Downloading and Unzipping Data
+
 To begin using the HMDA data you will first need to download the data. A list of data resources is available in [HMDA data links](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
 
 These data can be downloaded manually from the links listed or the following script can be run from the HMDA_Data_Science_Kit directory:  
@@ -82,50 +88,53 @@ The script can download HMDA ultimate data files for LAR, Transmittal Sheet, and
 Running the script without flags will download all LAR, Transmittal Sheet, and Panel files that are not present. 
 
 The script accepts the following option flags:
-- -a: Prints to console the available files for download. 
-- -s: Allows a specific file to be downloaded if it is not present. The name convention for specific files is as follows: lar_<year>, panel_<year>, or ts_<year>.
-- -p: Downloads all Panel files that are not present.
-- -t: Downloads all Transmittal Sheet files that are not present.
-- -l: Downloads all LAR files that are not present.
-- -F: Deletes the file or file types to be downloaded (the files are then redownloaded).
-- -h: Prints to console the instructions for using the script.
+- `-a`: Prints to console the available files for download. 
+- `-s`: Allows a specific file to be downloaded if it is not present. The name convention for specific files is as follows: lar_<year>, panel_<year>, or ts_<year>.
+- `-p`: Downloads all Panel files that are not present.
+- `-t`: Downloads all Transmittal Sheet files that are not present.
+- `-l`: Downloads all LAR files that are not present.
+- `-F`: Deletes the file or file types to be downloaded (the files are then redownloaded).
+- `-h`: Prints to console the instructions for using the script.
 
-Usage examples:
-To download LAR files: `bash download_scripts/download_hmda.sh -l`
-To download Panel files: `bash download_scripts/download_hmda.sh -p`
-To download Transmittal Sheet files: `bash download_scripts/download_hmda.sh -t`
-To download a specific file: `bash download_scripts/download_hmda.sh -s filename`
-To delete and download Panel files: `bash download_scripts/download_hmda.sh -Fp`
-To delete and download a specific file: `bash download_scripts/download_hmda.sh -Fs filename`
-To delete and download LAR 2004: `bash download_scripts/download_hmda.sh -Fs lar_2004`
+#### Usage examples
 
-Download Troubleshooting:
+- To download LAR files: `bash download_scripts/download_hmda.sh -l`
+- To download Panel files: `bash download_scripts/download_hmda.sh -p`
+- To download Transmittal Sheet files: `bash download_scripts/download_hmda.sh -t`
+- To download a specific file: `bash download_scripts/download_hmda.sh -s filename`
+- To delete and download Panel files: `bash download_scripts/download_hmda.sh -Fp`
+- To delete and download a specific file: `bash download_scripts/download_hmda.sh -Fs filename`
+- To delete and download LAR 2004: `bash download_scripts/download_hmda.sh -Fs lar_2004`
+
+#### Download Troubleshooting
+
 Sometimes files from the National Archives fail to download correctly. An indicator that this happens is the presence of a file with the correct name (such as LAR_20013.zip) that has a filesize of 4kb. In these cases the file must be deleted and redownloaded. One way to do this is:
  - `bash download_scripts/download_hmda.sh -Fs <filename>`.
 
-Unzipping Compressed Files:
+**Unzipping Compressed Files**
+
 All of the LAR files, and several of the Panel and Transmittal Sheets download as zip files. Prior to loading these data the files must be unzipped. To do so, run the following script:
 - `bash download_scripts/unzip_all.sh`
 
 The above script will unzip all the zipped files and standardize the names of the files.
 
 Alternatively, the LAR, Panel, and Transmittal Sheet files can be unzipped as groups using the following commands:
+
 - `bash download_scripts/unzip_and_rename_lar.sh`
 - `bash download_scripts/unzip_panel.sh`
 - `bash download_scripts/unzip_ts.sh`
-
 
 ### Creating Postgres Tables and Loading Data
 
 The default installation of Postgres should create both a Postgres role (superuser account) and a Postgres database. The default behavior of the load scripts uses these for login. If the role or the database are not present then a user and/or database will need to be specified when running the load scripts. Examples are provided later in this section.
 
 Available option flags for the load scripts are as follows:
-- -u: Sets the user role for the Postgres connection, default is postgres.
-- -p: Sets the password for the Postgres connection, default is blank.
-- -d: Sets the database for connection, default is postgres.
-- -h: Sets the database host, default is localhost.
-- -o: Sets the database connection port, the default is 5432.
-- --help: Displays the options available for the script.
+- `-u`: Sets the user role for the Postgres connection, default is postgres.
+- `-p`: Sets the password for the Postgres connection, default is blank.
+- `-d`: Sets the database for connection, default is postgres.
+- `-h`: Sets the database host, default is localhost.
+- `-o`: Sets the database connection port, the default is 5432.
+- `--help`: Displays the options available for the script.
 
 The script below creates a HMDA database on an existing Postgres installation, creates the hmda_public schema, creates tables, and loads data:
 - `bash load_scripts/create_hmda_db.sh`
@@ -135,7 +144,8 @@ To load subsets of the HMDA data (LAR, Transmittal Sheet, or Panel) use the scri
 - `bash load_scripts/create_and_load_ts_2004_2017.sh`
 - `bash load_scripts/create_andload_panel_2004_2017.sh`
 
-Using Options Flags:
+#### Using Options Flags
+
 All of the load scripts support the same option flags. The example below use the create_hmda_db.sh script, but any script can be substituted.
 
 To specify a username:
@@ -150,13 +160,19 @@ To specify a database:
 To specify a username and password:
 - `bash load_scripts/create_hmda_db.sh -u <username> -p <password>`
 
-
 The SQL scripts provided in HMDA_Data_Science_Kit/load_scripts/SQL require an update to the path for the data sources before they can be used. The placeholder is {data_path}. This placeholder is replaced with the full path to the HMDA data when any of the load scripts are run. For example {data_path}HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat' on a Mac will become /Users/<username>/HMDA_Data_Science_Kit/data/lar/lar_ult_2004.dat'.
 
 This change can be undone by running the following:
 - `python3 load_scripts/reset_path.py`
 
+### Quickstart
 
+To download all supported HMDA data, unzip any zipped data, and add the data to a Postgres database, you'll run the following commands in order:
 
+```
+bash download_scripts/download_hmda.sh
+bash download_scripts/unzip_all.sh
+bash load_scripts/create_and_load_hmda.sh
+```
 
-
+After the downloading step, you'll need to check if all files successfully downloaded. [See above for more information](#download-troubleshooting).
