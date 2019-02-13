@@ -168,12 +168,12 @@ This change can be undone by running the following:
 
 ### Quickstart
 
-To download the data, unzip the data, and add it to the Postgres database
+To download all supported HMDA data, unzip any zipped data, and add the data to a Postgres database, you'll run the following commands in order.
 
 ```
 bash download_scripts/download_hmda.sh
 bash download_scripts/unzip_all.sh
-bash load_scripts/create_and_load_lar_2004_2017.sh
-bash load_scripts/create_and_load_ts_2004_2017.sh
-bash load_scripts/create_andload_panel_2004_2017.sh
+bash load_scripts/create_hmda_db.sh
 ```
+
+After the downloading step, you'll need to check if all files successfully downloaded. [See above for more information](#download-troubleshooting).
