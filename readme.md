@@ -167,12 +167,12 @@ This change can be undone by running the following:
 
 ### Quickstart
 
-To download all supported HMDA data, unzip any zipped data, and add the data to a Postgres database, you'll run the following commands in order.
+To download all supported HMDA data, unzip any zipped data, and add the data to a Postgres database, you'll run the following commands in order:
 
 ```
 bash download_scripts/download_hmda.sh
 bash download_scripts/unzip_all.sh
-bash load_scripts/create_hmda_db.sh
+bash load_scripts/create_and_load_hmda.sh
 ```
 
 After the downloading step, you'll need to check if all files successfully downloaded. [See above for more information](#download-troubleshooting).
