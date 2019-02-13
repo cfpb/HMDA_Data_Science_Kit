@@ -1,14 +1,13 @@
-**Table of Contents:**
+### Table of Contents
 
-- [Repository purpose and scope](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#repository-purpose-and-scope)
-- [What is HMDA](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#what-is-hmda)
-- [HMDA Datasets](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#hmda-datasets)
-- [Integration of Census Data with HMDA](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#integration-of-census-data-with-hmda)
-
-- [Official HMDA documentation](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#hmda-data-documentation)
-- [Official HMDA data publications](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#hmda-publications)
-- [Working With HMDA Data](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#working-with-hmda-data)
-- [Getting Started: Basic Requirements](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/readme.md#basic-requirements-and-instructions)
+- [Repository purpose and scope](#repository-purpose-and-scope)
+- [What is HMDA](#what-is-hmda)
+- [HMDA Datasets](#hmda-datasets)
+- [Integration of Census Data with HMDA](#integration-of-census-data-with-hmda)
+- [Official HMDA documentation](#hmda-data-documentation)
+- [Official HMDA data publications](#hmda-publications)
+- [Working With HMDA Data](#working-with-hmda-data)
+- [Getting Started: Basic Requirements](#basic-requirements-and-instructions)
 
 ## Repository Purpose and Scope:
 
