@@ -48,5 +48,5 @@ CREATE TABLE hmda_public.lar_2016 (
 );
 
 COPY hmda_public.lar_2016
-FROM '/Users/mattlevitan/HMDA_Data_Science_Kit/data/lar/lar_2016.csv'
+FROM '{data_path}HMDA_Data_Science_Kit/data/lar/lar_2016.csv'
     DELIMITER ',' ENCODING 'latin1';

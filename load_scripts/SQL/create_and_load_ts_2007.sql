@@ -17,12 +17,12 @@ CREATE TABLE hmda_public.ts_2007 (
 	edit_status VARCHAR,
 	id_tax VARCHAR);
 
-CREATE TEMPORARY TABLE ts_load 
+CREATE TEMPORARY TABLE ts_load
   (TS VARCHAR) ; -- TS contains an entire TS record per row
 
-COPY ts_load 
+COPY ts_load
 -- Change to your local data path
-FROM '/Users/mattlevitan/HMDA_Data_Science_Kit/data/ts/ts_2007.dat' 
+FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2007.dat'
     ENCODING 'latin1';
 COMMIT;
 
@@ -44,7 +44,7 @@ INSERT INTO hmda_public.ts_2007 (
 	id_tax
 )
 
-SELECT 
+SELECT
 	SUBSTRING(TS, 1, 4),
 	SUBSTRING(TS, 5, 1),
 	SUBSTRING(TS, 6, 10),
@@ -63,5 +63,5 @@ SELECT
 
 FROM ts_load;
 COMMIT;
-DROP TABLE IF EXISTS ts_load; 
+DROP TABLE IF EXISTS ts_load;
 COMMIT;
