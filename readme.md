@@ -176,3 +176,15 @@ bash load_scripts/create_and_load_hmda.sh
 ```
 
 After the downloading step, you'll need to check if all files successfully downloaded. [See above for more information](#download-troubleshooting).
+
+
+## Contributing
+
+`CFPB` is developing the `HMDA Platform` in the open to maximize transparency and encourage third party contributions. If you want to contribute, please read and abide by the terms of the [License](LICENSE) for this project.
+
+We use GitHub issues in this repository to track features, bugs, and enhancements to the software. [Pull Requests](https://help.github.com/articles/using-pull-requests/) are welcome
+
+## Open source licensing info
+1. [TERMS](TERMS.md)
+2. [LICENSE](LICENSE)
+3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)
