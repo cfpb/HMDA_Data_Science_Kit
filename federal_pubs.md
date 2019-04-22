@@ -7,7 +7,7 @@
 - [HMDA Explorer](https://www.consumerfinance.gov/data-research/hmda/explore) is a BCFP project that allows users to query HMDA datasets and download slices of the data with customizable filters.
 - [Aggregate Reports](https://ffiec.cfpb.gov/data-publication/aggregate-reports/2017) are single-year tabular data for all reporting institutions that show application and origination activity by MSA (sometimes by Census Tract) for demographic and loan characteristics.
 - [National Aggregate Reports](https://ffiec.cfpb.gov/data-publication/national-aggregate-reports/2017) are single-year tabular data for all reporting institutions that show application and origination activity on a national level for demographic and loan characteristicts.
-- [Disclosure Reports](https://ffiec.cfpb.gov/data-publication/disclosure-reports/2017) are single-year tabular data for a single reporting institution that show application and origination activity by MSA (soetimes by Census Tract) for demographic and loan characteristics.
+- [Disclosure Reports](https://ffiec.cfpb.gov/data-publication/disclosure-reports/2017) are single-year tabular data for a single reporting institution that show application and origination activity by MSA (sometimes by Census Tract) for demographic and loan characteristics.
 - [2017 HMDA Data Point](https://www.consumerfinance.gov/data-research/research-reports/cfpb-data-point-mortgage-market-activity-and-trends/) outlines 2017 application and origination actiivty and highlights time-series trends in the HMDA data. This publication draws inspiration from FRB HMDA Bulletin publications of previous years.
 
 
@@ -15,7 +15,7 @@
 - [FRB HMDA Publication page](https://www.ffiec.gov/hmda/hmdaproducts.htm)
 - [HMDA Flat Files](https://www.ffiec.gov/hmda/hmdaflat.htm)
 - [Aggregate Reports 1999-2016](https://www.ffiec.gov/hmdaadwebreport/aggwelcome.aspx) are single-year tabular data for all reporting institutions that show application and origination activity by MSA (sometimes by Census Tract) for demographic and loan characteristics.
-- [Disclosure Reports 1999-2016](https://www.ffiec.gov/hmdaadwebreport/DisWelcome.aspx) are single-year tabular data for a single reporting institution that show application and origination activity by MSA (soetimes by Census Tract) for demographic and loan characteristics.
+- [Disclosure Reports 1999-2016](https://www.ffiec.gov/hmdaadwebreport/DisWelcome.aspx) are single-year tabular data for a single reporting institution that show application and origination activity by MSA (sometimes by Census Tract) for demographic and loan characteristics.
 - [HMDA Bulletin 2016](https://www.federalreserve.gov/publications/2017-november-residential-mortgage-lending-in-2016.htm)
 - [HMDA Bulletin 2015](https://www.federalreserve.gov/pubs/bulletin/2016/articles/hmda/2015-hmda-data.htm)
 - [HMDA Bulletin 2014](https://www.federalreserve.gov/pubs/bulletin/2015/pdf/2014_HMDA.pdf)
