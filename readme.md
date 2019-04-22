@@ -141,7 +141,7 @@ Select "Delimited" in the first window. Click next.
 field. Click Next.
 4. On the last screen select "General" for data type, and select "Finish." 
 At this point, the data will populate into their own cells.
-5. Select the modified lAR header for the appropriate activity year and open in Excel. These headers are available [here](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/mlar/headers/). Copy the first row of the header file into the modified LAR excel sheet.
+5. Select the modified lAR header for the appropriate activity year and open in Excel. These headers are available [here](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/mlar/headers/). Copy the first row of the header file into the modified LAR excel sheet.
 
 At this point, the Modified LAR download would have the appropriate column 
 headers. 
