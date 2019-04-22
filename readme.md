@@ -124,6 +124,28 @@ Alternatively, the LAR, Panel, and Transmittal Sheet files can be unzipped as gr
 - `bash download_scripts/unzip_panel.sh`
 - `bash download_scripts/unzip_ts.sh`
 
+### Opening Modified LAR Text Files With Excel
+Modified LAR is the public-facing set of the Loan Application Register data 
+containing fields that are altered or removed for privacy reasons.
+Please refer to the schemas for each activity year of Modified LAR 
+or Regulation C for further details on Modified LAR disclosure. 
+
+Modified LAR is downloaded as a pipe-delimited .txt file without descriptive 
+headers. To read this file in Excel, the following steps would need to be 
+taken.
+
+1. Open the .txt file download with Excel. 
+2. A window will open to select options for Excel to read the file. 
+Select "Delimited" in the first window. Click next. 
+3. Under delimiters, select "Other" and place a pipe ("|") in the "Other" 
+field. Click Next.
+4. On the last screen select "General" for data type, and select "Finish." 
+At this point, the data will populate into their own cells.
+5. Select the modified lAR header for the appropriate activity year and open in Excel. These headers are available [here](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/mlar/headers/). Copy the first row of the header file into the modified LAR excel sheet.
+
+At this point, the Modified LAR download would have the appropriate column 
+headers. 
+
 ### Creating Postgres Tables and Loading Data
 
 The default installation of Postgres should create both a Postgres role (superuser account) and a Postgres database. The default behavior of the load scripts uses these for login. If the role or the database are not present then a user and/or database will need to be specified when running the load scripts. Examples are provided later in this section.
