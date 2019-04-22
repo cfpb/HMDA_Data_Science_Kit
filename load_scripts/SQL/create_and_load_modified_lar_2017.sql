@@ -40,3 +40,4 @@ CREATE TABLE modified_lar_2017 (
 COPY hmda_public.modified_lar_2017
 FROM '{data_path}/data/lar/modified_lar_2017.txt'
 DELIMITER '|' ENCODING 'latin1';
+COMMIT;
