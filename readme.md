@@ -127,21 +127,19 @@ Alternatively, the LAR, Panel, and Transmittal Sheet files can be unzipped as gr
 ### Opening Modified LAR Text Files With Excel
 Modified LAR is the public-facing set of the Loan Application Register (LAR) data in which twenty-seven fields have been redacted for privacy reasons. In addition, 6 fields have been modified for privacy. Two fields indicating whether the age of the applicant or co-applicant is greater than 62 have been added. Please refer to the [schemas](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/mlar/schemas/), or [Regulation C](https://www.consumerfinance.gov/policy-compliance/rulemaking/regulations/1003/) for further details on Modified LAR disclosure.
 
-Modified LAR is downloaded as a pipe-delimited .txt file without descriptive 
-headers. To read this file in Excel, the following steps would need to be 
-taken.
+Modified LAR is available as a pipe-delimited text file with the .txt extension and has no header row. To read this file in Excel, the following steps would need to be taken.
 
-1. Open the .txt file download with Excel. 
-2. A window will open to select options for Excel to read the file. 
-Select "Delimited" in the first window. Click next. 
-3. Under delimiters, select "Other" and place a pipe ("|") in the "Other" 
-field. Click Next.
-4. On the last screen select "General" for data type, and select "Finish." 
+1. Navigate to the Modified Loan/Application Register (LAR) page [here](https://ffiec.cfpb.gov/data-publication/modified-lar/2018). Enter the institution name in the search box, and click `Download Modified LAR`. 
+2. Right click the .txt file in your local Downloads folder and open with Excel. 
+3. After the file opens, highlight the first column, navigate to the `Data` tab, and select `Text to Columns`.   
+4. A window should open that tells Excel how to read the file. Select `Delimited` in the first window and click `Next.` 
+5. In the next window, specify the pipe delimiter. Select `Other` under the `Delimiters` column and place a pipe (`|`) character in the text box field. Click `Next.`
+6. In the final window, select `General` for data type, and select `Finish.` 
 At this point, the data will populate into their own cells.
-5. Select the modified lAR header for the appropriate activity year and open in Excel. These headers are available [here](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/mlar/headers/). Copy the first row of the header file into the modified LAR excel sheet.
-
-At this point, the Modified LAR download would have the appropriate column 
-headers. 
+7. To begin adding a header, highlight the top row of data, right click, and select `Insert` to add a blank row. 
+8. Select the modified LAR header for the appropriate activity year and open in Excel. These headers are available [here](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/mlar/headers/). 
+9. Highlight the first row of the header file, right click, and select `Copy`. 
+10. Navigate back to the modified LAR excel sheet, highlight the first row, right click, and select `Insert Copied Cells`.
 
 ### Creating Postgres Tables and Loading Data
 
