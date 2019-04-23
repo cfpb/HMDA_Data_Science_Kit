@@ -43,16 +43,16 @@ Code 16`
 Age of Applicant >= 62
 Description: Field that indicates whether the applicant or borrower has an
 age greater than or equal to 62. 
-1. `Yes`if the age of the applicant is >= 62. 
-2. `No` if the age is <= 62. 
-3. `NA`if Age of Applicant or Borrower is 8888 or 9999
+- `Yes`if the age of the applicant is >= 62. 
+- `No` if the age is <= 62. 
+- `NA`if Age of Applicant or Borrower is 8888 or 9999
 
 Age of Co-Applicant >= 62
 Description: Field that indicates whether the applicant or borrower has an
 age greater than or equal to 62. 
-1. `Yes`if the age of the applicant is >= 62. 
-2. `No` if the age is <= 62. 
-3. `NA` if Age of Applicant or Borrower is 8888 or 9999
+- `Yes`if the age of the applicant is >= 62. 
+- `No` if the age is <= 62. 
+- `NA` if Age of Applicant or Borrower is 8888 or 9999
 
 ### Fields Modified for Privacy in the Modified LAR Data
 
