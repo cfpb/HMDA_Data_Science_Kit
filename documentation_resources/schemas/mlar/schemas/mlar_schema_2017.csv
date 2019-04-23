@@ -16,22 +16,22 @@ Data Field Name,Data Field Type,Valid Values
  Applicant Ethnicity,Numeric,1 2 3 4
  Co-applicant Ethnicity,Numeric,1 2 3 4 5
  Applicant Race: 1,Numeric,1 2 3 4 5 6 7
- Applicant Race: 2,Character Varying,1 2 3 4 5 ''
- Applicant Race: 3,Character Varying,1 2 3 4 5 ''
- Applicant Race: 4,Character Varying,1 2 3 4 5 ''
- Applicant Race: 5,Character Varying,1 2 3 4 5 ''
+ Applicant Race: 2,Character Varying,1 2 3 4 5 blank
+ Applicant Race: 3,Character Varying,1 2 3 4 5 blank
+ Applicant Race: 4,Character Varying,1 2 3 4 5 blank
+ Applicant Race: 5,Character Varying,1 2 3 4 5 blank
  Co-applicant Race: 1,Numeric,1 2 3 4 5 6 7 8
- Co-applicant Race: 2,Character Varying,1 2 3 4 5 ''
- Co-applicant Race: 3,Character Varying,1 2 3 4 5 ''
- Co-applicant Race: 4,Character Varying,1 2 3 4 5 ''
- Co-applicant Race: 5,Character Varying,1 2 3 4 5 '' 
+ Co-applicant Race: 2,Character Varying,1 2 3 4 5 blank
+ Co-applicant Race: 3,Character Varying,1 2 3 4 5 blank
+ Co-applicant Race: 4,Character Varying,1 2 3 4 5 blank
+ Co-applicant Race: 5,Character Varying,1 2 3 4 5 blank 
  Applicant Sex,Numeric,1 2 3 4
  Co-applicant Sex,Numeric,1 2 3 4 5
  Applicant Income,Alphanumeric,Integer reported in thousands and rounded to the nearest thousand and without commas or 'NA.'
  Type of Purchaser,Numeric,0 1 2 3 4 5 6 7 8 9 
- Denial Reason: 1,Character Varying,1 2 3 4 5 6 7 8 9 ''
- Denial Reason: 2,Character Varying,1 2 3 4 5 6 7 8 9 ''
- Denial Reason: 3,Character Varying,1 2 3 4 5 6 7 8 9 '' 
+ Denial Reason: 1,Character Varying,1 2 3 4 5 6 7 8 9 blank
+ Denial Reason: 2,Character Varying,1 2 3 4 5 6 7 8 9 blank
+ Denial Reason: 3,Character Varying,1 2 3 4 5 6 7 8 9 blank 
  Rate Spread,Alphanumeric,Double or 'NA'
  HOEPA Status,Numeric,1 2
  Lien Status,Numeric,1 2 3 4

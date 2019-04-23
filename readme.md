@@ -127,6 +127,8 @@ Alternatively, the LAR, Panel, and Transmittal Sheet files can be unzipped as gr
 ### Opening Modified LAR Text Files With Excel
 Modified LAR is the public-facing set of the Loan Application Register (LAR) data in which twenty-seven fields have been redacted for privacy reasons. In addition, 6 fields have been modified for privacy. Two fields indicating whether the age of the applicant or co-applicant is greater than 62 have been added. Please refer to the [schemas](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/mlar/schemas/), or [Regulation C](https://www.consumerfinance.gov/policy-compliance/rulemaking/regulations/1003/) for further details on Modified LAR disclosure.
 
+*Note concerning schemas*: Blanks are when a data field contains no entry. Blanks are valid enumerations for some data fields, for more information see the [Filing Instruction Guide](https://s3.amazonaws.com/cfpb-hmda-public/prod/help/2018-hmda-fig-2018-hmda-rule.pdf)
+
 Modified LAR is available as a pipe-delimited text file with the .txt extension and has no header row. To read this file in Excel, the following steps would need to be taken.
 
 1. Navigate to the Modified Loan/Application Register (LAR) page [here](https://ffiec.cfpb.gov/data-publication/modified-lar/2018). Enter the institution name in the search box, and click `Download Modified LAR`. 
