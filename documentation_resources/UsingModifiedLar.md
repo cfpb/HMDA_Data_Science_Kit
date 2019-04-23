@@ -1,8 +1,7 @@
 # Using Modified LAR Data
 Modified LAR is the public-facing set of the Loan Application Register data 
 containing fields that are altered or removed for privacy reasons.
-Please refer to the schemas or Regulation C for further details on 
-Modified LAR disclosure. 
+Please refer to the [schemas](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/mlar/schemas/), or [Regulation C](https://www.consumerfinance.gov/policy-compliance/rulemaking/regulations/1003/) for further details on Modified LAR disclosure. 
 
 ### Fields Removed in the 2018 Modified LAR Data Release for Privacy 
 1. Universal Loan Identifier (ULI) or Non Universal Loan Identifier (NULI)
