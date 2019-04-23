@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS modified_lar_2018;
-CREATE TABLE modified_lar_2018 (  
+DROP TABLE IF EXISTS mlar_2018_{lei};
+CREATE TABLE mlar_2018_{lei} (  
     record_id NUMERIC,
     lei VARCHAR,
     loan_type NUMERIC, 
@@ -86,7 +86,7 @@ CREATE TABLE modified_lar_2018 (
     open_end_credit NUMERIC,
     business_or_commercial_purpose NUMERIC);
 
-COPY hmda_public.modified_lar_2018
-FROM '{data_path}/data/lar/modified_lar_2018.txt'
+COPY hmda_public.mlar_2018_{lei}
+FROM '{data_path}/data/mlar/2018/{lei}.txt'
 DELIMITER '|' ENCODING 'latin1';
 COMMIT;

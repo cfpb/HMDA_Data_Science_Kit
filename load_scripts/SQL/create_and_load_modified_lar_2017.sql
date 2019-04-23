@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS modified_lar_2017;
-CREATE TABLE modified_lar_2017 (  
+DROP TABLE IF EXISTS mlar_2017_{institution_id};
+CREATE TABLE mlar_2017_{institution_id} (  
     record_id NUMERIC,
     respondent_id VARCHAR,
     agency_code NUMERIC, 
@@ -37,7 +37,6 @@ CREATE TABLE modified_lar_2017 (
     hoepa_status NUMERIC,
     lien_status NUMERIC
 
-COPY hmda_public.modified_lar_2017
-FROM '{data_path}/data/lar/modified_lar_2017.txt'
+COPY hmda_public.mlar_2017_{institution_id}
+FROM '{data_path}/data/mlar/2017/{institution_id}.txt'
 DELIMITER '|' ENCODING 'latin1';
-COMMIT;
