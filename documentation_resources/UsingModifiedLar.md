@@ -1,7 +1,5 @@
 # Using Modified LAR Data
-Modified LAR is the public-facing set of the Loan Application Register data 
-containing fields that are altered or removed for privacy reasons.
-Please refer to the [schemas](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/mlar/schemas/), or [Regulation C](https://www.consumerfinance.gov/policy-compliance/rulemaking/regulations/1003/) for further details on Modified LAR disclosure. 
+Modified LAR is the public-facing set of the Loan Application Register (LAR) data in which twenty-seven fields have been redacted for privacy reasons. In addition, 6 fields have been modified for privacy. Two fields indicating whether the age of the applicant or co-applicant is greater than 62 have been added. Please refer to the [schemas](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/mlar/schemas/), or [Regulation C](https://www.consumerfinance.gov/policy-compliance/rulemaking/regulations/1003/) for further details on Modified LAR disclosure.
 
 ### Fields Redacted in the 2018 Modified LAR Data Release for Privacy 
 1. `Universal Loan Identifier (ULI) or Non Universal Loan Identifier (NULI)`
