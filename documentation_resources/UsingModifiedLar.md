@@ -7,7 +7,7 @@ Modified LAR is the public-facing set of the Loan Application Register (LAR) dat
 Modified LAR is available as a pipe-delimited text file with the .txt extension and has no header row. To read this file in Excel, the following steps would need to be taken.
 
 1. Navigate to the Modified Loan/Application Register (LAR) page [here](https://ffiec.cfpb.gov/data-publication/modified-lar/2018). Enter the institution name in the search box, and click `Download Modified LAR`. 
-2. Open Excel and select the modified LAR file in the Downloads folder. 
+2. Open Excel. Select the `File` menu, and then `Open`. In the Open menu, double-click on `Browse` and view the Downloads folder. Select the modified LAR file in the Downloads folder as shown below. 
 ![alt text](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/example_images/mlar_tutorial_images/Step2.JPG)
 3. A window will open that tells Excel how to read the file. Select `Delimited` in the first window and click `Next.` 
 ![alt text](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/example_images/mlar_tutorial_images/Step3.JPG)
