@@ -16,7 +16,7 @@ Modified LAR is available as a pipe-delimited text file with the .txt extension 
 5. In the final window, select `General` for data type, and select `Finish.` 
 At this point, the data will populate into their own cells.
 ![alt text](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/example_images/mlar_tutorial_images/Step5.JPG)
-6. To begin adding a header, highlight the top row of data, right click, and select `Insert` to add a blank row. 
+6. To add a header, right click on the row number to highlight the top row of data, and select `Insert` to add a blank row. 
 ![alt text](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/example_images/mlar_tutorial_images/Step6.JPG)
 7. Select the modified LAR header for the appropriate activity year and open in Excel. These headers are available [here](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/mlar/headers/). To download from Github, click "Raw" at the top of the file.![alt text](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/example_images/mlar_tutorial_images/Step_7_1.JPG) Right click the raw text file page and save as a csv in the Downloads folder. ![alt text](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/example_images/mlar_tutorial_images/Step_7_2.JPG)
 8. Highlight the first row of the header file, right click, and select `Copy`. ![alt text](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/example_images/mlar_tutorial_images/Step8.JPG)
