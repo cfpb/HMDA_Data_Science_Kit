@@ -169,7 +169,7 @@
 51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",8,Other credit scoring model
 51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",9,Not applicable 
 51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",10,No co-applicant
-51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",11,Exempt
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",1111,Exempt
 52,Reason for Denial,1,Debt-to-income ratio
 52,Reason for Denial,2,Employment history
 52,Reason for Denial,3,Credit history
@@ -180,7 +180,7 @@
 52,Reason for Denial,8,Mortgage insruance denied
 52,Reason for Denial,9,Other
 52,Reason for Denial,10,Not applicable. Note Code 10 is only valid for Reason for Denial: 1
-52,Reason for Denial,11,Exempt. Note Code 11 is only valid for Reason for Denial: 1. 
+52,Reason for Denial,1111,Exempt. Note Code 1111 is only valid for Reason for Denial: 1. 
 63,Debt-to-Income Ratio,Exact values between 36% and 50%,Published with modification. 
 63,Debt-to-Income Ratio,<20%,Debt-to-income ratio is less than 20%
 63,Debt-to-Income Ratio,20%-<30%,Debt-to-income ratio is between 20% and is less than 30%
