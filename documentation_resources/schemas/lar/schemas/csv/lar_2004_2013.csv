@@ -1,0 +1,39 @@
+﻿ Data Field Number , Data Field Name         , Data Field Type , Start Position , Stop Position , Field Length 
+1, As of Date              , Numeric         ,1,4,4
+2, Respondent ID           , Alphanumeric    ,5,14,10
+3, Agency Code             , Numeric         ,15,15,1
+4, Loan Type               , Numeric         ,16,16,1
+5, Loan Purpose            , Numeric         ,17,17,1
+6, Occupancy               , Numeric         ,18,18,1
+7, Loan Amount (Thousands) , Numeric         ,19,23,5
+8, Action Taken            , Numeric         ,24,24,1
+9, MSA/MD                  , Alphanumeric    ,25,29,5
+10, State Code              , Alphanumeric    ,30,31,2
+11, County Code             , Alphanumeric    ,32,34,3
+12, Census Tract            , Alphanumeric    ,35,41,7
+13, Applicant Sex           , Numeric         ,42,42,1
+14, Co Applicant Sex        , Numeric         ,43,43,1
+15, Income                  , Alphanumeric    ,44,47,4
+16, Purchaser Type          , Numeric         ,48,48,1
+17, Denial Reason 1         , Numeric         ,49,49,1
+18, Denial Reason 2         , Numeric         ,50,50,1
+19, Denial Reason 3         , Numeric         ,51,51,1
+20, Edit Status             , Numeric         ,52,52,1
+21, Property Type           , Numeric         ,53,53,1
+22, Preapproval             , Numeric         ,54,54,1
+23, Applicant Ethnicity     , Numeric         ,55,55,1
+24, Co Applicant Ethnicity  , Numeric         ,56,56,1
+25, Applicant Race 1        , Numeric         ,57,57,1
+26, Applicant Race 2        , Numeric         ,58,58,1
+27, Applicant Race 3        , Numeric         ,59,59,1
+28, Applicant Race 4        , Numeric         ,60,60,1
+29, Applicant Race 5        , Numeric         ,61,61,1
+30, Co Applicant Race 1     , Numeric         ,62,62,1
+31, Co Applicant Race 2     , Numeric         ,63,63,1
+32, Co Applicant Race 3     , Numeric         ,64,64,1
+33, Co Applicant Race 4     , Numeric         ,65,65,1
+34, Co Applicant Race 5     , Numeric         ,66,66,1
+35, Rate Spread             , Alphanumeric    ,67,71,5
+36, HOEPA Status            , Numeric         ,72,72,1
+37, Lien Status             , Numeric         ,73,73,1
+38, Sequence Number         , Numeric         ,74,80,7
