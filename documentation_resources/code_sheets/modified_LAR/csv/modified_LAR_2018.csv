@@ -1,548 +1,246 @@
 ﻿Data Field Number,Field Name,Codes,Descriptions
-1,Record Identifier,2,Record identifier for LAR is 2. 
-2,"Legal Entity
-Identifier (LEI)",,Example: 10Bx939c5543TqA1144M
 3,Loan Type,1,"Conventional (not insured or guaranteed by FHA, VA, RHS, or FSA)"
-,,2,Federal Housing Administration insured (FHA)
-,,3,Veterans Affairs guaranteed (VA)
-,,4,USDA Rural Housing Service or Farm Service Agency guaranteed (RHS or FSA)
+3,Loan Type,2,Federal Housing Administration insured (FHA)
+3,Loan Type,3,Veterans Affairs guaranteed (VA)
+3,Loan Type,4,USDA Rural Housing Service or Farm Service Agency guaranteed (RHS or FSA)
 4,Loan Purpose,1,Home purchase
-,,2,Home improvement
-,,31,Refinancing
-,,32,Cash-out refinancing
-,,4,Other purpose
-,,5,Not applicable
+4,Loan Purpose,2,Home improvement
+4,Loan Purpose,31,Refinancing
+4,Loan Purpose,32,Cash-out refinancing
+4,Loan Purpose,4,Other purpose
+4,Loan Purpose,5,Not applicable
 5,Preapproval,1,Preapproval requested 
-,,2,Preapproval not requested
+5,Preapproval,2,Preapproval not requested
 6,Construction Method,1,Site-built
-,,2,Manufactured Home
+6,Construction Method,2,Manufactured Home
 7,Occupancy Type,1,Principal residence
-,,2,Second residence
-,,3,Investment property
-8,Loan Amount,Loan amount.,"Loan amount are rounded to the midpoint of the nearest $10,000 interval for which the reported value falls (For example a reported value of $117834 would be disclosed as $115000 as the midpoint between values $110000 and $120000"
+7,Occupancy Type,2,Second residence
+7,Occupancy Type,3,Investment property
 9,Action Taken,1,Loan originated
-,,2,Application approved but not accepted
-,,3,Application denied
-,,4,Application withdrawn by applicant
-,,5,File closed for incompleteness
-,,6,Purchased loan
-,,7,Preapproval request denied
-,,8,Preapproval request approved but not accepted
-10,State,"Character-Varying, 2-Letter State Code",Example: CA
-,,NA,Not applicable 
-11,County,State-County FIPS Code,Example: 06037 
-,,NA,Not applicable
-12,Census Tract,11 digit census tract number,Example: 06037264000
-,,NA,Not applicable
+9,Action Taken,2,Application approved but not accepted
+9,Action Taken,3,Application denied
+9,Action Taken,4,Application withdrawn by applicant
+9,Action Taken,5,File closed for incompleteness
+9,Action Taken,6,Purchased loan
+9,Action Taken,7,Preapproval request denied
+9,Action Taken,8,Preapproval request approved but not accepted
 13,Ethnicity of Applicant or Borrower: 1,1,Hispanic or Latino
-,,11,Mexican
-,,12,Puerto Rican
-,,13,Cuban
-,,14,Other Hispanic or Latino
-,,2,Not Hispanic or Latino
-,,3,"Information not provided by applicant in mail, internet, or telephone application."
-,,4,Not applicable
-14,Ethnicity of Applicant or Borrower: 2,1,Hispanic or Latino
-,,11,Mexican
-,,12,Puerto Rican
-,,13,Cuban
-,,14,Other Hispanic or Latino
-,,2,Not Hispanic or Latino
-,,blank,Field blank
-15,Ethnicity of Applicant or Borrower: 3,1,Hispanic or Latino
-,,11,Mexican
-,,12,Puerto Rican
-,,13,Cuban
-,,14,Other Hispanic or Latino
-,,2,Not Hispanic or Latino
-,,blank,Field blank
-16,Ethnicity of Applicant or Borrower: 4,1,Hispanic or Latino
-,,11,Mexican
-,,12,Puerto Rican
-,,13,Cuban
-,,14,Other Hispanic or Latino
-,,2,Not Hispanic or Latino
-,,blank,Field blank
-17,Ethnicity of Applicant or Borrower: 5,1,Hispanic or Latino
-,,11,Mexican
-,,12,Puerto Rican
-,,13,Cuban
-,,14,Other Hispanic or Latino
-,,2,Not Hispanic or Latino
-,,blank,Field blank
+13,Ethnicity of Applicant or Borrower: 1,11,Mexican
+13,Ethnicity of Applicant or Borrower: 1,12,Puerto Rican
+13,Ethnicity of Applicant or Borrower: 1,13,Cuban
+13,Ethnicity of Applicant or Borrower: 1,14,Other Hispanic or Latino
+13,Ethnicity of Applicant or Borrower: 1,2,Not Hispanic or Latino
+13,Ethnicity of Applicant or Borrower: 1,3,"Information not provided by applicant in mail, internet, or telephone application. Note: Code 3 only valid for ethnicity of Applicant or Borrower: 1."
+13,Ethnicity of Applicant or Borrower: 1,4,Not applicable. Note: Code 4 only valid for Ethnicity of Applicant or Borrower: 1.
 18,Ethnicity of Co-Applicant or Co-Borrower: 1,1,Hispanic or Latino
-,,11,Mexican
-,,12,Puerto Rican
-,,13,Cuban
-,,14,Other Hispanic or Latino
-,,2,Not Hispanic or Latino
-,,3,"Information not provided by applicant in mail, internet, or telephone application."
-,,4,Not applicable
-,,5,No co-applicant
-19,Ethnicity of Co-Applicant or Co-Borrower: 2,1,Hispanic or Latino
-,,11,Mexican
-,,12,Puerto Rican
-,,13,Cuban
-,,14,Other Hispanic or Latino
-,,2,Not Hispanic or Latino
-,,blank,Field blank
-20,Ethnicity of Co-Applicant or Co-Borrower: 3,1,Hispanic or Latino
-,,11,Mexican
-,,12,Puerto Rican
-,,13,Cuban
-,,14,Other Hispanic or Latino
-,,2,Not Hispanic or Latino
-,,blank,Field blank
-21,Ethnicity of Co-Applicant or Co-Borrower: 4,1,Hispanic or Latino
-,,11,Mexican
-,,12,Puerto Rican
-,,13,Cuban
-,,14,Other Hispanic or Latino
-,,2,Not Hispanic or Latino
-,,blank,Field blank
-22,Ethnicity of Co-Applicant or Co-Borrower: 5,1,Hispanic or Latino
-,,11,Mexican
-,,12,Puerto Rican
-,,13,Cuban
-,,14,Other Hispanic or Latino
-,,2,Not Hispanic or Latino
-,,blank,Field blank
+18,Ethnicity of Co-Applicant or Co-Borrower: 1,11,Mexican
+18,Ethnicity of Co-Applicant or Co-Borrower: 1,12,Puerto Rican
+18,Ethnicity of Co-Applicant or Co-Borrower: 1,13,Cuban
+18,Ethnicity of Co-Applicant or Co-Borrower: 1,14,Other Hispanic or Latino
+18,Ethnicity of Co-Applicant or Co-Borrower: 1,2,Not Hispanic or Latino
+18,Ethnicity of Co-Applicant or Co-Borrower: 1,3,"Information not provided by applicant in mail, internet, or telephone application. Note: Code 3 only valid for ethnicity of Co-Applicant or Co-Borrower: 1."
+18,Ethnicity of Co-Applicant or Co-Borrower: 1,4,Not applicable. Note: Code 4 only valid for Ethnicity of Co-Applicant or Co-Borrower: 1.
+18,Ethnicity of Co-Applicant or Co-Borrower: 1,5,No co-applicant. Note: Code 5 only valid for Ethnicity of Co-Applicant or Co-Borrower: 1.
 23,Ethnicity of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,1,Collected on the basis of visual observation or surname
-,,2,Not collected on the basis of visual observation or surname
-,,3,Not applicable
+23,Ethnicity of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,2,Not collected on the basis of visual observation or surname
+23,Ethnicity of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,3,Not applicable
 24,Ethnicity of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,1,Collected on the basis of visual observation or surname
-,,2,Not collected on the basis of visual observation or surname
-,,3,Not applicable
-,,4,No co-applicant
+24,Ethnicity of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,2,Not collected on the basis of visual observation or surname
+24,Ethnicity of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,3,Not applicable
+24,Ethnicity of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,4,No co-applicant
 25,Race of Applicant or Borrower: 1,1,American Indian or Alaska Native
-,,2,Asian
-,,21,Asian Indian
-,,22,Chinese
-,,23,Filipino
-,,24,Japanese
-,,25,Korean
-,,26,Vietnamese
-,,27,Other Asian
-,,3,Black or African American
-,,4,Native Hawaiian or Other Pacific Islander
-,,41,Native Hawaiian
-,,42,Guamanian or Chamorro
-,,43,Samoan
-,,44,Other Pacific Islander
-,,5,White
-,,6,"Information not provided by applicant in mail, internet, or telephone application."
-,,7,Not applicable
-26,Race of Applicant or Borrower: 2,1,American Indian or Alaska Native
-,,2,Asian
-,,21,Asian Indian
-,,22,Chinese
-,,23,Filipino
-,,24,Japanese
-,,25,Korean
-,,26,Vietnamese
-,,27,Other Asian
-,,3,Black or African American
-,,4,Native Hawaiian or Other Pacific Islander
-,,41,Native Hawaiian
-,,42,Guamanian or Chamorro
-,,43,Samoan
-,,44,Other Pacific Islander
-,,5,White
-,,blank,Field blank
-27,Race of Applicant or Borrower: 3,1,American Indian or Alaska Native
-,,2,Asian
-,,21,Asian Indian
-,,22,Chinese
-,,23,Filipino
-,,24,Japanese
-,,25,Korean
-,,26,Vietnamese
-,,27,Other Asian
-,,3,Black or African American
-,,4,Native Hawaiian or Other Pacific Islander
-,,41,Native Hawaiian
-,,42,Guamanian or Chamorro
-,,43,Samoan
-,,44,Other Pacific Islander
-,,5,White
-,,blank,Field blank
-28,Race of Applicant or Borrower: 4,1,American Indian or Alaska Native
-,,2,Asian
-,,21,Asian Indian
-,,22,Chinese
-,,23,Filipino
-,,24,Japanese
-,,25,Korean
-,,26,Vietnamese
-,,27,Other Asian
-,,3,Black or African American
-,,4,Native Hawaiian or Other Pacific Islander
-,,41,Native Hawaiian
-,,42,Guamanian or Chamorro
-,,43,Samoan
-,,44,Other Pacific Islander
-,,5,White
-,,blank,Field blank
-29,Race of Applicant or Borrower: 5,1,American Indian or Alaska Native
-,,2,Asian
-,,21,Asian Indian
-,,22,Chinese
-,,23,Filipino
-,,24,Japanese
-,,25,Korean
-,,26,Vietnamese
-,,27,Other Asian
-,,3,Black or African American
-,,4,Native Hawaiian or Other Pacific Islander
-,,41,Native Hawaiian
-,,42,Guamanian or Chamorro
-,,43,Samoan
-,,44,Other Pacific Islander
-,,5,White
-,,blank,Field blank
+25,Race of Applicant or Borrower: 1,2,Asian
+25,Race of Applicant or Borrower: 1,21,Asian Indian
+25,Race of Applicant or Borrower: 1,22,Chinese
+25,Race of Applicant or Borrower: 1,23,Filipino
+25,Race of Applicant or Borrower: 1,24,Japanese
+25,Race of Applicant or Borrower: 1,25,Korean
+25,Race of Applicant or Borrower: 1,26,Vietnamese
+25,Race of Applicant or Borrower: 1,27,Other Asian
+25,Race of Applicant or Borrower: 1,3,Black or African American
+25,Race of Applicant or Borrower: 1,4,Native Hawaiian or Other Pacific Islander
+25,Race of Applicant or Borrower: 1,41,Native Hawaiian
+25,Race of Applicant or Borrower: 1,42,Guamanian or Chamorro
+25,Race of Applicant or Borrower: 1,43,Samoan
+25,Race of Applicant or Borrower: 1,44,Other Pacific Islander
+25,Race of Applicant or Borrower: 1,5,White
+25,Race of Applicant or Borrower: 1,6,"Information not provided by applicant in mail, internet, or telephone application. Note Code 6 is only valid for Race of Applicant or Borrower: 1. "
+25,Race of Applicant or Borrower: 1,7,Not applicable. Note Code 7 is only valid for Race of Applicant or Borrower: 1. 
 30,Race of Co-Applicant or Co-Borrower: 1,1,American Indian or Alaska Native
-,,2,Asian
-,,21,Asian Indian
-,,22,Chinese
-,,23,Filipino
-,,24,Japanese
-,,25,Korean
-,,26,Vietnamese
-,,27,Other Asian
-,,3,Black or African American
-,,4,Native Hawaiian or Other Pacific Islander
-,,41,Native Hawaiian
-,,42,Guamanian or Chamorro
-,,43,Samoan
-,,44,Other Pacific Islander
-,,5,White
-,,6,"Information not provided by applicant in mail, internet, or telephone application."
-,,7,Not applicable
-,,8,No co-applicant
-31,Race of Co-Applicant or Co-Borrower: 2,1,American Indian or Alaska Native
-,,2,Asian
-,,21,Asian Indian
-,,22,Chinese
-,,23,Filipino
-,,24,Japanese
-,,25,Korean
-,,26,Vietnamese
-,,27,Other Asian
-,,3,Black or African American
-,,4,Native Hawaiian or Other Pacific Islander
-,,41,Native Hawaiian
-,,42,Guamanian or Chamorro
-,,43,Samoan
-,,44,Other Pacific Islander
-,,5,White
-,,blank,Field Blank
-32,Race of Co-Applicant or Co-Borrower: 3,1,American Indian or Alaska Native
-,,2,Asian
-,,21,Asian Indian
-,,22,Chinese
-,,23,Filipino
-,,24,Japanese
-,,25,Korean
-,,26,Vietnamese
-,,27,Other Asian
-,,3,Black or African American
-,,4,Native Hawaiian or Other Pacific Islander
-,,41,Native Hawaiian
-,,42,Guamanian or Chamorro
-,,43,Samoan
-,,44,Other Pacific Islander
-,,5,White
-,,blank,Field Blank
-33,Race of Co-Applicant or Co-Borrower: 4,1,American Indian or Alaska Native
-,,2,Asian
-,,21,Asian Indian
-,,22,Chinese
-,,23,Filipino
-,,24,Japanese
-,,25,Korean
-,,26,Vietnamese
-,,27,Other Asian
-,,3,Black or African American
-,,4,Native Hawaiian or Other Pacific Islander
-,,41,Native Hawaiian
-,,42,Guamanian or Chamorro
-,,43,Samoan
-,,44,Other Pacific Islander
-,,5,White
-,,blank,Field Blank
-34,Race of Co-Applicant or Co-Borrower: 5,1,American Indian or Alaska Native
-,,2,Asian
-,,21,Asian Indian
-,,22,Chinese
-,,23,Filipino
-,,24,Japanese
-,,25,Korean
-,,26,Vietnamese
-,,27,Other Asian
-,,3,Black or African American
-,,4,Native Hawaiian or Other Pacific Islander
-,,41,Native Hawaiian
-,,42,Guamanian or Chamorro
-,,43,Samoan
-,,44,Other Pacific Islander
-,,5,White
-,,blank,Field Blank
+30,Race of Co-Applicant or Co-Borrower: 1,2,Asian
+30,Race of Co-Applicant or Co-Borrower: 1,21,Asian Indian
+30,Race of Co-Applicant or Co-Borrower: 1,22,Chinese
+30,Race of Co-Applicant or Co-Borrower: 1,23,Filipino
+30,Race of Co-Applicant or Co-Borrower: 1,24,Japanese
+30,Race of Co-Applicant or Co-Borrower: 1,25,Korean
+30,Race of Co-Applicant or Co-Borrower: 1,26,Vietnamese
+30,Race of Co-Applicant or Co-Borrower: 1,27,Other Asian
+30,Race of Co-Applicant or Co-Borrower: 1,3,Black or African American
+30,Race of Co-Applicant or Co-Borrower: 1,4,Native Hawaiian or Other Pacific Islander
+30,Race of Co-Applicant or Co-Borrower: 1,41,Native Hawaiian
+30,Race of Co-Applicant or Co-Borrower: 1,42,Guamanian or Chamorro
+30,Race of Co-Applicant or Co-Borrower: 1,43,Samoan
+30,Race of Co-Applicant or Co-Borrower: 1,44,Other Pacific Islander
+30,Race of Co-Applicant or Co-Borrower: 1,5,White
+30,Race of Co-Applicant or Co-Borrower: 1,6,"Information not provided by applicant in mail, internet, or telephone application. Note Code 6 is only valid for Race of Co-Applicant or Co-Borrower: 1"
+30,Race of Co-Applicant or Co-Borrower: 1,7,Not applicable. Note: Code 7 is only valid for Race of Co-Applicant or Co-Borrower: 1
+30,Race of Co-Applicant or Co-Borrower: 1,8,No co-applicant. Note: Code 8 is only valid for Race of Co-Applicant or Co-Borrower: 1
 35,Race of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,1,Collected on the basis of visual observation or surname
-,,2,Not collected on the basis of visual observation or surname
-,,3,Not applicable
+35,Race of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,2,Not collected on the basis of visual observation or surname
+35,Race of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,3,Not applicable
 36,Race of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,1,Collected on the basis of visual observation or surname
-,,2,Not collected on the basis of visual observation or surname
-,,3,Not applicable 
-,,4,No co-applicant
+36,Race of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,2,Not collected on the basis of visual observation or surname
+36,Race of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,3,Not applicable 
+36,Race of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,4,No co-applicant. Note: Code 4 is only valid for Race of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname
 37,Sex of Applicant or Borrower,1,Male 
-,,2,Female
-,,3,"Information not provided by applicant in mail, internet, or telephone application."
-,,4,Not applicable 
-,,6,Applicant selected both male and female
+37,Sex of Applicant or Borrower,2,Female
+37,Sex of Applicant or Borrower,3,"Information not provided by applicant in mail, internet, or telephone application."
+37,Sex of Applicant or Borrower,4,Not applicable 
+37,Sex of Applicant or Borrower,6,Applicant selected both male and female
 38,Sex of Co-Applicant or Co-Borrower,1,Male 
-,,2,Female
-,,3,"Information not provided by applicant in mail, internet, or telephone application."
-,,4,Not applicable
-,,5,No co-applicant
-,,6,Co-applicant selected both male and female
+38,Sex of Co-Applicant or Co-Borrower,2,Female
+38,Sex of Co-Applicant or Co-Borrower,3,"Information not provided by applicant in mail, internet, or telephone application."
+38,Sex of Co-Applicant or Co-Borrower,4,Not applicable
+38,Sex of Co-Applicant or Co-Borrower,5,No co-applicant. Note Code 5 is only valid for Sex of Co-Applicant or Co-Borrower
+38,Sex of Co-Applicant or Co-Borrower,6,Co-applicant selected both male and female
 39,Sex of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,1,Collected on the basis of visual observation or surname
-,,2,Not collected on the basis of visual observation or surname
-,,3,Not applicable 
+39,Sex of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,2,Not collected on the basis of visual observation or surname
+39,Sex of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,3,Not applicable 
 40,Sex of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,1,Collected on the basis of visual observation or surname
-,,2,Not collected on the basis of visual observation or surname
-,,3,Not applicable
-,,4,No co-applicant
+40,Sex of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,2,Not collected on the basis of visual observation or surname
+40,Sex of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,3,Not applicable
+40,Sex of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,4,No co-applicant. Note Code 4 is only available for Sex of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname
 41,Age of Applicant or Borrower,<25,Age is less than 25
-,,25-34,Age is between 25 and 34
-,,35-44,Age is between 35 and 44
-,,45-54,Age is between 45 and 54
-,,55-64,Age is between 55 and 64
-,,65-74,Age is between 65 and 74
-,,>74,Age is greater than 74
-,,8888,Not applicable
+41,Age of Applicant or Borrower,25-34,Age is between 25 and 34
+41,Age of Applicant or Borrower,35-44,Age is between 35 and 44
+41,Age of Applicant or Borrower,45-54,Age is between 45 and 54
+41,Age of Applicant or Borrower,55-64,Age is between 55 and 64
+41,Age of Applicant or Borrower,65-74,Age is between 65 and 74
+41,Age of Applicant or Borrower,>74,Age is greater than 74
+41,Age of Applicant or Borrower,8888,Not applicable
 42,Age of Applicant >=62,Yes,Age of the applicant is >= 62
-,,No,Age of the applicant < 62
-,,NA,Age of Applicant or Borrower is indicated as 8888 or 9999
+42,Age of Applicant >=63,No,Age of the applicant < 62
+42,Age of Applicant >=64,NA,Age of Applicant or Borrower is indicated as 8888 or 9999
 43,Age of Co-Applicant or Co-Borrower,<25,Age is less than 25
-,,25-34,Age is between 25 and 34
-,,35-44,Age is between 35 and 44
-,,45-54,Age is between 45 and 54
-,,55-64,Age is between 55 and 64
-,,65-74,Age is between 65 and 74
-,,>74,Age is greater than 74
-,,8888,Not applicable
-,,9999,No co-applicant
+43,Age of Co-Applicant or Co-Borrower,25-34,Age is between 25 and 34
+43,Age of Co-Applicant or Co-Borrower,35-44,Age is between 35 and 44
+43,Age of Co-Applicant or Co-Borrower,45-54,Age is between 45 and 54
+43,Age of Co-Applicant or Co-Borrower,55-64,Age is between 55 and 64
+43,Age of Co-Applicant or Co-Borrower,65-74,Age is between 65 and 74
+43,Age of Co-Applicant or Co-Borrower,>74,Age is greater than 74
+43,Age of Co-Applicant or Co-Borrower,8888,Not applicable
+43,Age of Co-Applicant or Co-Borrower,9999,No co-applicant
 44,Age of Co-Applicant >=62,Yes,Age of Co-Applicant or Co-Borrower is >=62
-,,No,Age of Co-Applicant or Co-Borrower is < 62
-,,NA,Age of Co-Applicant or Co-Borrower is indicated as 8888 or 9999
-45,Income,Income,Example: 36
-,,NA,Not applicable
+44,Age of Co-Applicant >=63,No,Age of Co-Applicant or Co-Borrower is < 62
+44,Age of Co-Applicant >=64,NA,Age of Co-Applicant or Co-Borrower is indicated as 8888 or 9999
 46,Type of Purchaser,0,Not applicable 
-,,1,Fannie Mae
-,,2,Ginnie Mae
-,,3,Freddie Mac
-,,4,Farmer Mac
-,,5,Private securitizer
-,,6,"Commercial bank, savings bank, or savings association"
-,,71,"Credit union, mortgage company, or finance company"
-,,72,Life insurance company
-,,8,Affiliate institution
-,,9,Other type of purchaser
-47,Rate Spread,Rate Spread,Example: 0.428
-,,NA,NA
-,,Exempt,Exempt
+46,Type of Purchaser,1,Fannie Mae
+46,Type of Purchaser,2,Ginnie Mae
+46,Type of Purchaser,3,Freddie Mac
+46,Type of Purchaser,4,Farmer Mac
+46,Type of Purchaser,5,Private securitizer
+46,Type of Purchaser,6,"Commercial bank, savings bank, or savings association"
+46,Type of Purchaser,71,"Credit union, mortgage company, or finance company"
+46,Type of Purchaser,72,Life insurance company
+46,Type of Purchaser,8,Affiliate institution
+46,Type of Purchaser,9,Other type of purchaser
 48,HOEPA Status,1,High-cost mortgage
-,,2,Not a high-cost mortgage
-,,3,Not applicable
+48,HOEPA Status,2,Not a high-cost mortgage
+48,HOEPA Status,3,Not applicable
 49,Lien Status,1,Secured by a first lien
-,,2,Secured by a subordinate lien
+49,Lien Status,2,Secured by a subordinate lien
 50,"Applicant or Borrower, Name and Version of Credit Scoring Model",1,Equifax Beacon 5.0
-,,2,Experian Fair Isaac
-,,3,FICO Risk Score Classic 04
-,,4,FICO Risk Score Classic 98
-,,5,Vantage Score 2.0
-,,6,Vantage Score 3.0
-,,7,More than one credit scoring model
-,,8,Other credit scoring model
-,,9,Not applicable
-,,1111,Exempt
+50,"Applicant or Borrower, Name and Version of Credit Scoring Model",2,Experian Fair Isaac
+50,"Applicant or Borrower, Name and Version of Credit Scoring Model",3,FICO Risk Score Classic 04
+50,"Applicant or Borrower, Name and Version of Credit Scoring Model",4,FICO Risk Score Classic 98
+50,"Applicant or Borrower, Name and Version of Credit Scoring Model",5,Vantage Score 2.0
+50,"Applicant or Borrower, Name and Version of Credit Scoring Model",6,Vantage Score 3.0
+50,"Applicant or Borrower, Name and Version of Credit Scoring Model",7,More than one credit scoring model
+50,"Applicant or Borrower, Name and Version of Credit Scoring Model",8,Other credit scoring model
+50,"Applicant or Borrower, Name and Version of Credit Scoring Model",9,Not applicable
+50,"Applicant or Borrower, Name and Version of Credit Scoring Model",1111,Exempt
 51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",1,Equifax Beacon 5.0
-,,2,Experian Fair Isaac
-,,3,FICO Risk Score Classic 04
-,,4,FICO Risk Score Classic 98
-,,5,Vantage Score 2.0
-,,6,Vantage Score 3.0
-,,7,More than one credit scoring model
-,,8,Other credit scoring model
-,,9,Not applicable 
-,,10,No co-applicant
-,,11,Exempt
-52,Reason for Denial: 1,1,Debt-to-income ratio
-,,2,Employment history
-,,3,Credit history
-,,4,Collateral
-,,5,"Insufficient cash (downpayment, closing costs)"
-,,6,Unverifiable information
-,,7,Credit application incomplete
-,,8,Mortgage insruance denied
-,,9,Other
-,,10,Not applicable
-,,11,Exempt
-53,Reason for Denial: 2,1,Debt-to-income ratio
-,,2,Employment history
-,,3,Credit history
-,,4,Collateral
-,,5,"Insufficient cash (downpayment, closing costs)"
-,,6,Unverifiable information
-,,7,Credit application incomplete
-,,8,Mortgage insruance denied
-,,9,Other
-,,blank,Field Blank
-54,Reason for Denial: 3,1,Debt-to-income ratio
-,,2,Employment history
-,,3,Credit history
-,,4,Collateral
-,,5,"Insufficient cash (downpayment, closing costs)"
-,,6,Unverifiable information
-,,7,Credit application incomplete
-,,8,Mortgage insruance denied
-,,9,Other
-,,blank,Field Blank
-55,Reason for Denial: 4,1,Debt-to-income ratio
-,,2,Employment history
-,,3,Credit history
-,,4,Collateral
-,,5,"Insufficient cash (downpayment, closing costs)"
-,,6,Unverifiable information
-,,7,Credit application incomplete
-,,8,Mortgage insruance denied
-,,9,Other
-,,blank,Field Blank
-56,Total Loan Costs,Total Loan Costs,Example: 2399.04 
-,,NA,Not applicable
-,,Exempt ,(or) NA (or) Exempt (or) blank
-,,Blank,Field Blank
-57,Total Points and Fees,Total Points and Fees,Example: 2399.04
-,,NA,Not applicable
-,,Exempt ,Exemption taken 
-,,Blank,Field Blank
-58,Origination Charges,Origination Charges ,Example: 2399.04
-,,NA,Not applicable
-,,Exempt ,Exemption taken
-,,Blank,Field Blank
-59,Discount Points,Discount Points,Example: 2399.04
-,,NA,Not applicable
-,,Exempt ,Exemption taken
-,,Blank,Field Blank
-60,Lender Credits,Lender Credits,Example: 1500.24
-,,NA,Not applicable 
-,,Exempt ,Exemption taken
-,,Blank,Field Blank
-61,Interest Rate,Interest Rate,Example: 4.125
-,,NA,Not applicable 
-,,Exempt ,Exemption Taken 
-62,Preapayment Penalty Term,Prepayment Penalty Term,Example: 24
-,,NA,Not applicable
-,,Exempt,Exemption taken
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",2,Experian Fair Isaac
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",3,FICO Risk Score Classic 04
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",4,FICO Risk Score Classic 98
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",5,Vantage Score 2.0
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",6,Vantage Score 3.0
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",7,More than one credit scoring model
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",8,Other credit scoring model
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",9,Not applicable 
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",10,No co-applicant
+51,"Co-Applicant or Co-Borrower, Name and Version of Credit Scoring Model",11,Exempt
+52,Reason for Denial,1,Debt-to-income ratio
+52,Reason for Denial,2,Employment history
+52,Reason for Denial,3,Credit history
+52,Reason for Denial,4,Collateral
+52,Reason for Denial,5,"Insufficient cash (downpayment, closing costs)"
+52,Reason for Denial,6,Unverifiable information
+52,Reason for Denial,7,Credit application incomplete
+52,Reason for Denial,8,Mortgage insruance denied
+52,Reason for Denial,9,Other
+52,Reason for Denial,10,Not applicable. Note Code 10 is only valid for Reason for Denial: 1
+52,Reason for Denial,11,Exempt. Note Code 11 is only valid for Reason for Denial: 1. 
 63,Debt-to-Income Ratio,Exact values between 36% and 50%,Published with modification. 
-,,<20%,Debt-to-income ratio is less than 20%
-,,20%-<30%,Debt-to-income ratio is between 20% and is less than 30%
-,,30%-<36%,Debt-to-income ratio is between 30% and is less than 36%
-,,50%-60%,Debt-to-income ratio is between 50% and 60%
-,,>60%,Debt-to-income ratio is greater than 60%
-,,NA,Not applicable
-,,Exempt ,Exemption taken 
-64,Combined Loan-To-Value Ratio,Combined Loan-To-Value Ratio,Example: 80.05
-,,NA,Not applicable
-,,Exempt ,Exemption taken
-65,Loan Term,Loan Term,Example: 360 
-,,NA ,Not applicable
-,,Exempt ,Exemption taken 
-66,Introductory Rate Period,Introductory Rate Period,Example: 24 
-,,NA,Not applicable
-,,Exempt,Exemption taken
+63,Debt-to-Income Ratio,<20%,Debt-to-income ratio is less than 20%
+63,Debt-to-Income Ratio,20%-<30%,Debt-to-income ratio is between 20% and is less than 30%
+63,Debt-to-Income Ratio,30%-<36%,Debt-to-income ratio is between 30% and is less than 36%
+63,Debt-to-Income Ratio,50%-60%,Debt-to-income ratio is between 50% and 60%
+63,Debt-to-Income Ratio,>60%,Debt-to-income ratio is greater than 60%
+63,Debt-to-Income Ratio,NA,Not applicable
+63,Debt-to-Income Ratio,Exempt ,Exemption taken 
 67,Balloon Payment,1,Balloon payment
-,,2,No balloon payment
-,,1111,Exempt
+67,Balloon Payment,2,No balloon payment
+67,Balloon Payment,1111,Exempt
 68,Interest-Only Payments,1,Interest-only payments
-,,2,No interest-only payments
-,,1111,Exempt
+68,Interest-Only Payments,2,No interest-only payments
+68,Interest-Only Payments,1111,Exempt
 69,Negative Amortization,1,Negative amortization
-,,2,No negative amortization
-,,1111,Exempt
+69,Negative Amortization,2,No negative amortization
+69,Negative Amortization,1111,Exempt
 70,Other Non-Amortizing Features,1,Other non-fully amortizing features
-,,2,No other non-fully amortizing features
-,,1111,Exempt
-71,Property Value,Property value,"Property values are rounded to the midpoint of the nearest $10,000 interval for which the reported value falls (For example a reported value of $117834 would be disclosed as $115000 as the midpoint between values $110000 and $120000)."
-,,NA,Not-applicable
-,,Exempt ,Exemption taken 
+70,Other Non-Amortizing Features,2,No other non-fully amortizing features
+70,Other Non-Amortizing Features,1111,Exempt
 72,Manufactured Home Secured Property Type,1,Manufactured home and land
-,,2,Manufactured home and not land
-,,3,Not applicable 
-,,1111,Exempt
+72,Manufactured Home Secured Property Type,2,Manufactured home and not land
+72,Manufactured Home Secured Property Type,3,Not applicable 
+72,Manufactured Home Secured Property Type,1111,Exempt
 73,Manufactured Home Land Property Interest,1,Direct ownership
-,,2,Indirect ownership
-,,3,Paid leasehold
-,,4,Unpaid leasehold
-,,5,Not applicable 
-,,1111,Exempt
-73,Total Units,1,1-Unit
-,,2,2-Unit
-,,3,3-Unit
-,,4,4-Unit
-,,5-24,Total units between 5 and 24
-,,25-49,Total units between 25 and 49
-,,50-99,Total units between 50 and 99
-,,100-149,Total units between 100 and 149
-,,>149,Total units over 149
-75,Multifamily Affordable Units,Percentage of total units,"Values that are not NA or Exempt are disclosed as a percentage calculated as multifamily affordable units reported / total units reported, and rounded to the nearest whole number."
-,,NA,Not-applicable
-,,Exempt,Exemption taken
+73,Manufactured Home Land Property Interest,2,Indirect ownership
+73,Manufactured Home Land Property Interest,3,Paid leasehold
+73,Manufactured Home Land Property Interest,4,Unpaid leasehold
+73,Manufactured Home Land Property Interest,5,Not applicable 
+73,Manufactured Home Land Property Interest,1111,Exempt
+74,Total Units,1,1-Unit
+74,Total Units,2,2-Unit
+74,Total Units,3,3-Unit
+74,Total Units,4,4-Unit
+74,Total Units,5-24,Total units between 5 and 24
+74,Total Units,25-49,Total units between 25 and 49
+74,Total Units,50-99,Total units between 50 and 99
+74,Total Units,100-149,Total units between 100 and 149
+74,Total Units,>149,Total units over 149
 76,Submission of Application,1,Submitted directly to your institution
-,,2,Not submitted directly to your institution
-,,3,Not applicable 
-,,1111,Exempt
+76,Submission of Application,2,Not submitted directly to your institution
+76,Submission of Application,3,Not applicable 
+76,Submission of Application,1111,Exempt
 77,Initially Payable to Your Institution,1,Initially payable to your institution
-,,2,Not initially payable to your institution
-,,3,Not applicable 
-,,1111,Exempt
-78,Automated Underwriting System: 1,1,Desktop Underwriter (DU)
-,,2,Loan Prospector (LP) or Loan Product Advisor
-,,3,Technology Open to Approved Lenders (TOTAL) Scorecard
-,,4,Guaranteed Underwriting System (GUS)
-,,5,Other
-,,6,Not applicable 
-,,1111,Exempt
-79,Automated Underwriting System: 2,1,Desktop Underwriter (DU)
-,,2,Loan Prospector (LP) or Loan Product Advisor
-,,3,Technology Open to Approved Lenders (TOTAL) Scorecard
-,,4,Guaranteed Underwriting System (GUS)
-,,5,Other
-,,blank,Field Blank
-80,Automated Underwriting System: 3,1,Desktop Underwriter (DU)
-,,2,Loan Prospector (LP) or Loan Product Advisor
-,,3,Technology Open to Approved Lenders (TOTAL) Scorecard
-,,4,Guaranteed Underwriting System (GUS)
-,,5,Other
-,,blank,Field Blank
-81,Automated Underwriting System: 4,1,Desktop Underwriter (DU)
-,,2,Loan Prospector (LP) or Loan Product Advisor
-,,3,Technology Open to Approved Lenders (TOTAL) Scorecard
-,,4,Guaranteed Underwriting System (GUS)
-,,5,Other
-,,blank,Field Blank
-82,Automated Underwriting System: 5,1,Desktop Underwriter (DU)
-,,2,Loan Prospector (LP) or Loan Product Advisor
-,,3,Technology Open to Approved Lenders (TOTAL) Scorecard
-,,4,Guaranteed Underwriting System (GUS)
-,,5,Other
-,,blank,Field Blank
+77,Initially Payable to Your Institution,2,Not initially payable to your institution
+77,Initially Payable to Your Institution,3,Not applicable 
+77,Initially Payable to Your Institution,1111,Exempt
+78,Automated Underwriting System,1,Desktop Underwriter (DU)
+78,Automated Underwriting System,2,Loan Prospector (LP) or Loan Product Advisor
+78,Automated Underwriting System,3,Technology Open to Approved Lenders (TOTAL) Scorecard
+78,Automated Underwriting System,4,Guaranteed Underwriting System (GUS)
+78,Automated Underwriting System,5,Other. Note: Code 5 is only valid for Automated Underwriting System: 1
+78,Automated Underwriting System,6,Not applicable. Note: Code 6 is only valid for Automated Underwriting System: 1
+78,Automated Underwriting System,1111,Exemption taken. Note Code 1111 is only valid for Automated Underwriting System: 1
 83,Reverse Mortgage,1,Reverse mortgage
-,,2,Not a reverse mortgage
-,,1111,Exempt
+83,Reverse Mortgage,2,Not a reverse mortgage
+83,Reverse Mortgage,1111,Exempt
 84,Open-End Line of Credit,1,Open-end line of credit
-,,2,Not an open-end line of credit
-,,1111,Exempt
+84,Open-End Line of Credit,2,Not an open-end line of credit
+84,Open-End Line of Credit,1111,Exempt
 85,Business or Commercial Purpose,1,Primarily for a business or commercial purpose
-,,2,Not primarily for a business or commercial purpose
-,,1111,Exempt 
+85,Business or Commercial Purpose,2,Not primarily for a business or commercial purpose
+85,Business or Commercial Purpose,1111,Exempt 
