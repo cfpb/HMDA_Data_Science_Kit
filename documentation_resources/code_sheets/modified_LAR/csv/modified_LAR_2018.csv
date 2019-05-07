@@ -24,23 +24,23 @@
 9,Action Taken,6,Purchased loan
 9,Action Taken,7,Preapproval request denied
 9,Action Taken,8,Preapproval request approved but not accepted
-13,Ethnicity of Applicant or Borrower: 1,1,Hispanic or Latino
-13,Ethnicity of Applicant or Borrower: 1,11,Mexican
-13,Ethnicity of Applicant or Borrower: 1,12,Puerto Rican
-13,Ethnicity of Applicant or Borrower: 1,13,Cuban
-13,Ethnicity of Applicant or Borrower: 1,14,Other Hispanic or Latino
-13,Ethnicity of Applicant or Borrower: 1,2,Not Hispanic or Latino
-13,Ethnicity of Applicant or Borrower: 1,3,"Information not provided by applicant in mail, internet, or telephone application. Note: Code 3 only valid for ethnicity of Applicant or Borrower: 1."
-13,Ethnicity of Applicant or Borrower: 1,4,Not applicable. Note: Code 4 only valid for Ethnicity of Applicant or Borrower: 1.
-18,Ethnicity of Co-Applicant or Co-Borrower: 1,1,Hispanic or Latino
-18,Ethnicity of Co-Applicant or Co-Borrower: 1,11,Mexican
-18,Ethnicity of Co-Applicant or Co-Borrower: 1,12,Puerto Rican
-18,Ethnicity of Co-Applicant or Co-Borrower: 1,13,Cuban
-18,Ethnicity of Co-Applicant or Co-Borrower: 1,14,Other Hispanic or Latino
-18,Ethnicity of Co-Applicant or Co-Borrower: 1,2,Not Hispanic or Latino
-18,Ethnicity of Co-Applicant or Co-Borrower: 1,3,"Information not provided by applicant in mail, internet, or telephone application. Note: Code 3 only valid for ethnicity of Co-Applicant or Co-Borrower: 1."
-18,Ethnicity of Co-Applicant or Co-Borrower: 1,4,Not applicable. Note: Code 4 only valid for Ethnicity of Co-Applicant or Co-Borrower: 1.
-18,Ethnicity of Co-Applicant or Co-Borrower: 1,5,No co-applicant. Note: Code 5 only valid for Ethnicity of Co-Applicant or Co-Borrower: 1.
+13,Ethnicity of Applicant or Borrower,1,Hispanic or Latino
+13,Ethnicity of Applicant or Borrower,11,Mexican
+13,Ethnicity of Applicant or Borrower,12,Puerto Rican
+13,Ethnicity of Applicant or Borrower,13,Cuban
+13,Ethnicity of Applicant or Borrower,14,Other Hispanic or Latino
+13,Ethnicity of Applicant or Borrower,2,Not Hispanic or Latino
+13,Ethnicity of Applicant or Borrower,3,"Information not provided by applicant in mail, internet, or telephone application. Note: Code 3 only valid for ethnicity of Applicant or Borrower: 1."
+13,Ethnicity of Applicant or Borrower,4,Not applicable. Note: Code 4 only valid for Ethnicity of Applicant or Borrower: 1.
+18,Ethnicity of Co-Applicant or Co-Borrower,1,Hispanic or Latino
+18,Ethnicity of Co-Applicant or Co-Borrower,11,Mexican
+18,Ethnicity of Co-Applicant or Co-Borrower,12,Puerto Rican
+18,Ethnicity of Co-Applicant or Co-Borrower,13,Cuban
+18,Ethnicity of Co-Applicant or Co-Borrower,14,Other Hispanic or Latino
+18,Ethnicity of Co-Applicant or Co-Borrower,2,Not Hispanic or Latino
+18,Ethnicity of Co-Applicant or Co-Borrower,3,"Information not provided by applicant in mail, internet, or telephone application. Note: Code 3 only valid for ethnicity of Co-Applicant or Co-Borrower: 1."
+18,Ethnicity of Co-Applicant or Co-Borrower,4,Not applicable. Note: Code 4 only valid for Ethnicity of Co-Applicant or Co-Borrower: 1.
+18,Ethnicity of Co-Applicant or Co-Borrower,5,No co-applicant. Note: Code 5 only valid for Ethnicity of Co-Applicant or Co-Borrower: 1.
 23,Ethnicity of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,1,Collected on the basis of visual observation or surname
 23,Ethnicity of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,2,Not collected on the basis of visual observation or surname
 23,Ethnicity of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,3,Not applicable
@@ -48,43 +48,43 @@
 24,Ethnicity of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,2,Not collected on the basis of visual observation or surname
 24,Ethnicity of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,3,Not applicable
 24,Ethnicity of Co-Applicant or Co-Borrower Collected on the Basis of Visual Observation or Surname,4,No co-applicant
-25,Race of Applicant or Borrower: 1,1,American Indian or Alaska Native
-25,Race of Applicant or Borrower: 1,2,Asian
-25,Race of Applicant or Borrower: 1,21,Asian Indian
-25,Race of Applicant or Borrower: 1,22,Chinese
-25,Race of Applicant or Borrower: 1,23,Filipino
-25,Race of Applicant or Borrower: 1,24,Japanese
-25,Race of Applicant or Borrower: 1,25,Korean
-25,Race of Applicant or Borrower: 1,26,Vietnamese
-25,Race of Applicant or Borrower: 1,27,Other Asian
-25,Race of Applicant or Borrower: 1,3,Black or African American
-25,Race of Applicant or Borrower: 1,4,Native Hawaiian or Other Pacific Islander
-25,Race of Applicant or Borrower: 1,41,Native Hawaiian
-25,Race of Applicant or Borrower: 1,42,Guamanian or Chamorro
-25,Race of Applicant or Borrower: 1,43,Samoan
-25,Race of Applicant or Borrower: 1,44,Other Pacific Islander
-25,Race of Applicant or Borrower: 1,5,White
-25,Race of Applicant or Borrower: 1,6,"Information not provided by applicant in mail, internet, or telephone application. Note Code 6 is only valid for Race of Applicant or Borrower: 1. "
-25,Race of Applicant or Borrower: 1,7,Not applicable. Note Code 7 is only valid for Race of Applicant or Borrower: 1. 
-30,Race of Co-Applicant or Co-Borrower: 1,1,American Indian or Alaska Native
-30,Race of Co-Applicant or Co-Borrower: 1,2,Asian
-30,Race of Co-Applicant or Co-Borrower: 1,21,Asian Indian
-30,Race of Co-Applicant or Co-Borrower: 1,22,Chinese
-30,Race of Co-Applicant or Co-Borrower: 1,23,Filipino
-30,Race of Co-Applicant or Co-Borrower: 1,24,Japanese
-30,Race of Co-Applicant or Co-Borrower: 1,25,Korean
-30,Race of Co-Applicant or Co-Borrower: 1,26,Vietnamese
-30,Race of Co-Applicant or Co-Borrower: 1,27,Other Asian
-30,Race of Co-Applicant or Co-Borrower: 1,3,Black or African American
-30,Race of Co-Applicant or Co-Borrower: 1,4,Native Hawaiian or Other Pacific Islander
-30,Race of Co-Applicant or Co-Borrower: 1,41,Native Hawaiian
-30,Race of Co-Applicant or Co-Borrower: 1,42,Guamanian or Chamorro
-30,Race of Co-Applicant or Co-Borrower: 1,43,Samoan
-30,Race of Co-Applicant or Co-Borrower: 1,44,Other Pacific Islander
-30,Race of Co-Applicant or Co-Borrower: 1,5,White
-30,Race of Co-Applicant or Co-Borrower: 1,6,"Information not provided by applicant in mail, internet, or telephone application. Note Code 6 is only valid for Race of Co-Applicant or Co-Borrower: 1"
-30,Race of Co-Applicant or Co-Borrower: 1,7,Not applicable. Note: Code 7 is only valid for Race of Co-Applicant or Co-Borrower: 1
-30,Race of Co-Applicant or Co-Borrower: 1,8,No co-applicant. Note: Code 8 is only valid for Race of Co-Applicant or Co-Borrower: 1
+25,Race of Applicant or Borrower,1,American Indian or Alaska Native
+25,Race of Applicant or Borrower,2,Asian
+25,Race of Applicant or Borrower,21,Asian Indian
+25,Race of Applicant or Borrower,22,Chinese
+25,Race of Applicant or Borrower,23,Filipino
+25,Race of Applicant or Borrower,24,Japanese
+25,Race of Applicant or Borrower,25,Korean
+25,Race of Applicant or Borrower,26,Vietnamese
+25,Race of Applicant or Borrower,27,Other Asian
+25,Race of Applicant or Borrower,3,Black or African American
+25,Race of Applicant or Borrower,4,Native Hawaiian or Other Pacific Islander
+25,Race of Applicant or Borrower,41,Native Hawaiian
+25,Race of Applicant or Borrower,42,Guamanian or Chamorro
+25,Race of Applicant or Borrower,43,Samoan
+25,Race of Applicant or Borrower,44,Other Pacific Islander
+25,Race of Applicant or Borrower,5,White
+25,Race of Applicant or Borrower,6,"Information not provided by applicant in mail, internet, or telephone application. Note Code 6 is only valid for Race of Applicant or Borrower: 1. "
+25,Race of Applicant or Borrower,7,Not applicable. Note Code 7 is only valid for Race of Applicant or Borrower: 1. 
+30,Race of Co-Applicant or Co-Borrower,1,American Indian or Alaska Native
+30,Race of Co-Applicant or Co-Borrower,2,Asian
+30,Race of Co-Applicant or Co-Borrower,21,Asian Indian
+30,Race of Co-Applicant or Co-Borrower,22,Chinese
+30,Race of Co-Applicant or Co-Borrower,23,Filipino
+30,Race of Co-Applicant or Co-Borrower,24,Japanese
+30,Race of Co-Applicant or Co-Borrower,25,Korean
+30,Race of Co-Applicant or Co-Borrower,26,Vietnamese
+30,Race of Co-Applicant or Co-Borrower,27,Other Asian
+30,Race of Co-Applicant or Co-Borrower,3,Black or African American
+30,Race of Co-Applicant or Co-Borrower,4,Native Hawaiian or Other Pacific Islander
+30,Race of Co-Applicant or Co-Borrower,41,Native Hawaiian
+30,Race of Co-Applicant or Co-Borrower,42,Guamanian or Chamorro
+30,Race of Co-Applicant or Co-Borrower,43,Samoan
+30,Race of Co-Applicant or Co-Borrower,44,Other Pacific Islander
+30,Race of Co-Applicant or Co-Borrower,5,White
+30,Race of Co-Applicant or Co-Borrower,6,"Information not provided by applicant in mail, internet, or telephone application. Note Code 6 is only valid for Race of Co-Applicant or Co-Borrower: 1"
+30,Race of Co-Applicant or Co-Borrower,7,Not applicable. Note: Code 7 is only valid for Race of Co-Applicant or Co-Borrower: 1
+30,Race of Co-Applicant or Co-Borrower,8,No co-applicant. Note: Code 8 is only valid for Race of Co-Applicant or Co-Borrower: 1
 35,Race of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,1,Collected on the basis of visual observation or surname
 35,Race of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,2,Not collected on the basis of visual observation or surname
 35,Race of Applicant or Borrower Collected on the Basis of Visual Observation or Surname,3,Not applicable
@@ -119,8 +119,8 @@
 41,Age of Applicant or Borrower,>74,Age is greater than 74
 41,Age of Applicant or Borrower,8888,Not applicable
 42,Age of Applicant >=62,Yes,Age of the applicant is >= 62
-42,Age of Applicant >=63,No,Age of the applicant < 62
-42,Age of Applicant >=64,NA,Age of Applicant or Borrower is indicated as 8888 or 9999
+42,Age of Applicant >=62,No,Age of the applicant < 62
+42,Age of Applicant >=62,NA,Age of Applicant or Borrower is indicated as 8888 or 9999
 43,Age of Co-Applicant or Co-Borrower,<25,Age is less than 25
 43,Age of Co-Applicant or Co-Borrower,25-34,Age is between 25 and 34
 43,Age of Co-Applicant or Co-Borrower,35-44,Age is between 35 and 44
@@ -131,8 +131,8 @@
 43,Age of Co-Applicant or Co-Borrower,8888,Not applicable
 43,Age of Co-Applicant or Co-Borrower,9999,No co-applicant
 44,Age of Co-Applicant >=62,Yes,Age of Co-Applicant or Co-Borrower is >=62
-44,Age of Co-Applicant >=63,No,Age of Co-Applicant or Co-Borrower is < 62
-44,Age of Co-Applicant >=64,NA,Age of Co-Applicant or Co-Borrower is indicated as 8888 or 9999
+44,Age of Co-Applicant >=62,No,Age of Co-Applicant or Co-Borrower is < 62
+44,Age of Co-Applicant >=62,NA,Age of Co-Applicant or Co-Borrower is indicated as 8888 or 9999
 46,Type of Purchaser,0,Not applicable 
 46,Type of Purchaser,1,Fannie Mae
 46,Type of Purchaser,2,Ginnie Mae
