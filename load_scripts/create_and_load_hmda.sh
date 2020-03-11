@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #Set default PSQL connection variables
 USER="postgres" #the postgres username for the connection

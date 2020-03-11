@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS lar_2017;
-CREATE TABLE lar_2017 (  
+DROP TABLE IF EXISTS hmda_public.lar_2017;
+CREATE TABLE hmda_public.lar_2017 (
     activity_year VARCHAR,
     respondent_id VARCHAR,
-    agency_code VARCHAR, 
+    agency_code VARCHAR,
     loan_type VARCHAR,
     property_type VARCHAR,
     loan_purpose VARCHAR,
@@ -32,7 +32,7 @@ CREATE TABLE lar_2017 (
     purchaser_type VARCHAR,
     denial_1 VARCHAR,
     denial_2 VARCHAR,
-    denial_3 VARCHAR,    
+    denial_3 VARCHAR,
     rate_spread VARCHAR,
     hoepa_status VARCHAR,
     lien_status VARCHAR,
@@ -47,7 +47,7 @@ CREATE TABLE lar_2017 (
     application_date_indicator VARCHAR);
 
 COPY hmda_public.lar_2017
+
 FROM '{data_path}/data/lar/lar_2017.txt'
+
 DELIMITER '|' ENCODING 'latin1';
-
-

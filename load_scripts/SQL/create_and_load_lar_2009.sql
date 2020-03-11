@@ -1,5 +1,7 @@
 DROP TABLE IF EXISTS hmda_public.lar_2009;
+
 CREATE TABLE hmda_public.lar_2009(   
+
     activity_year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR,
@@ -90,7 +92,7 @@ INSERT INTO hmda_public.lar_2009 (
     sequence_num
     )
 
-SELECT 
+SELECT
 SUBSTRING(LAR, 1,4),
 SUBSTRING(LAR, 5,10),
 SUBSTRING(LAR, 15,1),
@@ -132,6 +134,5 @@ SUBSTRING(LAR, 74,7)
 
 FROM lar_load;
 COMMIT;
-DROP TABLE IF EXISTS lar_load; 
+DROP TABLE IF EXISTS lar_load;
 COMMIT;
-
