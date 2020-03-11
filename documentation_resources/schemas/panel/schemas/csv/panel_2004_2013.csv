@@ -1,0 +1,17 @@
+﻿ Field Number , Field Name            , Field Data Type , Start , Stop , Length 
+1, Respondent ID         , Alphanumeric    ,1,10,10
+2, MSA                   , Alphanumeric    ,11,15,5
+3, Agency Code           , Numeric         ,16,16,1
+4, Agency Group Code     , Numeric         ,17,18,2
+5, Respondent Name       , Alphanumeric    ,19,48,30
+6, Respondent City       , Alphanumeric    ,49,73,25
+7, Respondent State      , Alphanumeric    ,74,75,2
+8, Respondent State FIPS , Alphanumeric    ,76,77,2
+9, Assets                , Numeric         ,78,87,10
+10, Other Lender Code     , Numeric         ,88,88,1
+11, Parent ID             , Alphanumeric    ,89,98,10
+12, Parent Name           , Alphanumeric    ,99,128,30
+13, Parent City           , Alphanumeric    ,129,153,25
+14, Parent State          , Alphanumeric    ,154,155,2
+15, As Of Year            , Numeric         ,156,159,4
+16, Respondent RSSD       , Numeric         ,160,169,10

@@ -22,7 +22,9 @@ CREATE TEMPORARY TABLE ts_load
 
 COPY ts_load
 -- Change to your local data path
-FROM '{data_path}HMDA_Data_Science_Kit/data/ts/ts_2007.dat'
+
+FROM '{data_path}/data/ts/ts_2007.dat' 
+
     ENCODING 'latin1';
 COMMIT;
 

@@ -1,5 +1,7 @@
 DROP TABLE IF EXISTS hmda_public.lar_2009;
-CREATE TABLE hmda_public.lar_2009(
+
+CREATE TABLE hmda_public.lar_2009(   
+
     activity_year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR,
@@ -45,7 +47,7 @@ CREATE TEMPORARY TABLE lar_load
 
 COPY lar_load
 -- Change this path to your local data path.
-FROM '{data_path}HMDA_Data_Science_Kit/data/lar/lar_2009.dat';
+FROM '{data_path}/data/lar/lar_2009.dat';
 
 COMMIT;
 

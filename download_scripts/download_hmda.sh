@@ -197,7 +197,7 @@ if [ $# -eq 0 ]; then
 	   if [ "${FORCE}" = "true" ]; then
 	   		rm data/ts/${TS_FILENAME}
 	   fi
-	   wget -q -nc -c -t=10 --show-progress -O data/ts/${TS_FILENAME} "${i}" #write file to disk
+	   wget -q -nc -c -t 10 --show-progress -O data/ts/${TS_FILENAME} "${i}" #write file to disk
 	done #end loop
 
 	#iterate over Panel URL array
@@ -217,7 +217,7 @@ if [ $# -eq 0 ]; then
 		if [ "${FORCE}" = "true" ]; then
 			rm data/panel/${PANEL_FILENAME}
 		fi
-		wget -q -nc -c -t=10 --show-progress -O data/panel/${PANEL_FILENAME} "${i}"
+		wget -q -nc -c -t 10 --show-progress -O data/panel/${PANEL_FILENAME} "${i}"
 	done
 
 	#iterate over LAR URL array
@@ -232,7 +232,7 @@ if [ $# -eq 0 ]; then
 		if [ "${FORCE}" = "true" ]; then
 			rm data/lar/${LAR_FILENAME}
 		fi
-		wget -q -nc -c -t=10 --show-progress -O  data/lar/${LAR_FILENAME} "${i}"
+		wget -q -nc -c -t 10 --show-progress -O  data/lar/${LAR_FILENAME} "${i}"
 	done
 	exit 0
 fi
@@ -257,7 +257,7 @@ if [ "${LAR}" = "true" ]; then
 		if [ "${FORCE}" = "true" ]; then
 			rm data/lar/${LAR_FILENAME}
 		fi
-		wget -q ${NC} -c -t=10 --show-progress -O  data/lar/${LAR_FILENAME} "${i}"
+		wget -q ${NC} -c -t 10 --show-progress -O  data/lar/${LAR_FILENAME} "${i}"
 	done
 fi
 
@@ -287,7 +287,7 @@ if [ "$TS" = "true" ]; then
 	   if [ "${FORCE}" = "true" ]; then
 	   		rm data/ts/${TS_FILENAME}
 	   fi
-	   wget -q ${NC} -c -t=10 --show-progress -O data/ts/${TS_FILENAME} "${i}" #write file to disk
+	   wget -q ${NC} -c -t 10 --show-progress -O data/ts/${TS_FILENAME} "${i}" #write file to disk
 	done #end loop
 fi
 
@@ -316,7 +316,7 @@ if [ "${PANEL}" = "true" ]; then
 		if [ "${FORCE}" = "true" ]; then
 			rm data/panel/${PANEL_FILENAME}
 		fi
-		wget -q ${NC} -c -t=10 --show-progress -O data/panel/${PANEL_FILENAME} "${i}"
+		wget -q ${NC} -c -t 10 --show-progress -O data/panel/${PANEL_FILENAME} "${i}"
 	done
 fi
 
@@ -369,5 +369,5 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 		rm data/$FOLDER/"${SPECIFIC_FILE}${FILE_EXT}"
 	fi
 	#download the specific file using passed force parameter
-	wget -q ${NC} -c -t=10 --show-progress -O data/$FOLDER/"${SPECIFIC_FILE}${FILE_EXT}" "${URL}"
+	wget -q ${NC} -c -t 10 --show-progress -O data/$FOLDER/"${SPECIFIC_FILE}${FILE_EXT}" "${URL}"
 fi
