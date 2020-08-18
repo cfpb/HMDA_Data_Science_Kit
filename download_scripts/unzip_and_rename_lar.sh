@@ -3,19 +3,19 @@
 #This file unzips and renames the LAR files in the data/lar directory.
 #unzip and rename files
 unzip data/lar/lar_2017.zip -d data/lar
-unzip data/lar/lar_2016.zip -d data/lar 
-unzip data/lar/lar_2015.zip -d data/lar 
-unzip data/lar/lar_2014.zip -d data/lar 
-unzip data/lar/lar_2013.zip -d data/lar 
-unzip data/lar/lar_2012.zip -d data/lar 
-unzip data/lar/lar_2011.zip -d data/lar 
-unzip data/lar/lar_2010.zip -d data/lar 
-unzip data/lar/lar_2009.zip -d data/lar 
-unzip data/lar/lar_2008.zip -d data/lar 
-unzip data/lar/lar_2007.zip -d data/lar 
-unzip data/lar/lar_2006.zip -d data/lar 
-unzip data/lar/lar_2005.zip -d data/lar 
-unzip data/lar/lar_2004.zip -d data/lar 
+unzip data/lar/lar_2016.zip -d data/lar
+unzip data/lar/lar_2015.zip -d data/lar
+unzip data/lar/lar_2014.zip -d data/lar
+unzip data/lar/lar_2013.zip -d data/lar
+unzip data/lar/lar_2012.zip -d data/lar
+unzip data/lar/lar_2011.zip -d data/lar
+unzip data/lar/lar_2010.zip -d data/lar
+unzip data/lar/lar_2009.zip -d data/lar
+unzip data/lar/lar_2008.zip -d data/lar
+unzip data/lar/lar_2007.zip -d data/lar
+unzip data/lar/lar_2006.zip -d data/lar
+unzip data/lar/lar_2005.zip -d data/lar
+unzip data/lar/lar_2004.zip -d data/lar
 
 mv data/lar/2017_public_lar.txt data/lar/lar_2017.txt
 mv data/lar/2016HMDALAR\ -\ National.csv data/lar/lar_2016.csv

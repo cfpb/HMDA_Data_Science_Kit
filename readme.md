@@ -10,22 +10,22 @@
 - [Getting Started: Basic Requirements](#basic-requirements-and-instructions)
 
 ## Repository Purpose and Scope:
-
-The primary goal of this repository is to provide data users with tools to enable them to produce accurate analytics results. Additionally, this repository provides an overview of HMDA resources, publications, and guidelines for proper use. This repository does not provide statutory interpretation or compliance assistance. 
+The primary goal of this repository is to provide data users with tools to enable them to produce accurate analytics results. Additionally, this repository provides an overview of HMDA resources, publications, and guidelines for proper use. This repository does not provide statutory interpretation or compliance assistance.
 
 ## What Is HMDA?
 
 HMDA refers to the [Home Mortgage Disclosure Act of 1975](https://www.gpo.gov/fdsys/pkg/USCODE-2011-title12/pdf/USCODE-2011-title12-chap29.pdf).
-HMDA requires many financial institutions to maintain, report, and publicly disclose loan-level information about mortgages. HMDA was originally enacted by Congress in 1975 and is implemented by [Regulation C](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/regulation-c-home-mortgage-disclosure-act/). 
+HMDA requires many financial institutions to maintain, report, and publicly disclose loan-level information about mortgages. HMDA was originally enacted by Congress in 1975 and is implemented by [Regulation C](https://www.consumerfinance.gov/policy-compliance/rulemaking/final-rules/regulation-c-home-mortgage-disclosure-act/).
 
 Congress amended HMDA in 2010 and the Bureau finalized a rule implementing changes to HMDA in 2015. Most of the rule's provisions affect data collected in 2018 and reported in 2019. However, beginning with data collected in 2017, depository institutions that originated fewer than 25 covered closed-end mortgages in either of the preceding two years are not required to report.
 
 The senate bill S2155 modified some reporting requirements for the 2018 data collection. These changes will be outlined in upcoming publications.
 
-#### What is the purpose of HMDA?
 
-- To provide the public with information that will help show whether financial institutions are serving the housing credit needs of the neighborhoods and communities in which they are located. 
-- To aid public officials in targeting public investments from the private sector to areas where they are needed. 
+**What is the purpose of HMDA?**
+- To provide the public with information that will help show whether financial institutions are serving the housing credit needs of the neighborhoods and communities in which they are located.
+- To aid public officials in targeting public investments from the private sector to areas where they are needed.
+
 - The FIRREA amendments of 1989 require the collection and disclosure of data about applicant and borrower characteristics to assist in identifying possible discriminatory lending patterns and enforcing antidiscrimination statutes.
 
 ## HMDA Datasets
@@ -40,10 +40,10 @@ These datasets include:
 - The HMDA Reporter Panel: This dataset contains additional information regarding financial institutions such as identifier links to the National Information Center (NIC) and hierarchy information such as parent and top holder. The HMDA Reporter Panel is assembled by the Bureau on behalf of the FFIEC (beginning in 2017). Panel schemas can be found in this [folder]().
 
 ## Integration of Census Data with HMDA
+HMDA data is often joined to Census data to show context for the mortgage data. The FFIEC joins the following to the HMDA LAR data: area population, minority population percentage, FFIEC median family income, tract to MSA/MD median family income percentage, number of owner-occupied units, and the number of 1-4 family units. These data are joined at the tract level to provide context for mortgage activity in the relevant geography. The base data for this join are made available by the FFIEC on this [website](https://www.ffiec.gov/censusapp.htm). The year of the Census data correspond to the HMDA collection year.
 
-HMDA data is often joined to Census data to show context for the mortgage data. The FFIEC joins the following to the HMDA LAR data: area population, minority population percentage, FFIEC median family income, tract to MSA/MD median family income percentage, number of owner-occupied units, and the number of 1-4 family units. These data are joined at the tract level to provide context for mortgage activity in the relevant geography. The base data for this join are made available by the FFIEC on this [website](https://www.ffiec.gov/censusapp.htm). The year of the Census data correspond to the HMDA collection year. 
 
-For examples on how to handle Census data and join Census data to LAR data please see the [Census directory]().
+For examples on how to handle Census data and join Census data to LAR data please see the [Census Directory](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/census).
 
 ## HMDA Data Documentation
 
@@ -64,17 +64,19 @@ The HMDA data are complex and care must be taken to ensure that analytics result
 ## HMDA Publications
 
 For a list of HMDA publications, see [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/federal_pubs.md)
-  
+
 ## Basic Requirements and Instructions
+
 
 ### Requirements
 
-The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code. 
+#### Requirements
+The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code.
 
 The Python resources assume that a functioning installation of [Python 3.5 or greater](https://www.python.org/downloads/) or greater is present. Convention in these instructions and code resources will use python3 to invoke python scripts. If two versions of Python are not present, this command may need to be changed to python, without the 3.
 
 This repository has a requirements.txt file that can be used to install the Python libraries used in the repository:
-- `pip install -r requirements.txt` 
+- `pip install -r requirements.txt`
 
 ### Downloading and Unzipping Data
 
@@ -85,16 +87,17 @@ These data can be downloaded manually from the links listed or the following scr
 
 The script can download HMDA ultimate data files for LAR, Transmittal Sheet, and Panel for the years 2004 through 2017.
 
-Running the script without flags will download all LAR, Transmittal Sheet, and Panel files that are not present. 
+Running the script without flags will download all LAR, Transmittal Sheet, and Panel files that are not present.
 
 The script accepts the following option flags:
-- `-a`: Prints to console the available files for download. 
-- `-s`: Allows a specific file to be downloaded if it is not present. The name convention for specific files is as follows: lar_<year>, panel_<year>, or ts_<year>.
-- `-p`: Downloads all Panel files that are not present.
-- `-t`: Downloads all Transmittal Sheet files that are not present.
-- `-l`: Downloads all LAR files that are not present.
-- `-F`: Deletes the file or file types to be downloaded (the files are then redownloaded).
-- `-h`: Prints to console the instructions for using the script.
+
+- -a: Prints to console the available files for download.
+- -s: Allows a specific file to be downloaded if it is not present. The name convention for specific files is as follows: lar_<year>, panel_<year>, or ts_<year>.
+- -p: Downloads all Panel files that are not present.
+- -t: Downloads all Transmittal Sheet files that are not present.
+- -l: Downloads all LAR files that are not present.
+- -F: Deletes the file or file types to be downloaded (the files are then redownloaded).
+- -h: Prints to console the instructions for using the script.
 
 #### Usage examples
 
@@ -188,3 +191,4 @@ We use GitHub issues in this repository to track features, bugs, and enhancement
 1. [TERMS](TERMS.md)
 2. [LICENSE](LICENSE)
 3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)
+
