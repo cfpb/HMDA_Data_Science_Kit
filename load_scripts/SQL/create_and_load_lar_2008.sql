@@ -45,7 +45,7 @@ CREATE TEMPORARY TABLE lar_load
 
 COPY lar_load
 -- Change this path to your local data path.
-FROM '{data_path}/data/lar/lar_2008.dat';
+FROM '/Users/roellr/Documents/HMDA_Repos/HMDA_Data_Science_Kit/data/lar/lar_2008.dat';
 
 COMMIT;
 
@@ -87,7 +87,7 @@ INSERT INTO hmda_public.lar_2008 (
     rate_spread,
     hoepa_status,
     lien_status,
-    sequence_num
+    sequence_number
     )
 
 SELECT 

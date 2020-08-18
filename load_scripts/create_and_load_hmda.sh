@@ -59,6 +59,7 @@ export PGHOST="${PGHOST-${HOST}}" #host address of the database
 export PGPORT="${PGPORT-${PORT}}" #connection port of the database
 
 echo "creating HMDA database and hmda_public schema"
+echo ""
 psql $PGDATABASE $PGUSER << EOF
 	CREATE DATABASE hmda;
 	\c hmda
@@ -66,12 +67,15 @@ psql $PGDATABASE $PGUSER << EOF
 EOF
 
 echo "setting data paths for SQL load"
+echo ""
 bash load_scripts/write_data_paths.sh
 
 echo "removing extra tab in ts 2016"
+echo ""
 python3 load_scripts/remove_tab_ts_2016.py
 
 echo "creating HMDA tables for 2004-2017"
+echo ""
 psql $PGDATABASE $PGUSER  << EOF
 	\c hmda;
 	set schema 'hmda_public';
@@ -89,6 +93,8 @@ psql $PGDATABASE $PGUSER  << EOF
 	\i 'load_scripts/SQL/create_and_load_ts_2015.sql'
 	\i 'load_scripts/SQL/create_and_load_ts_2016.sql'
 	\i 'load_scripts/SQL/create_and_load_ts_2017.sql'
+	\i 'load_scripts/SQL/create_and_load_ts_2018.sql'
+	\i 'load_scripts/SQL/create_and_load_ts_2019.sql'
 	\i 'load_scripts/SQL/create_and_load_panel_2004.sql'
 	\i 'load_scripts/SQL/create_and_load_panel_2005.sql'
 	\i 'load_scripts/SQL/create_and_load_panel_2006.sql'
@@ -103,6 +109,8 @@ psql $PGDATABASE $PGUSER  << EOF
 	\i 'load_scripts/SQL/create_and_load_panel_2015.sql'
 	\i 'load_scripts/SQL/create_and_load_panel_2016.sql'
 	\i 'load_scripts/SQL/create_and_load_panel_2017.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2018.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2019.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2004.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2005.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2006.sql'
@@ -117,4 +125,6 @@ psql $PGDATABASE $PGUSER  << EOF
 	\i 'load_scripts/SQL/create_and_load_lar_2015.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2016.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2017.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2018.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2019.sql'
 EOF

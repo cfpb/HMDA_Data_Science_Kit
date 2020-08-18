@@ -41,6 +41,9 @@ Additional elements discussing of changes to underlying data (such as the benchm
 
 - The HMDA Reporter Panel: This dataset contains additional information regarding financial institutions such as identifier links to the National Information Center (NIC) and hierarchy information such as parent and top holder. The HMDA Reporter Panel is assembled by the Bureau on behalf of the FFIEC (beginning in 2017). Panel schemas can be found in this [folder](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/panel/schemas).
 
+## HMDA Data Browser:
+The [HMDA Data Browser](https://ffiec.cfpb.gov/data-browser/data/2019?category=states&ethnicities=&sexes=) provides filtering and download capability for the LAR datasets.
+
 ## Integration of Census Data with HMDA
 HMDA data is often joined to Census data on the county FIPS code to show context for the mortgage data at the geographic level. The FFIEC joins the following to the HMDA LAR data: area population, minority population percentage, FFIEC median family income, tract to MSA/MD median family income percentage, number of owner-occupied units, and the number of 1-4 family units. These data are joined at the tract level to provide context for mortgage activity in the relevant geography. The base data for this join are made available by the FFIEC on this [website](https://www.ffiec.gov/censusapp.htm). The year of the Census data correspond to the HMDA collection year.
 
@@ -92,7 +95,8 @@ The [HMDA-Census](https://github.com/cfpb/hmda-census) repository contains code 
 
 ## Working With HMDA Data
 
-The HMDA data are complex and care must be taken to ensure that analytics results are accurate. Please see [Working With HMDA Data]() for explanations of how to load, segment the data, handle NA values, and create accurate time-series tabulations.
+The HMDA data are complex and care must be taken to ensure that analytics results are accurate. 
+
 
 ## HMDA Publications
 
@@ -177,9 +181,9 @@ The script below creates a HMDA database on an existing Postgres installation, c
 - `bash load_scripts/create_hmda_db.sh`
 
 To load subsets of the HMDA data (LAR, Transmittal Sheet, or Panel) use the scripts below. These scripts will create a database named 'hmda' if one does not exist. They will also create a hmda_public schema in which all the data tables will be created and populated.
-- `bash load_scripts/create_and_load_lar_2004_2017.sh`
-- `bash load_scripts/create_and_load_ts_2004_2017.sh`
-- `bash load_scripts/create_andload_panel_2004_2017.sh`
+- `bash load_scripts/create_and_load_lar_2004_2019.sh`
+- `bash load_scripts/create_and_load_ts_2004_2019.sh`
+- `bash load_scripts/create_andload_panel_2004_2019.sh`
 
 #### Using Options Flags
 

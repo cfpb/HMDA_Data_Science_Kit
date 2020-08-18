@@ -101,6 +101,6 @@ CREATE TABLE hmda_public.lar_2018 (
 
 COPY hmda_public.lar_2018
 
-FROM '{data_path}/data/lar/lar_2018.txt'
+FROM '/Users/roellr/Documents/HMDA_Repos/HMDA_Data_Science_Kit/data/lar/lar_2018.txt'
 
 DELIMITER '|' ENCODING 'latin1';

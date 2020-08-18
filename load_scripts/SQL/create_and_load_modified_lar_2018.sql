@@ -87,6 +87,6 @@ CREATE TABLE mlar_2018_{lei} (
     business_or_commercial_purpose NUMERIC);
 
 COPY hmda_public.mlar_2018_{lei}
-FROM '{data_path}/data/mlar/2018/{lei}.txt'
+FROM '/Users/roellr/Documents/HMDA_Repos/HMDA_Data_Science_Kit/data/mlar/2018/{lei}.txt'
 DELIMITER '|' ENCODING 'latin1';
 COMMIT;

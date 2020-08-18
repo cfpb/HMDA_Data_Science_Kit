@@ -34,7 +34,7 @@
 - [2016 Comma Delimted](https://www.ffiec.gov/hmdarawdata/FORMATS/2016HMDALARRecordFormat.pdf)
 - [2015 Comma Delimted](https://www.ffiec.gov/hmdarawdata/FORMATS/2015HMDALARRecordFormat.pdf)
 - [2014 Comma Delimted](https://www.ffiec.gov/hmdarawdata/FORMATS/2014HMDALARRecordFormat.pdf)
-- [2004-2013 Fixed Width .DAT files](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/data_links.md) from National Archives.
+- [2004-2013 Fixed Width .DAT files](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/data_links.md) from National Archives
 
 
 ### MLAR Specs:
@@ -50,4 +50,4 @@
 - [2016 Tab Delimited](https://www.ffiec.gov/hmdarawdata/FORMATS/2016HMDAMSAOfficeFormat.pdf)
 - [2015 Tab Delimited](https://www.ffiec.gov/hmdarawdata/FORMATS/2015HMDAMSAOfficeFormat.pdf)
 - [2014 Tab Delimited](https://www.ffiec.gov/hmdarawdata/FORMATS/2014HMDAMSAOfficeFormat.pdf)
-- The [HMDA-Census repository](https://github.com/cfpb/hmda-census) can be used to construct the 2013 and prior MSA MD name files
+- [The HMDA-Census repository](https://github.com/cfpb/hmda-census) can be used to construct the 2013 and prior MSA MD name files

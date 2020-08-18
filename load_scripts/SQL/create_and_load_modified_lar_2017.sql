@@ -38,5 +38,5 @@ CREATE TABLE mlar_2017_{institution_id} (
     lien_status NUMERIC
 
 COPY hmda_public.mlar_2017_{institution_id}
-FROM '{data_path}/data/mlar/2017/{institution_id}.txt'
+FROM '/Users/roellr/Documents/HMDA_Repos/HMDA_Data_Science_Kit/data/mlar/2017/{institution_id}.txt'
 DELIMITER '|' ENCODING 'latin1';

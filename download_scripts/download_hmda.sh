@@ -21,7 +21,8 @@ lar_2004_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg
 
 #store download URLs in list for later iteration
 declare -a lar_url_list=(${lar_2004_url} ${lar_2005_url} ${lar_2006_url} ${lar_2007_url} ${lar_2008_url} ${lar_2009_url} ${lar_2010_url}
-	${lar_2011_url} ${lar_2012_url} ${lar_2013_url} ${lar_2014_url} ${lar_2015_url} ${lar_2016_url} ${lar_2017_url})
+	${lar_2011_url} ${lar_2012_url} ${lar_2013_url} ${lar_2014_url} ${lar_2015_url} ${lar_2016_url} ${lar_2017_url}
+	${lar_2018_url} ${lar_2019_url})
 
 #TS URL list for data downloading
 ts_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2019/2019_public_ts_pipe.zip"
@@ -43,7 +44,8 @@ ts_2004_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-
 
 #store download URLs in list for later iteration
 declare -a ts_url_list=(${ts_2004_url} ${ts_2005_url} ${ts_2006_url} ${ts_2007_url} ${ts_2008_url} ${ts_2009_url} ${ts_2010_url}
-	${ts_2011_url} ${ts_2012_url} ${ts_2013_url} ${ts_2014_url} ${ts_2015_url} ${ts_2016_url} ${ts_2017_url})
+	${ts_2011_url} ${ts_2012_url} ${ts_2013_url} ${ts_2014_url} ${ts_2015_url} ${ts_2016_url} ${ts_2017_url}
+	${ts_2018_url} ${ts_2019_url})
 
 #Panel URL list for data downloading
 panel_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2019/2019_public_panel_pipe.zip"
@@ -65,7 +67,8 @@ panel_2004_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/
 
 #store download URLs in list for later iteration
 declare -a panel_url_list=(${panel_2004_url} ${panel_2005_url} ${panel_2006_url} ${panel_2007_url} ${panel_2008_url} ${panel_2009_url}
-	${panel_2010_url} ${panel_2011_url} ${panel_2012_url} ${panel_2013_url} ${panel_2014_url} ${panel_2015_url} ${panel_2016_url} ${panel_2017_url})
+	${panel_2010_url} ${panel_2011_url} ${panel_2012_url} ${panel_2013_url} ${panel_2014_url} ${panel_2015_url} 
+	${panel_2016_url} ${panel_2017_url} ${panel_2018_url} ${panel_2019_url})
 
 #declaration of variables used in later logic
 FORCE="false" #set force download (overwrite) to false
@@ -198,9 +201,7 @@ if [ $# -eq 0 ]; then
 	for i in "${ts_url_list[@]}"
 	do #wget each URL in the TS array
 	   #specify file type for filename by year
-	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
-			FILE_TYPE=".zip"
-		elif [ ${YEAR} = 2017 ]; then
+	   if [ $YEAR -gt 2013 ]; then
 			FILE_TYPE=".zip"
 		else
 			FILE_TYPE=".dat"
@@ -218,9 +219,7 @@ if [ $# -eq 0 ]; then
 	for i in "${panel_url_list[@]}"
 	do #wget each URL in Panel array
 		#specify file type for filename by year
-		if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
-			FILE_TYPE=".zip"
-		elif [ ${YEAR} = 2017 ]; then
+		if [ $YEAR -gt 2013 ]; then
 			FILE_TYPE=".zip"
 		else
 			FILE_TYPE=".dat"
@@ -240,7 +239,12 @@ if [ $# -eq 0 ]; then
 		#echo
 		#echo
 		#specify file type for filename by year
-		LAR_FILENAME="lar_${YEAR}.zip"
+	   if [ $YEAR = 2017 ]; then
+			FILE_TYPE=".txt"
+		else
+			FILE_TYPE=".zip"
+	   fi
+		LAR_FILENAME="lar_${YEAR}${FILE_TYPE}" #set LAR filename based on year
 		YEAR=$((YEAR+1))
 		if [ "${FORCE}" = "true" ]; then
 			rm data/lar/${LAR_FILENAME}
@@ -265,7 +269,12 @@ if [ "${LAR}" = "true" ]; then
 		#echo
 		#echo
 		#specify file type for filename by year
-		LAR_FILENAME="lar_${YEAR}.zip"
+	   if [ $YEAR = 2017 ]; then
+			FILE_TYPE=".txt"
+		else
+			FILE_TYPE=".zip"
+	   fi
+		LAR_FILENAME="lar_${YEAR}${FILE_TYPE}" #set LAR filename based on year
 		YEAR=$((YEAR+1))
 		if [ "${FORCE}" = "true" ]; then
 			rm data/lar/${LAR_FILENAME}
@@ -288,11 +297,9 @@ if [ "$TS" = "true" ]; then
 	for i in "${ts_url_list[@]}"
 	do #wget each URL in the TS array
 	   #specify file type for filename by year
-	   if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
+	   if [ $YEAR -gt 2013 ]; then
 			FILE_TYPE=".zip"
-	   elif [ ${YEAR} = 2017 ]; then
-	   		FILE_TYPE=".zip"
-	   else
+		else
 			FILE_TYPE=".dat"
 	   fi
 	   TS_FILENAME="ts_${YEAR}${FILE_TYPE}" #set TS filename based on year
@@ -317,9 +324,7 @@ if [ "${PANEL}" = "true" ]; then
 	for i in "${panel_url_list[@]}"
 	do #wget each URL in Panel array
 		#specify file type for filename by year
-		if [ ${YEAR} = 2014 ] || [ ${YEAR} = 2015 ] || [ ${YEAR} = 2016 ]; then
-			FILE_TYPE=".zip"
-		elif [ ${YEAR} = 2017 ]; then
+		if [ $YEAR -gt 2013 ]; then
 			FILE_TYPE=".zip"
 		else
 			FILE_TYPE=".dat"
@@ -353,9 +358,7 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 	if [ "${SPECIFIC_FILE:0:1}" = "p" ]; then
 		URL=${panel_url_list[$URL_INDEX]}
 		FOLDER="panel"
-		if [ $YEAR = 2017 ]; then
-			FILE_EXT=".zip"
-		elif [ $YEAR -gt 2013 ]; then
+		if [ $YEAR -gt 2013 ]; then
 			FILE_EXT=".zip"
 		else
 			FILE_EXT=".dat"
@@ -364,9 +367,7 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 	elif [ "${SPECIFIC_FILE:0:1}" = "t" ]; then
 		URL=${ts_url_list[$URL_INDEX]}
 		FOLDER="ts"
-		if [ $YEAR -gt 2013 ] && [ $YEAR -lt 2017 ]; then
-			FILE_EXT=".zip"
-		elif [ $YEAR -eq 2017 ]; then
+		if [ $YEAR -gt 2013 ]; then
 			FILE_EXT=".zip"
 		else
 			FILE_EXT=".dat"
@@ -375,8 +376,14 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 	elif [ "${SPECIFIC_FILE:0:1}" = "l" ]; then
 		URL=${lar_url_list[URL_INDEX]}
 		FOLDER="lar"
-		FILE_EXT=".zip"
+		if [ $YEAR = 2017 ]; then
+			FILE_EXT=".txt"
+		else
+			FILE_EXT=".zip"
+		fi
+		
 	fi
+
 	#remove specific file if force flag was passed
 	if [ "${FORCE}" = "true" ]; then
 		rm data/$FOLDER/"${SPECIFIC_FILE}${FILE_EXT}"
