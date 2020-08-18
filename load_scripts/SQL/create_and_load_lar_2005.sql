@@ -37,7 +37,7 @@ CREATE TABLE hmda_public.lar_2005(
     rate_spread VARCHAR,
     hoepa_status VARCHAR,
     lien_status VARCHAR,
-    sequence_num VARCHAR
+    sequence_number VARCHAR
     );
 
 CREATE TEMPORARY TABLE lar_load

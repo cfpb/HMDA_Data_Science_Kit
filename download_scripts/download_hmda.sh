@@ -1,7 +1,10 @@
 #!/bin/bash
-
+#Note: the data files used are either Snapshot, Final, or Ultimate, whichever is latest
+#      Dynamic files are not used
 #LAR URL list for data downloading
-lar_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2017_public_lar_txt.zip"
+lar_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2019/2019_public_lar_pipe.zip"
+lar_2018_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2018/2018_public_lar_pipe.zip"
+lar_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/dynamic-data/dynamic_lar_ultimate_2017.txt"
 lar_2016_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2016HMDALAR%20-%20National.zip"
 lar_2015_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2015HMDALAR%20-%20National.zip"
 lar_2014_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2014HMDALAR%20-%20National.zip"
@@ -21,6 +24,8 @@ declare -a lar_url_list=(${lar_2004_url} ${lar_2005_url} ${lar_2006_url} ${lar_2
 	${lar_2011_url} ${lar_2012_url} ${lar_2013_url} ${lar_2014_url} ${lar_2015_url} ${lar_2016_url} ${lar_2017_url})
 
 #TS URL list for data downloading
+ts_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2019/2019_public_ts_pipe.zip"
+ts_2018_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2018/2018_public_ts_pipe.zip"
 ts_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2017_public_ts_txt.zip"
 ts_2016_url="https://www.ffiec.gov/hmdarawdata/OTHER/2016HMDAInstitutionRecords.zip"
 ts_2015_url="https://www.ffiec.gov/hmdarawdata/OTHER/2015HMDAInstitutionRecords.zip"
@@ -41,6 +46,8 @@ declare -a ts_url_list=(${ts_2004_url} ${ts_2005_url} ${ts_2006_url} ${ts_2007_u
 	${ts_2011_url} ${ts_2012_url} ${ts_2013_url} ${ts_2014_url} ${ts_2015_url} ${ts_2016_url} ${ts_2017_url})
 
 #Panel URL list for data downloading
+panel_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2019/2019_public_panel_pipe.zip"
+panel_2018_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2018/2018_public_panel_pipe.zip"
 panel_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2017_public_panel_txt.zip"
 panel_2016_url="https://www.ffiec.gov/hmdarawdata/OTHER/2016HMDAReporterPanel.zip"
 panel_2015_url="https://www.ffiec.gov/hmdarawdata/OTHER/2015HMDAReporterPanel.zip"
@@ -89,6 +96,8 @@ while getopts "asptlFh" OPTION; do
 
 				a)
 						echo "Panel Files:"
+						echo "panel_2019"
+						echo "panel_2018"
 						echo "panel_2017"
 						echo "panel_2016"
 						echo "panel_2015"
@@ -105,6 +114,8 @@ while getopts "asptlFh" OPTION; do
 						echo "panel_2004"
 						echo ""
 						echo "Transmittal Sheet Files:"
+						echo "ts_2019"
+						echo "ts_2018"
 						echo "ts_2017"
 						echo "ts_2016"
 						echo "ts_2015"
@@ -121,6 +132,8 @@ while getopts "asptlFh" OPTION; do
 						echo "ts_2004"
 						echo ""
 						echo "LAR Files:"
+						echo "lar_2019"
+						echo "lar_2018"
 						echo "lar_2017"
 						echo "lar_2016"
 						echo "lar_2015"
