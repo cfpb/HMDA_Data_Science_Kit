@@ -15,10 +15,10 @@ CREATE TABLE hmda_public.panel_2018 (
 	parent_rssd VARCHAR,
 	parent_name VARCHAR,
 	top_holder_rssd VARCHAR,
-	top_holder_name VARCHAR,
+	top_holder_name VARCHAR
 	);
 
 COPY hmda_public.panel_2018
-FROM '/Users/roellr/Documents/HMDA_Repos/HMDA_Data_Science_Kit/data/panel/panel_2018.txt' 
+FROM '{data_path}/data/panel/panel_2018.txt' 
 	DELIMITER '|' ENCODING 'latin1';
 COMMIT;
