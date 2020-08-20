@@ -5,7 +5,7 @@ CREATE TABLE hmda_public.panel_2019 (
 	tax_id VARCHAR(10),
 	agency_code VARCHAR(1),
 	id_2017 VARCHAR(10),
-	arid_2017 VARCHAR(10),
+	arid_2017 VARCHAR(11),
 	respondent_rssd VARCHAR,
 	respondent_name VARCHAR,
 	respondent_state VARCHAR,
@@ -19,6 +19,6 @@ CREATE TABLE hmda_public.panel_2019 (
 	);
 
 COPY hmda_public.panel_2019
-FROM '{data_path}/data/panel/panel_2019.txt' 
-	DELIMITER '|' ENCODING 'latin1';
+FROM '/Users/roellr/Documents/HMDA_Repos/HMDA_Data_Science_Kit/data/panel/panel_2019.txt' 
+	DELIMITER '|' ENCODING 'utf8' CSV HEADER;
 COMMIT;
