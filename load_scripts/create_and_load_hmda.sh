@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Set default PSQL connection variables
-USER="postgres" #the postgres username for the connection
+USER="roellr" #the postgres username for the connection
 PASSWORD="" #user's password for the connection
 DATABASE="postgres" #Sets connection database
 HOST="localhost" #host address of the database
@@ -74,7 +74,7 @@ echo "removing extra tab in ts 2016"
 echo ""
 python3 load_scripts/remove_tab_ts_2016.py
 
-echo "creating HMDA tables for 2004-2017"
+echo "creating HMDA tables for 2004-2019"
 echo ""
 psql $PGDATABASE $PGUSER  << EOF
 	\c hmda;
