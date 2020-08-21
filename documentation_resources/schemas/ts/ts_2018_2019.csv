@@ -1,0 +1,11 @@
+﻿ Field Number , Field Name         , Data Type    ,Length
+1,activity_year,Numeric,4
+2,calendar_quarter,Numeric,1
+3,lei,Alphanumeric,20
+4,tax_id,Alphanumeric,10
+5,agency_code,Numeric,1
+6,respondent_name,Alphanumeric,
+7,respondent_state,Alphanumeric,
+8,respondent_city,Alphanumeric,
+9,respondent_zip_code,Alphanumeric,
+10,lar_count,Numeric,

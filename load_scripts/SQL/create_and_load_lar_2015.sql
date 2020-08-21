@@ -37,14 +37,14 @@ CREATE TABLE hmda_public.lar_2015 (
     hoepa_status VARCHAR,
     lien_status VARCHAR,
     edit_status VARCHAR,
-    sequence_num VARCHAR,
-    population VARCHAR,
-    minority_population_percent VARCHAR,
-    ffiec_median_income VARCHAR,
+    sequence_number VARCHAR,
+    tract_population VARCHAR,
+    tract_minority_population_percent VARCHAR,
+    ffiec_msamd_median_income VARCHAR,
     tract_to_msa_income_percent VARCHAR,
-    owner_occupied_units VARCHAR,
-    one_to_four_units VARCHAR,
-    app_date_indicator VARCHAR
+    tract_owner_occupied_units VARCHAR,
+    tract_one_to_four_units VARCHAR,
+    application_date_indicator VARCHAR
 );
 
 COPY hmda_public.lar_2015

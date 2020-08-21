@@ -1,13 +1,13 @@
 #!/bin/bash
-
 #Set default PSQL connection variables
-USER="roellr" #the postgres username for the connection
+USER="postgres" #the postgres username for the connection
 PASSWORD="" #user's password for the connection
 DATABASE="postgres" #Sets connection database
 HOST="localhost" #host address of the database
 PORT="5432" #connection port of the database
 
 if [ $# -gt 0 ]; then
+	#while [ "${1}" != "" ]; 
 	for var in "$@"
 	do #iterate over passed command line arguments as long as one remains
 	    case $1 in
@@ -58,59 +58,20 @@ export PGDATABASE="${PGDATABASE-${DATABASE}}" #Sets connection database
 export PGHOST="${PGHOST-${HOST}}" #host address of the database
 export PGPORT="${PGPORT-${PORT}}" #connection port of the database
 
+echo "setting data paths for SQL load"
+bash load_scripts/write_data_paths.sh
+
 echo "creating HMDA database and hmda_public schema"
-echo ""
 psql $PGDATABASE $PGUSER << EOF
 	CREATE DATABASE hmda;
 	\c hmda
 	CREATE SCHEMA hmda_public;
 EOF
 
-echo "setting data paths for SQL load"
-echo ""
-bash load_scripts/write_data_paths.sh
-
-echo "removing extra tab in ts 2016"
-echo ""
-python3 load_scripts/remove_tab_ts_2016.py
-
-echo "creating HMDA tables for 2004-2019"
-echo ""
-psql $PGDATABASE $PGUSER  << EOF
+echo "creating HMDA LAR tables for 2004-2017"
+psql $PGDATABASE $PGUSER << EOF
 	\c hmda;
 	set schema 'hmda_public';
-	\i 'load_scripts/SQL/create_and_load_ts_2004.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2005.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2006.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2007.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2008.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2009.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2010.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2011.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2012.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2013.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2014.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2015.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2016.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2017.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2018.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2019.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2004.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2005.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2006.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2007.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2008.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2009.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2010.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2011.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2012.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2013.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2014.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2015.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2016.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2017.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2018.sql'
-	\i 'load_scripts/SQL/create_and_load_panel_2019.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2004.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2005.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2006.sql'

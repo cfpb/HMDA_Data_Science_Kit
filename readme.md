@@ -30,40 +30,78 @@ The senate bill S2155 modified some reporting requirements for the 2018 data col
 
 ## HMDA Datasets
 
-Three raw data files are published annually under HMDA authority. File formats (and schemas) vary by data source. The National Archives (NARA) use a .DAT format, the FFIEC site maintained by the Federal Reserve Board (FRB) use a .CSV format (with Census data appended) and the FFIEC site maintained by the BCFP us a pipe-delimited .TXT format (with Census data appended). Links to HMDA datasets are available in this [file](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
+Three raw data files are published annually under HMDA authority. File formats (and schemas) vary by data source. The National Archives (NARA) use a .DAT format, the FFIEC site maintained by the Federal Reserve Board (FRB) use a .CSV format (with Census data appended) and the FFIEC site maintained by the BCFP use a pipe-delimited .TXT format (with Census data appended). Links to HMDA datasets are available in this [file](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
 
 These datasets include:
-- The Loan Application Register (LAR): This dataset contains application and origination activity on covered transactions made by covered institutions. The LAR is distinct from many other mortgage datasets as it includes both application and origination data as well as borrower demographic information. The LAR has had several distinct schemas including a change from aggregate to transaction level data in 1990. LAR schemas are available in this [folder]() and a discussion of changes to underlying data (such as the benchmark for the rate spread variable) can be found in the [Working with HMDA Data]() document.
+- The Loan Application Register (LAR): This dataset contains application and origination activity on covered transactions made by covered institutions. The LAR is distinct from many other mortgage datasets as it includes both application and origination data as well as borrower demographic information. The LAR has had several distinct schemas including a change from aggregate to transaction level data in 1990. LAR schemas are available in this [folder](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/lar/schemas) 
 
-- The Transmittal Sheet (TS): This dataset contains information about the financial institutions that are covered by HMDA and submitted LAR data to the FFIEC. Transmittal sheet schemas can be found in this [folder]().
+Additional elements discussing of changes to underlying data (such as the benchmark for the rate spread variable) will be added in the future. Check the [Platform FAQ Pages](https://ffiec.cfpb.gov/documentation/2020/faqs/) for common tips.
 
-- The HMDA Reporter Panel: This dataset contains additional information regarding financial institutions such as identifier links to the National Information Center (NIC) and hierarchy information such as parent and top holder. The HMDA Reporter Panel is assembled by the Bureau on behalf of the FFIEC (beginning in 2017). Panel schemas can be found in this [folder]().
+- The Transmittal Sheet (TS): This dataset contains information about the financial institutions that are covered by HMDA and submitted LAR data to the FFIEC. Transmittal sheet schemas can be found in this [folder](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/ts/schemas).
+
+- The HMDA Reporter Panel: This dataset contains additional information regarding financial institutions such as identifier links to the National Information Center (NIC) and hierarchy information such as parent and top holder. The HMDA Reporter Panel is assembled by the Bureau on behalf of the FFIEC (beginning in 2017). Panel schemas can be found in this [folder](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/panel/schemas).
+
+## HMDA Data Browser:
+The [HMDA Data Browser](https://ffiec.cfpb.gov/data-browser/data/2019?category=states&ethnicities=&sexes=) provides filtering and download capability for the LAR datasets.
 
 ## Integration of Census Data with HMDA
-HMDA data is often joined to Census data to show context for the mortgage data. The FFIEC joins the following to the HMDA LAR data: area population, minority population percentage, FFIEC median family income, tract to MSA/MD median family income percentage, number of owner-occupied units, and the number of 1-4 family units. These data are joined at the tract level to provide context for mortgage activity in the relevant geography. The base data for this join are made available by the FFIEC on this [website](https://www.ffiec.gov/censusapp.htm). The year of the Census data correspond to the HMDA collection year.
+HMDA data is often joined to Census data on the county FIPS code to show context for the mortgage data at the geographic level. The FFIEC joins the following to the HMDA LAR data: area population, minority population percentage, FFIEC median family income, tract to MSA/MD median family income percentage, number of owner-occupied units, and the number of 1-4 family units. These data are joined at the tract level to provide context for mortgage activity in the relevant geography. The base data for this join are made available by the FFIEC on this [website](https://www.ffiec.gov/censusapp.htm). The year of the Census data correspond to the HMDA collection year.
 
+The [HMDA-Census](https://github.com/cfpb/hmda-census) repository contains code that can be used to download FFIEC Census flat files and OMB MSA Delineation files and create joined cuts of those datasets for use with HMDA.
 
-For examples on how to handle Census data and join Census data to LAR data please see the [Census Directory](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/census).
 
 ## HMDA Data Documentation
-
+**FIGs**
+- [2020 Filing Instruction Guide (FIG)](https://s3.amazonaws.com/cfpb-hmda-public/prod/help/2020-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2020.
+- [2019 Filing Instruction Guide (FIG)](https://s3.amazonaws.com/cfpb-hmda-public/prod/help/2019-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2019.
 - [2018 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2018/2018-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2018.
 - [2017 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2017/2017-hmda-fig.pdf): Outlines the the file format, data fields, business rules, and valid values for data submitted in 2017.
-- [BCFP Small Entity Compliance Guide](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/cfpb_hmda_small-entity-compliance-guide.pdf): The purpose of this guide is to provide an easy-to-use summary of Regulation C, as amended by the HMDA Rule, and to highlight information that financial institutions and those that work with them might find helpful when implementing the HMDA Rule.
+
+**Compliance Guides**
+- [CFPB Small Entity Compliance Guide](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/cfpb_hmda_small-entity-compliance-guide.pdf): The purpose of this guide is to provide an easy-to-use summary of Regulation C, as amended by the HMDA Rule, and to highlight information that financial institutions and those that work with them might find helpful when implementing the HMDA Rule.
 - [FFIEC Getting it Right Guides](https://www.ffiec.gov/Hmda/guide.htm): Guidelines for assembling HMDA data in accordance with Regulation C.
-- [BCFP Regulatory Implementation Resrouces](https://www.consumerfinance.gov/policy-compliance/guidance/implementation-guidance/hmda-implementation/): Landing page for regulation implementation resources.
+
+
+**Regulatiory Implementation Resources**
+- [CFPB Regulatory Implementation Resources](https://www.consumerfinance.gov/policy-compliance/guidance/implementation-guidance/hmda-implementation/): Landing page for regulation implementation resources.
+- [2020 Final Rule Summary](https://www.consumerfinance.gov/documents/8720/cfpb_hmda_executive-summary_2020-04.pdf)
+- [2019 Final Rule Summary](https://www.consumerfinance.gov/documents/8126/cfpb_executive-summary-2019-reg-C-final-rule.pdf)
+- [2018 Data Disclosure Policy](https://www.consumerfinance.gov/documents/7052/HMDA_Data_Disclosure_Policy_Guidance.Executive_Summary.FINAL.12212018.pdf)
+- [2018 Procedural Rule Summary](https://www.consumerfinance.gov/documents/6724/bcfp_hmda_interpretive-procedural-rule_2018-08_executive-summary.pdf)
 - [2018 Institution Coverage](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/201709_cfpb_2018-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2018.
-- [2017 Institution Coverage](https://files.consumerfinance.gov/f/201510_cfpb_2017-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2017.
+
+
+**Transactional Coverage Charts**
+- [2022 Transaction Coverage](https://www.consumerfinance.gov/documents/8725/cfpb_2022-hmda-transactional-coverage.pdf): Outlines which transactions are covered by Regulation C.
+- [2020 Transaction Coverage](https://www.consumerfinance.gov/documents/8724/cfpb_2020-hmda-transactional-coverage.pdf): Outlines which transactions are covered by Regulation C.
 - [2018 Transaction Coverage](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/201709_cfpb_2018-hmda-institutional-coverage.pdf): Outlines which transactions are covered by Regulation C.
+
+
+**Institutional Coverage Charts**
+- [2022 Institution Coverage](https://www.consumerfinance.gov/documents/8723/cfpb_2022-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2022.
+- [2020 Institution Coverage](https://www.consumerfinance.gov/documents/8722/cfpb_2020-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2020.
+- [2018 Institution Coverage](https://www.consumerfinance.gov/documents/5630/201709_cfpb_2018-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2018.
+- [2017 Institution Coverage](https://files.consumerfinance.gov/f/201510_cfpb_2017-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2017.
+
+
+**Reportable Data**
+- [2020](https://www.consumerfinance.gov/documents/8129/cfpb_2020-reportable-hmda-data.pdf)
+- [2019](https://www.consumerfinance.gov/documents/7219/cfpb_reportable-hmda-data_regulatory-and-reporting-overview-reference-chart-2019.pdf)
+- [2018](https://www.consumerfinance.gov/documents/5710/201710_cfpb_reportable-hmda-data_regulatory-and-reporting-overview-reference-chart.pdf)
+
+
+**Other**
 - [HMDA Loan Scenarios](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/HMDA-Loan-Scenarios.pdf): Fictional scenarios designed to assist in compilation of LAR data to meet requirements under Regulation C.
 
 ## Working With HMDA Data
 
-The HMDA data are complex and care must be taken to ensure that analytics results are accurate. Please see [Working With HMDA Data]() for explanations of how to load, segment the data, handle NA values, and create accurate time-series tabulations.
+The HMDA data are complex and care must be taken to ensure that analytics results are accurate. 
+
 
 ## HMDA Publications
 
 For a list of HMDA publications, see [here](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/federal_pubs.md)
+
 
 ## Basic Requirements and Instructions
 
@@ -143,9 +181,9 @@ The script below creates a HMDA database on an existing Postgres installation, c
 - `bash load_scripts/create_hmda_db.sh`
 
 To load subsets of the HMDA data (LAR, Transmittal Sheet, or Panel) use the scripts below. These scripts will create a database named 'hmda' if one does not exist. They will also create a hmda_public schema in which all the data tables will be created and populated.
-- `bash load_scripts/create_and_load_lar_2004_2017.sh`
-- `bash load_scripts/create_and_load_ts_2004_2017.sh`
-- `bash load_scripts/create_andload_panel_2004_2017.sh`
+- `bash load_scripts/create_and_load_lar_2004_2019.sh`
+- `bash load_scripts/create_and_load_ts_2004_2019.sh`
+- `bash load_scripts/create_andload_panel_2004_2019.sh`
 
 #### Using Options Flags
 
