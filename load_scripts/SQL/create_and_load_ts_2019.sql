@@ -14,6 +14,6 @@ CREATE TABLE hmda_public.ts_2019 (
 
 COPY hmda_public.ts_2019
 FROM 
-'/Users/roellr/Documents/HMDA_Repos/HMDA_Data_Science_Kit/data/ts/ts_2019.txt'
-    DELIMITER '|' ENCODING 'latin1';
+'{data_path}/data/ts/ts_2019.txt'
+    DELIMITER '|' ENCODING 'latin1' CSV HEADER;
 COMMIT;
