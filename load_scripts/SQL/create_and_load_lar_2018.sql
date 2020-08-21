@@ -13,7 +13,7 @@ CREATE TABLE hmda_public.lar_2018 (
     derived_race VARCHAR,
     derived_sex VARCHAR,
     action_type VARCHAR,
-    purchaser_type VARCHAR(1),
+    purchaser_type VARCHAR(2),
     preapprovals VARCHAR(1),
     loan_type VARCHAR(1),
     loan_purpose VARCHAR(2),
@@ -27,6 +27,7 @@ CREATE TABLE hmda_public.lar_2018 (
     rate_spread VARCHAR,
     hoepa_status VARCHAR,
     total_loan_costs VARCHAR,
+    total_points_and_fees VARCHAR,
     origination_charges VARCHAR,
     discount_points VARCHAR,
     lender_credits VARCHAR,
@@ -76,10 +77,10 @@ CREATE TABLE hmda_public.lar_2018 (
     co_applicant_sex VARCHAR(1),
     applicant_sex_observed VARCHAR(1),
     co_applicant_sex_observed VARCHAR(1),
-    applicant_age VARCHAR(4),
-    co_applicant_age VARCHAR(4),
-    applicant_age_above_62 VARCHAR(1),
-    co_applicant_age_above_62 VARCHAR(1),
+    applicant_age VARCHAR,
+    co_applicant_age VARCHAR,
+    applicant_age_above_62 VARCHAR(3),
+    co_applicant_age_above_62 VARCHAR(3),
     submission_of_application VARCHAR(4),
     initially_payable VARCHAR(4),
     aus_1 VARCHAR(4),
@@ -97,10 +98,12 @@ CREATE TABLE hmda_public.lar_2018 (
     tract_to_msa_income_percent VARCHAR,
     tract_owner_occupied_units VARCHAR,
     tract_one_to_four_units VARCHAR,
-    tract_median_housing_age VARCHAR);
+    tract_median_housing_age VARCHAR
+    );
+
 
 COPY hmda_public.lar_2018
 
-FROM '/Users/roellr/Documents/HMDA_Repos/HMDA_Data_Science_Kit/data/lar/lar_2018.txt'
+FROM '{data_path}/data/lar/lar_2018.txt'
 
-DELIMITER '|' ENCODING 'latin1';
+DELIMITER '|' ENCODING 'latin1' CSV HEADER;
