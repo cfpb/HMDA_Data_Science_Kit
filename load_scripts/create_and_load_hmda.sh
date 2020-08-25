@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Set default PSQL connection variables
-USER="roellr" #the postgres username for the connection
+USER="postgres" #the postgres username for the connection
 PASSWORD="" #user's password for the connection
 DATABASE="postgres" #Sets connection database
 HOST="localhost" #host address of the database
