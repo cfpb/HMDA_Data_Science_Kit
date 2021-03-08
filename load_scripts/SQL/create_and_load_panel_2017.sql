@@ -20,7 +20,7 @@ CREATE TABLE hmda_public.panel_2017 (
 	top_holder_country VARCHAR,
 	respondent_rssd VARCHAR,
 	parent_rssd VARCHAR,
-	respondent_state_fips VARCHAR);
+	respondent_state_fips_number VARCHAR);
 
 COPY hmda_public.panel_2017
 FROM '{data_path}/data/panel/panel_2017.txt' 

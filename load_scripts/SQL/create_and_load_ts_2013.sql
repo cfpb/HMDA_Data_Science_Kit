@@ -7,14 +7,14 @@ CREATE TABLE ts_2013 (
 	respondent_address VARCHAR,
 	respondent_city VARCHAR,
 	respondent_state VARCHAR,
-	respondent_zip VARCHAR,
+	respondent_zip_code VARCHAR,
 	parent_name VARCHAR,
 	parent_address VARCHAR,
 	parent_city VARCHAR,
 	parent_state VARCHAR,
-	parent_zip VARCHAR,
+	parent_zip_code VARCHAR,
 	edit_status VARCHAR,
-	id_tax VARCHAR);
+	tax_id VARCHAR);
 
 CREATE TEMPORARY TABLE ts_load 
   (TS VARCHAR) ; -- TS contains an entire TS record per row
@@ -33,14 +33,14 @@ INSERT INTO hmda_public.ts_2013 (
 	respondent_address,
 	respondent_city,
 	respondent_state,
-	respondent_zip,
+	respondent_zip_code,
 	parent_name,
 	parent_address,
 	parent_city,
 	parent_state,
-	parent_zip,
+	parent_zip_code,
 	edit_status,
-	id_tax
+	tax_id
 )
 
 SELECT 

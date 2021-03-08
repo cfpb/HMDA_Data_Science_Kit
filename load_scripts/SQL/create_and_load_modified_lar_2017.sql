@@ -6,11 +6,11 @@ CREATE TABLE mlar_2017_{institution_id} (
     loan_type NUMERIC,
     property_type NUMERIC,
     loan_purpose NUMERIC,
-    occupancy NUMERIC,
+    occupancy_type NUMERIC,
     loan_amount NUMERIC,
-    preapprovals NUMERIC,
-    action_type NUMERIC,
-    msa VARCHAR,
+    preapproval NUMERIC,
+    action_taken NUMERIC,
+    msa_md VARCHAR,
     state_code VARCHAR,
     county_code VARCHAR,
     census_tract VARCHAR,
@@ -30,12 +30,13 @@ CREATE TABLE mlar_2017_{institution_id} (
     co_applicant_sex NUMERIC,
     income NUMERIC,
     purchaser_type NUMERIC,
-    denial_1 VARCHAR,
-    denial_2 VARCHAR,
-    denial_3 VARCHAR,    
+    denial_reason_1 VARCHAR,
+    denial_reason_2 VARCHAR,
+    denial_reason_3 VARCHAR,    
     rate_spread VARCHAR,
     hoepa_status NUMERIC,
     lien_status NUMERIC
+    )
 
 COPY hmda_public.mlar_2017_{institution_id}
 FROM '{data_path}/data/mlar/2017/{institution_id}.txt'

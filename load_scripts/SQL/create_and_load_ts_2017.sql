@@ -8,12 +8,12 @@ CREATE TABLE hmda_public.ts_2017 (
 	respondent_address VARCHAR,
 	respondent_city VARCHAR,
 	respondent_state VARCHAR,
-	respondent_zip VARCHAR,
+	respondent_zip_code VARCHAR,
 	parent_name VARCHAR,
 	parent_address VARCHAR,
 	parent_city VARCHAR,
 	parent_state VARCHAR,
-	parent_zip VARCHAR,
+	parent_zip_code VARCHAR,
 	lar_count VARCHAR
 	);
 

@@ -23,7 +23,7 @@ CREATE TABLE hmda_public.panel_2016 (
     top_holder_country VARCHAR,
     respondent_rssd VARCHAR,
     parent_rssd VARCHAR,
-    respondent_state_fips VARCHAR);
+    respondent_state_fips_number VARCHAR);
 
  CREATE TEMPORARY TABLE panel_load
     (PANEL VARCHAR); -- LAR contains an entire LAR record
@@ -56,7 +56,7 @@ COMMIT;
     top_holder_country,
     respondent_rssd,
     parent_rssd,
-    respondent_state_fips
+    respondent_state_fips_number
     )
  SELECT 
     SUBSTRING(PANEL, 1, 4),

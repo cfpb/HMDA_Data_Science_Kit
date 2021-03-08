@@ -7,22 +7,26 @@ CREATE TABLE hmda_public.panel_2013 (
     respondent_name VARCHAR,
     respondent_city VARCHAR,
     respondent_state VARCHAR,
-    respondent_state_fips VARCHAR,
+    respondent_state_fips_number VARCHAR,
     assets VARCHAR,
     other_lender_code VARCHAR,
-    parent_id VARCHAR,
+    parent_respondent_id VARCHAR,
     parent_name VARCHAR,
     parent_city VARCHAR,
     parent_state VARCHAR,
     activity_year VARCHAR,
-    respondent_rssd VARCHAR);
+    respondent_rssd VARCHAR
+    );
+
  CREATE TEMPORARY TABLE panel_load
   (PANEL VARCHAR); -- LAR contains an entire LAR record
  COPY panel_load
         --Change to your local path
 FROM '{data_path}/data/panel/panel_2013.dat' 
     ENCODING 'latin1';
+
 COMMIT;
+
  INSERT INTO hmda_public.panel_2013 (
     respondent_id,
     msa,
@@ -31,10 +35,10 @@ COMMIT;
     respondent_name,
     respondent_city,
     respondent_state,
-    respondent_state_fips,
+    respondent_state_fips_number,
     assets,
     other_lender_code,
-    parent_id,
+    parent_respondent_id,
     parent_name,
     parent_city,
     parent_state,
