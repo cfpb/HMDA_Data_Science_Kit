@@ -2,6 +2,7 @@
 
 #This file unzips and renames the LAR files in the data/lar directory.
 #unzip and rename files
+unzip data/lar/lar_2020.zip -d data/lar
 unzip data/lar/lar_2019.zip -d data/lar
 unzip data/lar/lar_2018.zip -d data/lar
 unzip data/lar/lar_2017.zip -d data/lar
@@ -19,6 +20,7 @@ unzip data/lar/lar_2006.zip -d data/lar
 unzip data/lar/lar_2005.zip -d data/lar
 unzip data/lar/lar_2004.zip -d data/lar
 
+mv data/lar/2020_lar_pipe.txt data/lar/lar_2020.txt
 mv data/lar/2019_public_lar_pipe.txt data/lar/lar_2019.txt
 mv data/lar/2018_public_lar_pipe.txt data/lar/lar_2018.txt
 mv data/lar/dynamic_lar_ultimate_2017.txt data/lar/lar_2017.txt
