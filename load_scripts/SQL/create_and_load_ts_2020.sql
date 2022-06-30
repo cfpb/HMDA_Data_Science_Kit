@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS hmda_public.ts_2020;
-CREATE TABLE hmda_public.ts_2019 (
+CREATE TABLE hmda_public.ts_2020 (
 	activity_year VARCHAR(4),
 	calendar_quarter VARCHAR(1),
 	lei VARCHAR(20),
