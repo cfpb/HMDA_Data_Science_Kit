@@ -15,6 +15,6 @@ CREATE TABLE hmda_public.ts_2021 (
 
 COPY hmda_public.ts_2021
 FROM 
-'C:/Repos/proto_analytics/data/hmda/snapshot/2021_ts.txt'
+'{data_path}/data/ts/2021_ts.txt'
     DELIMITER '|' ENCODING 'latin1' CSV HEADER;
 COMMIT;
