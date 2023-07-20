@@ -1,4 +1,4 @@
-### Table of Contents
+### Table of Contents changing something
 
 - [Repository purpose and scope](#repository-purpose-and-scope)
 - [What is HMDA](#what-is-hmda)
@@ -25,12 +25,11 @@ The senate bill S2155 modified some reporting requirements for the 2018 data col
 **What is the purpose of HMDA?**
 - To provide the public with information that will help show whether financial institutions are serving the housing credit needs of the neighborhoods and communities in which they are located.
 - To aid public officials in targeting public investments from the private sector to areas where they are needed.
-
 - The FIRREA amendments of 1989 require the collection and disclosure of data about applicant and borrower characteristics to assist in identifying possible discriminatory lending patterns and enforcing antidiscrimination statutes.
 
 ## HMDA Datasets
 
-Three raw data files are published annually under HMDA authority. File formats (and schemas) vary by data source. The National Archives (NARA) use a .DAT format, the FFIEC site maintained by the Federal Reserve Board (FRB) use a .CSV format (with Census data appended) and the FFIEC site maintained by the BCFP use a pipe-delimited .TXT format (with Census data appended). Links to HMDA datasets are available in this [file](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
+Three raw data files are published annually under HMDA authority. File formats (and schemas) vary by data source. The National Archives (NARA) use a .DAT format, the FFIEC site maintained by the Federal Reserve Board (FRB) use a .CSV format (with Census data appended) and the FFIEC site maintained by the CFPB use a pipe-delimited .TXT format (with Census data appended). Links to HMDA datasets are available in this [file](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
 
 These datasets include:
 - The Loan Application Register (LAR): This dataset contains application and origination activity on covered transactions made by covered institutions. The LAR is distinct from many other mortgage datasets as it includes both application and origination data as well as borrower demographic information. The LAR has had several distinct schemas including a change from aggregate to transaction level data in 1990. LAR schemas are available in this [folder](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/lar) 
@@ -111,7 +110,7 @@ For a list of HMDA publications, see [here](https://github.com/cfpb/HMDA_Data_Sc
 #### Requirements
 The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code.
 
-The Python resources assume that a functioning installation of [Python 3.5 or greater](https://www.python.org/downloads/) or greater is present. Convention in these instructions and code resources will use python3 to invoke python scripts. If two versions of Python are not present, this command may need to be changed to python, without the 3.
+The Python resources assume that a functioning installation of [Python 3.5 or greater](https://www.python.org/downloads/) is present. Convention in these instructions and code resources will use python3 to invoke python scripts. If two versions of Python are not present, this command may need to be changed to python, without the 3.
 
 This repository has a requirements.txt file that can be used to install the Python libraries used in the repository:
 - `pip install -r requirements.txt`
