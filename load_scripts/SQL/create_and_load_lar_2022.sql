@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS hmda_public.lar_2019;
-CREATE TABLE hmda_public.lar_2019 (
+DROP TABLE IF EXISTS hmda_public.lar_2022;
+CREATE TABLE hmda_public.lar_2022 (
     activity_year VARCHAR,
     lei VARCHAR,
     derived_msa_md VARCHAR(5),
@@ -102,8 +102,8 @@ CREATE TABLE hmda_public.lar_2019 (
     );
 
 
-COPY hmda_public.lar_2019
+COPY hmda_public.lar_2022
 
-FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/lar/lar_2019.txt'
+FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/lar/lar_2022.txt'
 
 DELIMITER '|' ENCODING 'latin1' CSV HEADER;

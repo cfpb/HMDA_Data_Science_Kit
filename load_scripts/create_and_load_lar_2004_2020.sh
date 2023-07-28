@@ -68,7 +68,7 @@ psql $PGDATABASE $PGUSER << EOF
 	CREATE SCHEMA hmda_public;
 EOF
 
-echo "creating HMDA LAR tables for 2004-2017"
+echo "creating HMDA LAR tables for 2004-2020"
 psql $PGDATABASE $PGUSER << EOF
 	\c hmda;
 	set schema 'hmda_public';

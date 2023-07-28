@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #Set default PSQL connection variables
 USER="postgres" #the postgres username for the connection
 PASSWORD="" #user's password for the connection
@@ -69,27 +68,27 @@ psql $PGDATABASE $PGUSER << EOF
 	CREATE SCHEMA hmda_public;
 EOF
 
-echo "removing extra tab in ts 2016"
-python3 load_scripts/remove_tab_ts_2016.py
-
-echo "creating HMDA tables for 2004-2019"
+echo "creating HMDA LAR tables for 2004-2022"
 psql $PGDATABASE $PGUSER << EOF
 	\c hmda;
 	set schema 'hmda_public';
-	\i 'load_scripts/SQL/create_and_load_ts_2004.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2005.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2006.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2007.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2008.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2009.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2010.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2011.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2012.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2013.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2014.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2015.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2016.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2017.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2018.sql'
-	\i 'load_scripts/SQL/create_and_load_ts_2019.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2004.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2005.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2006.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2007.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2008.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2009.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2010.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2011.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2012.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2013.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2014.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2015.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2016.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2017.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2018.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2019.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2020.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2021.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2022.sql'
 EOF

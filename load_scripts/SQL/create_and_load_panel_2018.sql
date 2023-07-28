@@ -2,10 +2,9 @@ DROP TABLE IF EXISTS hmda_public.panel_2018;
 CREATE TABLE hmda_public.panel_2018 (
 	activity_year VARCHAR(4),
 	lei VARCHAR(20),
-	tax_id VARCHAR(10),
+	tax_id VARCHAR(11),
 	agency_code VARCHAR(1),
 	id_2017 VARCHAR(10),
-	arid_2017 VARCHAR(10),
 	respondent_rssd VARCHAR,
 	respondent_name VARCHAR,
 	respondent_state VARCHAR,
@@ -19,6 +18,6 @@ CREATE TABLE hmda_public.panel_2018 (
 	);
 
 COPY hmda_public.panel_2018
-FROM '{data_path}/data/panel/panel_2018.txt' 
+FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/panel/panel_2018.txt' 
 	DELIMITER '|' ENCODING 'latin1' CSV HEADER;
 COMMIT;

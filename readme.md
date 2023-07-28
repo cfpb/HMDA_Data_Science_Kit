@@ -122,7 +122,7 @@ To begin using the HMDA data you will first need to download the data. A list of
 These data can be downloaded manually from the links listed or the following script can be run from the HMDA_Data_Science_Kit directory:  
 - `bash download_scripts/download_hmda.sh`
 
-The script can download HMDA ultimate data files for LAR, Transmittal Sheet, and Panel for the years 2004 through 2017.
+The script can download HMDA ultimate data files for LAR, Transmittal Sheet, and Panel for the years 2004 through 2022.
 
 Running the script without flags will download all LAR, Transmittal Sheet, and Panel files that are not present.
 

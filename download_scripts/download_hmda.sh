@@ -2,76 +2,83 @@
 #Note: the data files used are either Snapshot, Final, or Ultimate, whichever is latest
 #      Dynamic files are not used
 #LAR URL list for data downloading
+lar_2022_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2022/2022_public_lar_pipe.zip"
+lar_2021_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2021/2021_public_lar_pipe.zip"
 lar_2020_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2020/2020_public_lar_pipe.zip"
-lar_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2019/2019_public_lar_pipe.zip"
-lar_2018_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2018/2018_public_lar_pipe.zip"
-lar_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/dynamic-data/dynamic_lar_ultimate_2017.txt"
-lar_2016_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2016HMDALAR%20-%20National.zip"
-lar_2015_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2015HMDALAR%20-%20National.zip"
-lar_2014_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2014HMDALAR%20-%20National.zip"
-lar_2013_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2013/Lars.ultimate.2013.dat.zip"
-lar_2012_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2012/Lars.ultimate.2012.dat.zip"
-lar_2011_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTL11/Lars.ultimate.2011.dat.zip"
-lar_2010_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTL10/Lars.ultimate.2010.dat.zip"
-lar_2009_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/ULAR09/2009_Ultimate_PUBLIC_LAR.dat.zip"
-lar_2008_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/ULAR0708/lars.ultimate.2008.dat.zip"
-lar_2007_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/ULAR0708/lars.ultimate.2007.dat.zip"
-lar_2006_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/ULAR0506/LARS.ULTIMATE.2006.DAT.zip"
-lar_2005_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/ULAR0506/LARS.ULTIMATE.2005.DAT.zip"
-lar_2004_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/ULAR04/u2004lar.public.dat.zip"
+lar_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/three-year-data/2019/2019_public_lar_three_year_pipe.zip"
+lar_2018_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/three-year-data/2018/2018_public_lar_three_year_pipe.zip"
+lar_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/three-year-data/2017/2017_public_lar_three_year_pipe.zip"
+lar_2016_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2016HMDALAR%20-%20National.zip" #The FFIEC has updated their website such that 2015 and 2016 are no longer wget scrapable. You will need to manually download LAR, TS, and Panel data from the FFIEC's website directly. 
+lar_2015_url="https://www.ffiec.gov/hmdarawdata/LAR/National/2015HMDALAR%20-%20National.zip" #The FFIEC has updated their website such that 2015 and 2016 are no longer wget scrapable. You will need to manually download LAR, TS, and Panel data from the FFIEC's website directly. 
+lar_2014_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/2014/ULAR_2014.zip"
+lar_2013_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/2013/Lars.ultimate.2013.dat.zip"
+lar_2012_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/2012/Lars.ultimate.2012.dat.zip"
+lar_2011_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UTL11/Lars.ultimate.2011.dat.zip"
+lar_2010_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UTL10/Lars.ultimate.2010.dat.zip"
+lar_2009_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/ULAR09/2009_Ultimate_PUBLIC_LAR.dat.zip"
+lar_2008_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/ULAR0708/lars.ultimate.2008.dat.zip"
+lar_2007_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/ULAR0708/lars.ultimate.2007.dat.zip"
+lar_2006_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/ULAR0506/LARS.ULTIMATE.2006.DAT.zip"
+lar_2005_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/ULAR0506/LARS.ULTIMATE.2005.DAT.zip"
+lar_2004_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/ULAR04/u2004lar.public.dat.zip"
 
 #store download URLs in list for later iteration
 declare -a lar_url_list=(${lar_2004_url} ${lar_2005_url} ${lar_2006_url} ${lar_2007_url} ${lar_2008_url} ${lar_2009_url} ${lar_2010_url}
 	${lar_2011_url} ${lar_2012_url} ${lar_2013_url} ${lar_2014_url} ${lar_2015_url} ${lar_2016_url} ${lar_2017_url}
-	${lar_2018_url} ${lar_2019_url} ${lar_2020_url})
+	${lar_2018_url} ${lar_2019_url} ${lar_2020_url} ${lar_2021_url} ${lar_2022_url})
 
 #TS URL list for data downloading
+ts_2022_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2022/2022_public_ts_pipe.zip"
+ts_2021_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2021/2021_public_ts_pipe.zip"
 ts_2020_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2020/2020_public_ts_pipe.zip"
-ts_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2019/2019_public_ts_pipe.zip"
-ts_2018_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2018/2018_public_ts_pipe.zip"
-ts_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2017_public_ts_txt.zip"
-ts_2016_url="https://www.ffiec.gov/hmdarawdata/OTHER/2016HMDAInstitutionRecords.zip"
-ts_2015_url="https://www.ffiec.gov/hmdarawdata/OTHER/2015HMDAInstitutionRecords.zip"
-ts_2014_url="https://www.ffiec.gov/hmdarawdata/OTHER/2014HMDAInstitutionRecords.zip"
-ts_2013_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2013/TS.ultimate.2013.dat"
-ts_2012_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2012/TS.ultimate.2012.dat"
-ts_2011_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTL11/TS.ultimate.2011.dat"
-ts_2010_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTL10/TS.ultimate.2010.dat"
-ts_2009_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTS09/2009_Ultimate_PUBLIC_TS.dat"
-ts_2008_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTS0708/ts.ultimate.2008.dat"
-ts_2007_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTS0708/ts.ultimate.2007.dat"
-ts_2006_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTS0506/TS.ULTIMATE.2006.DAT"
-ts_2005_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTS0506/TS.ULTIMATE.2005.DAT"
-ts_2004_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UTS04/u2004ts.public.dat"
+ts_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/three-year-data/2019/2019_public_ts_three_year_pipe.zip"
+ts_2018_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/three-year-data/2018/2018_public_ts_three_year_pipe.zip"
+ts_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/three-year-data/2017/2017_public_ts_three_year_pipe.zip"
+ts_2016_url="https://www.ffiec.gov/hmdarawdata/OTHER/2016HMDAInstitutionRecords.zip" #The FFIEC has updated their website such that 2015 and 2016 are no longer wget scrapable. You will need to manually download LAR, TS, and Panel data from the FFIEC's website directly. 
+ts_2015_url="https://www.ffiec.gov/hmdarawdata/OTHER/2015HMDAInstitutionRecords.zip" #The FFIEC has updated their website such that 2015 and 2016 are no longer wget scrapable. You will need to manually download LAR, TS, and Panel data from the FFIEC's website directly. 
+ts_2014_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/2014/TS_ultimate_2014.txt"
+ts_2013_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/2013/TS.ultimate.2013.dat"
+ts_2012_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/2012/TS.ultimate.2012.dat"
+ts_2011_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UTL11/TS.ultimate.2011.dat"
+ts_2010_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UTL10/TS.ultimate.2010.dat"
+ts_2009_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UTS09/2009_Ultimate_PUBLIC_TS.dat"
+ts_2008_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UTS0708/ts.ultimate.2008.dat"
+ts_2007_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UTS0708/ts.ultimate.2007.dat"
+ts_2006_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UTS0506/TS.ULTIMATE.2006.DAT"
+ts_2005_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UTS0506/TS.ULTIMATE.2005.DAT"
+ts_2004_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UTS04/u2004ts.public.dat"
 
 #store download URLs in list for later iteration
 declare -a ts_url_list=(${ts_2004_url} ${ts_2005_url} ${ts_2006_url} ${ts_2007_url} ${ts_2008_url} ${ts_2009_url} ${ts_2010_url}
 	${ts_2011_url} ${ts_2012_url} ${ts_2013_url} ${ts_2014_url} ${ts_2015_url} ${ts_2016_url} ${ts_2017_url}
-	${ts_2018_url} ${ts_2019_url} ${ts_2020_url})
+	${ts_2018_url} ${ts_2019_url} ${ts_2020_url} ${ts_2021_url} ${ts_2022_url})
 
 #Panel URL list for data downloading
+
+panel_2022_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2022/2022_public_panel_pipe.zip"
+panel_2021_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2021/2021_public_panel_pipe.zip"
 panel_2020_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2020/2020_public_panel_pipe.zip"
-panel_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2019/2019_public_panel_pipe.zip"
-panel_2018_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2018/2018_public_panel_pipe.zip"
-panel_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/snapshot-data/2017_public_panel_txt.zip"
-panel_2016_url="https://www.ffiec.gov/hmdarawdata/OTHER/2016HMDAReporterPanel.zip"
-panel_2015_url="https://www.ffiec.gov/hmdarawdata/OTHER/2015HMDAReporterPanel.zip"
-panel_2014_url="https://www.ffiec.gov/hmdarawdata/OTHER/2014HMDAReporterPanel.zip"
-panel_2013_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2013/Panel.ultimate.2013.dat"
-panel_2012_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/2012/Panel.ultimate.2012.dat"
-panel_2011_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UPN11/Panel.ultimate.2011.dat"
-panel_2010_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UPN10/Panel.ultimate.2010.dat"
-panel_2009_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UPN09/2009_Ultimate_PUBLIC_Panel.dat"
-panel_2008_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UPN0708/panel.u.2008.dat"
-panel_2007_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UPN0708/panel.u.2007.dat"
-panel_2006_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UPN0506/PANEL.U.2006.DAT"
-panel_2005_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UPN0506/PANEL.U.2005.DAT"
-panel_2004_url="https://catalog.archives.gov/catalogmedia/lz/electronic-records/rg-082/hmda/UPN04/u2004pan.public.dat "
+panel_2019_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/three-year-data/2019/2019_public_panel_three_year_pipe.zip"
+panel_2018_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/three-year-data/2018/2018_public_panel_three_year_pipe.zip"
+panel_2017_url="https://s3.amazonaws.com/cfpb-hmda-public/prod/three-year-data/2017/2017_public_panel_three_year_pipe.zip"
+panel_2016_url="https://www.ffiec.gov/hmdarawdata/OTHER/2016HMDAReporterPanel.zip" #The FFIEC has updated their website such that 2015 and 2016 are no longer wget scrapable. You will need to manually download LAR, TS, and Panel data from the FFIEC's website directly. 
+panel_2015_url="https://www.ffiec.gov/hmdarawdata/OTHER/2015HMDAReporterPanel.zip" #The FFIEC has updated their website such that 2015 and 2016 are no longer wget scrapable. You will need to manually download LAR, TS, and Panel data from the FFIEC's website directly. 
+panel_2014_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/2014/Panel.ultimate.2014.dat"
+panel_2013_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/2013/Panel.ultimate.2013.dat"
+panel_2012_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/2012/Panel.ultimate.2012.dat"
+panel_2011_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UPN11/Panel.ultimate.2011.dat"
+panel_2010_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UPN10/Panel.ultimate.2010.dat"
+panel_2009_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UPN09/2009_Ultimate_PUBLIC_Panel.dat"
+panel_2008_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UPN0708/panel.u.2008.dat"
+panel_2007_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UPN0708/panel.u.2007.dat"
+panel_2006_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UPN0506/PANEL.U.2006.DAT"
+panel_2005_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UPN0506/PANEL.U.2005.DAT"
+panel_2004_url="https://s3.amazonaws.com/NARAprodstorage/lz/electronic-records/rg-082/hmda/UPN04/u2004pan.public.dat "
 
 #store download URLs in list for later iteration
 declare -a panel_url_list=(${panel_2004_url} ${panel_2005_url} ${panel_2006_url} ${panel_2007_url} ${panel_2008_url} ${panel_2009_url}
 	${panel_2010_url} ${panel_2011_url} ${panel_2012_url} ${panel_2013_url} ${panel_2014_url} ${panel_2015_url} 
-	${panel_2016_url} ${panel_2017_url} ${panel_2018_url} ${panel_2019_url} ${panel_2020_url})
+	${panel_2016_url} ${panel_2017_url} ${panel_2018_url} ${panel_2019_url} ${panel_2020_url} ${panel_2021_url} ${panel_2022_url})
 
 #declaration of variables used in later logic
 FORCE="false" #set force download (overwrite) to false
@@ -102,6 +109,8 @@ while getopts "asptlFh" OPTION; do
 
 				a)
 						echo "Panel Files:"
+						echo "panel_2022"
+						echo "panel_2021"
 						echo "panel_2020"
 						echo "panel_2019"
 						echo "panel_2018"
@@ -121,6 +130,8 @@ while getopts "asptlFh" OPTION; do
 						echo "panel_2004"
 						echo ""
 						echo "Transmittal Sheet Files:"
+						echo "ts_2022"
+						echo "ts_2021"
 						echo "ts_2020"
 						echo "ts_2019"
 						echo "ts_2018"
@@ -140,6 +151,8 @@ while getopts "asptlFh" OPTION; do
 						echo "ts_2004"
 						echo ""
 						echo "LAR Files:"
+						echo "lar_2022"
+						echo "lar_2021"
 						echo "lar_2020"
 						echo "lar_2019"
 						echo "lar_2018"
@@ -225,7 +238,7 @@ if [ $# -eq 0 ]; then
 	for i in "${panel_url_list[@]}"
 	do #wget each URL in Panel array
 		#specify file type for filename by year
-		if [ $YEAR -gt 2013 ]; then
+		if [ $YEAR -gt 2014 ]; then
 			FILE_TYPE=".zip"
 		else
 			FILE_TYPE=".dat"
@@ -298,7 +311,7 @@ if [ "$TS" = "true" ]; then
 		echo "Force downloading all TS files"
 	fi
 
-	    #iterate over TS URL array
+	#iterate over TS URL array
     YEAR=2004 #set start year to 2004, this code does not support downloads prior to 2004
 	for i in "${ts_url_list[@]}"
 	do #wget each URL in the TS array
@@ -330,7 +343,7 @@ if [ "${PANEL}" = "true" ]; then
 	for i in "${panel_url_list[@]}"
 	do #wget each URL in Panel array
 		#specify file type for filename by year
-		if [ $YEAR -gt 2013 ]; then
+		if [ $YEAR -gt 2014 ]; then
 			FILE_TYPE=".zip"
 		else
 			FILE_TYPE=".dat"
@@ -364,7 +377,7 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 	if [ "${SPECIFIC_FILE:0:1}" = "p" ]; then
 		URL=${panel_url_list[$URL_INDEX]}
 		FOLDER="panel"
-		if [ $YEAR -gt 2013 ]; then
+		if [ $YEAR -gt 2014 ]; then
 			FILE_EXT=".zip"
 		else
 			FILE_EXT=".dat"

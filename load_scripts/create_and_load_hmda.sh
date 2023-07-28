@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Set default PSQL connection variables
-USER="postgres" #the postgres username for the connection
+USER="nongarda" #the postgres username for the connection
 PASSWORD="" #user's password for the connection
 DATABASE="postgres" #Sets connection database
 HOST="localhost" #host address of the database
@@ -74,7 +74,7 @@ echo "removing extra tab in ts 2016"
 echo ""
 python3 load_scripts/remove_tab_ts_2016.py
 
-echo "creating HMDA tables for 2004-2019"
+echo "creating HMDA tables for 2004-2022"
 echo ""
 psql $PGDATABASE $PGUSER  << EOF
 	\c hmda;
@@ -95,6 +95,9 @@ psql $PGDATABASE $PGUSER  << EOF
 	\i 'load_scripts/SQL/create_and_load_ts_2017.sql'
 	\i 'load_scripts/SQL/create_and_load_ts_2018.sql'
 	\i 'load_scripts/SQL/create_and_load_ts_2019.sql'
+	\i 'load_scripts/SQL/create_and_load_ts_2020.sql'
+	\i 'load_scripts/SQL/create_and_load_ts_2021.sql'
+	\i 'load_scripts/SQL/create_and_load_ts_2022.sql'
 	\i 'load_scripts/SQL/create_and_load_panel_2004.sql'
 	\i 'load_scripts/SQL/create_and_load_panel_2005.sql'
 	\i 'load_scripts/SQL/create_and_load_panel_2006.sql'
@@ -111,6 +114,9 @@ psql $PGDATABASE $PGUSER  << EOF
 	\i 'load_scripts/SQL/create_and_load_panel_2017.sql'
 	\i 'load_scripts/SQL/create_and_load_panel_2018.sql'
 	\i 'load_scripts/SQL/create_and_load_panel_2019.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2020.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2021.sql'
+	\i 'load_scripts/SQL/create_and_load_panel_2022.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2004.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2005.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2006.sql'
@@ -127,4 +133,7 @@ psql $PGDATABASE $PGUSER  << EOF
 	\i 'load_scripts/SQL/create_and_load_lar_2017.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2018.sql'
 	\i 'load_scripts/SQL/create_and_load_lar_2019.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2020.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2021.sql'
+	\i 'load_scripts/SQL/create_and_load_lar_2022.sql'
 EOF

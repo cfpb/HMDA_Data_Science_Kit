@@ -30,7 +30,7 @@ CREATE TABLE hmda_public.panel_2014 (
     (PANEL VARCHAR); -- LAR contains an entire LAR record
  COPY panel_load
 
-FROM '{data_path}/data/panel/panel_2014.txt' 
+FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/panel/panel_2014.dat' 
     ENCODING 'latin1';
 
 COMMIT;
