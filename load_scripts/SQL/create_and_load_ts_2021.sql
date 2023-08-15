@@ -1,5 +1,6 @@
-DROP TABLE IF EXISTS hmda_public.ts_2020;
-CREATE TABLE hmda_public.ts_2020 (
+
+DROP TABLE IF EXISTS hmda_public.ts_2021;
+CREATE TABLE hmda_public.ts_2021 (
 	activity_year VARCHAR(4),
 	calendar_quarter VARCHAR(1),
 	lei VARCHAR(20),
@@ -12,8 +13,8 @@ CREATE TABLE hmda_public.ts_2020 (
 	lar_count VARCHAR
 	);
 
-COPY hmda_public.ts_2020
+COPY hmda_public.ts_2021
 FROM 
-'{data_path}/data/ts/ts_2020.txt'
+'{data_path}/data/ts/2021_ts.txt'
     DELIMITER '|' ENCODING 'latin1' CSV HEADER;
 COMMIT;

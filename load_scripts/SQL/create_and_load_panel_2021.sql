@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS hmda_public.panel_2020;
-CREATE TABLE hmda_public.panel_2020 (
+DROP TABLE IF EXISTS hmda_public.panel_2021;
+CREATE TABLE hmda_public.panel_2021 (
 	activity_year VARCHAR(4),
 	lei VARCHAR(20),
 	tax_id VARCHAR(10),
@@ -18,7 +18,7 @@ CREATE TABLE hmda_public.panel_2020 (
 	top_holder_name VARCHAR
 	);
 
-COPY hmda_public.panel_2020
-FROM '{data_path}/data/panel/panel_2020.txt' 
+COPY hmda_public.panel_2021
+FROM '{data_path}/data/panel/panel_2021.txt' 
 	DELIMITER '|' ENCODING 'utf8' CSV HEADER;
 COMMIT;
