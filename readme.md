@@ -51,7 +51,7 @@ The [HMDA-Census](https://github.com/cfpb/hmda-census) repository contains code 
 
 
 ## HMDA Data Documentation
-**FIGs**
+[**FIGs**](https://ffiec.cfpb.gov/documentation/faq/data-collection-timelines#filing-instructions-guide-fig)
 - [2020 Filing Instruction Guide (FIG)](https://s3.amazonaws.com/cfpb-hmda-public/prod/help/2020-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2020.
 - [2019 Filing Instruction Guide (FIG)](https://s3.amazonaws.com/cfpb-hmda-public/prod/help/2019-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2019.
 - [2018 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2018/2018-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2018.
