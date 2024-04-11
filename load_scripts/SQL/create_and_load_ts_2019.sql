@@ -15,5 +15,5 @@ CREATE TABLE hmda_public.ts_2019 (
 COPY hmda_public.ts_2019
 FROM 
 '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/ts/ts_2019.txt'
-    DELIMITER '|' ENCODING 'latin1' CSV HEADER;
+    DELIMITER '|' ENCODING 'utf8' CSV HEADER;
 COMMIT;

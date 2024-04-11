@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS hmda_public.ts_2008;
+DROP TABLE IF EXISTS hmda_public.ts_2008, ts_load;
 CREATE TABLE hmda_public.ts_2008 (
 	activity_year VARCHAR,
 	agency_code VARCHAR,

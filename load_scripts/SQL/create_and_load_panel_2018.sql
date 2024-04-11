@@ -19,5 +19,5 @@ CREATE TABLE hmda_public.panel_2018 (
 
 COPY hmda_public.panel_2018
 FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/panel/panel_2018.txt' 
-	DELIMITER '|' ENCODING 'latin1' CSV HEADER;
+	DELIMITER '|' ENCODING 'utf8' CSV HEADER;
 COMMIT;

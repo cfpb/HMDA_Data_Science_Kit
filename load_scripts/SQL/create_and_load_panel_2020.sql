@@ -5,7 +5,6 @@ CREATE TABLE hmda_public.panel_2020 (
 	tax_id VARCHAR(10),
 	agency_code VARCHAR(1),
 	id_2017 VARCHAR(10),
-	arid_2017 VARCHAR(11),
 	respondent_rssd VARCHAR,
 	respondent_name VARCHAR,
 	respondent_state VARCHAR,
@@ -14,8 +13,8 @@ CREATE TABLE hmda_public.panel_2020 (
 	other_lender_code VARCHAR,
 	parent_rssd VARCHAR,
 	parent_name VARCHAR,
-	top_holder_rssd VARCHAR,
-	top_holder_name VARCHAR
+	topholder_rssd VARCHAR,
+	topholder_name VARCHAR
 	);
 
 COPY hmda_public.panel_2020

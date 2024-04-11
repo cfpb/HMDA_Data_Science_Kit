@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS hmda_public.ts_2022;
 CREATE TABLE hmda_public.ts_2022 (
 	activity_year VARCHAR(4),
-	calendar_quarter VARCHAR(1),
+	calendar_quarter VARCHAR,
 	lei VARCHAR(20),
 	tax_id VARCHAR(10),
 	agency_code VARCHAR(1),
@@ -15,5 +15,5 @@ CREATE TABLE hmda_public.ts_2022 (
 COPY hmda_public.ts_2022
 FROM 
 '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/ts/ts_2022.txt'
-    DELIMITER '|' ENCODING 'latin1' CSV HEADER;
+    DELIMITER '|' ENCODING 'utf8' CSV HEADER;
 COMMIT;

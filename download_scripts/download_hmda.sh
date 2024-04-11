@@ -220,8 +220,10 @@ if [ $# -eq 0 ]; then
 	for i in "${ts_url_list[@]}"
 	do #wget each URL in the TS array
 	   #specify file type for filename by year
-	   if [ $YEAR -gt 2013 ]; then
+	   if [ $YEAR -gt 2014 ]; then
 			FILE_TYPE=".zip"
+		elif [ $YEAR = 2014 ]; then #we leave 2014 TS only as a .txt file because it did not come zipped or .dat'd
+			FILE_TYPE=".txt"
 		else
 			FILE_TYPE=".dat"
 	   fi
@@ -316,8 +318,10 @@ if [ "$TS" = "true" ]; then
 	for i in "${ts_url_list[@]}"
 	do #wget each URL in the TS array
 	   #specify file type for filename by year
-	   if [ $YEAR -gt 2013 ]; then
+	   if [ $YEAR -gt 2014 ]; then
 			FILE_TYPE=".zip"
+		elif [ $YEAR = 2014 ]; then #we leave 2014 TS only as a .txt file because it did not come zipped or .dat'd
+			FILE_TYPE=".txt"			
 		else
 			FILE_TYPE=".dat"
 	   fi
@@ -386,8 +390,10 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 	elif [ "${SPECIFIC_FILE:0:1}" = "t" ]; then
 		URL=${ts_url_list[$URL_INDEX]}
 		FOLDER="ts"
-		if [ $YEAR -gt 2013 ]; then
+		if [ $YEAR -gt 2014 ]; then
 			FILE_EXT=".zip"
+		elif [ $YEAR = 2014 ]; then #we leave 2014 TS only as a .txt file because it did not come zipped or .dat'd
+			FILE_TYPE=".txt"			
 		else
 			FILE_EXT=".dat"
 		fi

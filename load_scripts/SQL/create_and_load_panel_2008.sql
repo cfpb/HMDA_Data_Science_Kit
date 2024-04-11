@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS hmda_public.panel_2008;
+DROP TABLE IF EXISTS panel_load; 
 CREATE TABLE hmda_public.panel_2008 (
     respondent_id VARCHAR,
     msa VARCHAR,
@@ -7,7 +8,7 @@ CREATE TABLE hmda_public.panel_2008 (
     respondent_name VARCHAR,
     respondent_city VARCHAR,
     respondent_state VARCHAR,
-    respondent_state_fips VARCHAR,
+    respondent_state_fips_number VARCHAR,
     assets VARCHAR,
     other_lender_code VARCHAR,
     parent_respondent_id_number VARCHAR,

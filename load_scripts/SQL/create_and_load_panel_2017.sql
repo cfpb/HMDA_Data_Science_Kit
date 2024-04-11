@@ -24,5 +24,5 @@ CREATE TABLE hmda_public.panel_2017 (
 
 COPY hmda_public.panel_2017
 FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/panel/panel_2017.txt' 
-	DELIMITER '|' ENCODING 'windows-1252';
+	DELIMITER '|' ENCODING 'utf8';
 COMMIT;
