@@ -162,6 +162,8 @@ The script accepts the following option flags:
 Sometimes files from the National Archives fail to download correctly. An indicator that this happens is the presence of a file with the correct name (such as LAR_20013.zip) that has a filesize of 4kb. In these cases the file must be deleted and redownloaded. One way to do this is:
  - `bash download_scripts/download_hmda.sh -Fs <filename>`.
 
+A note on 2015-2016 data: the FFIEC website where these files are held cannot be scraped using the utility in this codebase. We recommend that you manually download the panel, TS, and LAR files for those years from the links in the code. All code calling 2015-2016 data will simply be skipped if the files are not present. 
+
 **Unzipping Compressed Files**
 
 All of the LAR files, and several of the Panel and Transmittal Sheets download as zip files. Prior to loading these data the files must be unzipped. To do so, run the following script:
