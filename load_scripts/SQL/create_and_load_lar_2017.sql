@@ -51,6 +51,6 @@ CREATE TABLE hmda_public.lar_2017 (
 
 COPY hmda_public.lar_2017
 
-FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/lar/lar_2017.txt'
+FROM '{data_path}/data/lar/lar_2017.txt'
 
 DELIMITER '|' ENCODING 'latin1';

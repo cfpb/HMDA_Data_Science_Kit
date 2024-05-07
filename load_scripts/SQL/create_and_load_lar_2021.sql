@@ -104,6 +104,6 @@ CREATE TABLE hmda_public.lar_2021 (
 
 COPY hmda_public.lar_2021
 
-FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/lar/lar_2021.txt'
+FROM '{data_path}/data/lar/lar_2021.txt'
 
 DELIMITER '|' ENCODING 'latin1' CSV HEADER;

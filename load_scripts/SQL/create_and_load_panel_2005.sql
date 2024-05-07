@@ -21,7 +21,7 @@ CREATE TABLE hmda_public.panel_2005 (
   (PANEL VARCHAR); -- LAR contains an entire LAR record
  COPY panel_load
         --Change to your local path
-FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/panel/panel_2005.dat' 
+FROM '{data_path}/data/panel/panel_2005.dat' 
     ENCODING 'latin1';
 COMMIT;
  INSERT INTO hmda_public.panel_2005 (

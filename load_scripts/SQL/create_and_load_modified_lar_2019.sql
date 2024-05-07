@@ -88,6 +88,6 @@ CREATE TABLE mlar_2019_{lei} (
     );
 
 COPY hmda_public.mlar_2019_{lei}
-FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/mlar/2019/{lei}.txt'
+FROM '{data_path}/data/mlar/2019/{lei}.txt'
 DELIMITER '|' ENCODING 'latin1';
 COMMIT;

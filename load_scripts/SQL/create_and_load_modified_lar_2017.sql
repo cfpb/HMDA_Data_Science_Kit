@@ -39,5 +39,5 @@ CREATE TABLE mlar_2017_{institution_id} (
     )
 
 COPY hmda_public.mlar_2017_{institution_id}
-FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/mlar/2017/{institution_id}.txt'
+FROM '{data_path}/data/mlar/2017/{institution_id}.txt'
 DELIMITER '|' ENCODING 'latin1';

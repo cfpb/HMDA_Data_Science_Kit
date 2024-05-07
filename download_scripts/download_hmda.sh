@@ -290,7 +290,7 @@ if [ "${LAR}" = "true" ]; then
 		#echo
 		#echo
 		#specify file type for filename by year
-	   if [ $YEAR = 2017 ]; then
+	   if [ $YEAR = 9999 ]; then #I have no idea why, but this was set to 2017 before and that made the .zip file a .txt instead which broke things. Changed to 9999 for now. 
 			FILE_TYPE=".txt"
 		else
 			FILE_TYPE=".zip"
@@ -401,7 +401,7 @@ if [ "$SPECIFIC_FILE" != "" ]; then
 	elif [ "${SPECIFIC_FILE:0:1}" = "l" ]; then
 		URL=${lar_url_list[URL_INDEX]}
 		FOLDER="lar"
-		if [ $YEAR = 2017 ]; then
+		if [ $YEAR = 2025 ]; then #I have no idea why, but this was set to 2017 before and that made the .zip file a .txt instead which broke things. Changed to 9999 for now.
 			FILE_EXT=".txt"
 		else
 			FILE_EXT=".zip"

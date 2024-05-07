@@ -11,7 +11,7 @@ CREATE TABLE hmda_public.panel_2008 (
     respondent_state_fips_number VARCHAR,
     assets VARCHAR,
     other_lender_code VARCHAR,
-    parent_respondent_id_number VARCHAR,
+    parent_respondent_id VARCHAR,
     parent_name VARCHAR,
     parent_city VARCHAR,
     parent_state VARCHAR,
@@ -21,7 +21,7 @@ CREATE TABLE hmda_public.panel_2008 (
   (PANEL VARCHAR); -- LAR contains an entire LAR record
  COPY panel_load
         --Change to your local path
-FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/panel/panel_2008.dat' 
+FROM '{data_path}/data/panel/panel_2008.dat' 
     ENCODING 'latin1';
 COMMIT;
  INSERT INTO hmda_public.panel_2008 (

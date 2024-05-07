@@ -14,6 +14,6 @@ CREATE TABLE hmda_public.ts_2018 (
 
 COPY hmda_public.ts_2018
 FROM 
-'/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/ts/ts_2018.txt'
+'{data_path}/data/ts/ts_2018.txt'
     DELIMITER '|' ENCODING 'utf8' CSV HEADER;
 COMMIT;

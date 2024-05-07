@@ -22,7 +22,7 @@ CREATE TEMPORARY TABLE ts_load
 
 COPY ts_load 
 -- Change to your local data path
-FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/ts/ts_2014' -- Exclude the .txt extension, as 2014 TS is weird. 
+FROM '{data_path}/data/ts/ts_2014' -- Exclude the .txt extension, as 2014 TS is weird. 
     ENCODING 'latin1';
 COMMIT;
 

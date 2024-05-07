@@ -18,6 +18,6 @@ CREATE TABLE hmda_public.panel_2019 (
 	);
 
 COPY hmda_public.panel_2019
-FROM '/Users/nongarda/Documents/HMDA_Data_Science_Kit/data/panel/panel_2019.txt' 
+FROM '{data_path}/data/panel/panel_2019.txt' 
 	DELIMITER '|' ENCODING 'utf8' CSV HEADER;
 COMMIT;
