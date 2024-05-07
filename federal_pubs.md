@@ -1,10 +1,10 @@
 #### HMDA Publications
-**2017 and beyond is provided by the BCFP on behalf of the FFIEC**
-- [BCFP HMDA publication page](https://ffiec.cfpb.gov/data-publication/)
+**2017 and beyond is provided by the CFPB on behalf of the FFIEC**
+- [CFPB HMDA publication page](https://ffiec.cfpb.gov/data-publication/)
 - [Modified LAR (MLAR)](https://ffiec.cfpb.gov/data-publication/modified-lar) is the LAR data for a single institution with the following fields redacted: application date, action date, loan ID.
 - [Static data from 4/18](https://ffiec.cfpb.gov/data-publication/snapshot-national-loan-level-dataset) are the LAR, TS, and Panel data as of 4/18/2018. These files are the input to the 2017 HMDA Data Point. These files are not updated.
 - [Dynamic Data](https://ffiec.cfpb.gov/data-publication/dynamic-national-loan-level-dataset) are TS and LAR datasets containing information from all reporting institutions. These data are updated weekly.
-- [HMDA Explorer](https://www.consumerfinance.gov/data-research/hmda/explore) is a BCFP project that allows users to query HMDA datasets and download slices of the data with customizable filters.
+- [HMDA Explorer](https://www.consumerfinance.gov/data-research/hmda/explore) is a CFPB project that allows users to query HMDA datasets and download slices of the data with customizable filters.
 - [Aggregate Reports](https://ffiec.cfpb.gov/data-publication/aggregate-reports/2017) are single-year tabular data for all reporting institutions that show application and origination activity by MSA (sometimes by Census Tract) for demographic and loan characteristics.
 - [National Aggregate Reports](https://ffiec.cfpb.gov/data-publication/national-aggregate-reports/2017) are single-year tabular data for all reporting institutions that show application and origination activity on a national level for demographic and loan characteristicts.
 - [Disclosure Reports](https://ffiec.cfpb.gov/data-publication/disclosure-reports/2017) are single-year tabular data for a single reporting institution that show application and origination activity by MSA (sometimes by Census Tract) for demographic and loan characteristics.

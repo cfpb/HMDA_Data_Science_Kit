@@ -15,5 +15,5 @@ CREATE TABLE hmda_public.ts_2020 (
 COPY hmda_public.ts_2020
 FROM 
 '{data_path}/data/ts/ts_2020.txt'
-    DELIMITER '|' ENCODING 'latin1' CSV HEADER;
+    DELIMITER '|' ENCODING 'utf8' CSV HEADER;
 COMMIT;

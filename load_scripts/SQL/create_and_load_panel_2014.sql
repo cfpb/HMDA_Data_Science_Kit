@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS hmda_public.panel_2014;
+DROP TABLE IF EXISTS panel_load; 
 CREATE TABLE hmda_public.panel_2014 (
     activity_year VARCHAR,
     respondent_id VARCHAR,
@@ -30,7 +31,7 @@ CREATE TABLE hmda_public.panel_2014 (
     (PANEL VARCHAR); -- LAR contains an entire LAR record
  COPY panel_load
 
-FROM '{data_path}/data/panel/panel_2014.txt' 
+FROM '{data_path}/data/panel/panel_2014.dat' 
     ENCODING 'latin1';
 
 COMMIT;

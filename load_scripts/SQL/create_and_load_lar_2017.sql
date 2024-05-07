@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS hmda_public.lar_2017;
 CREATE TABLE hmda_public.lar_2017 (
-    record_id VARCHAR(1),
+    activity_year VARCHAR,
     respondent_id VARCHAR,
     agency_code VARCHAR,
     loan_type VARCHAR,
@@ -41,7 +41,12 @@ CREATE TABLE hmda_public.lar_2017 (
     ffiec_msa_md_median_family_income VARCHAR,
     tract_to_msa_income_percentage VARCHAR,
     tract_owner_occupied_units VARCHAR,
-    tract_one_to_four_family_units VARCHAR
+    tract_one_to_four_family_units VARCHAR,
+	derived_loan_product_type VARCHAR, 
+	derived_dwelling_category VARCHAR,
+	derived_ethnicity VARCHAR,
+	derived_race VARCHAR,
+	derived_sex VARCHAR
     );
 
 COPY hmda_public.lar_2017

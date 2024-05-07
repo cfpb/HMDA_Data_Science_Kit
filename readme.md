@@ -1,4 +1,4 @@
-### Table of Contents
+### Table of Contents changing something
 
 - [Repository purpose and scope](#repository-purpose-and-scope)
 - [What is HMDA](#what-is-hmda)
@@ -25,12 +25,11 @@ The senate bill S2155 modified some reporting requirements for the 2018 data col
 **What is the purpose of HMDA?**
 - To provide the public with information that will help show whether financial institutions are serving the housing credit needs of the neighborhoods and communities in which they are located.
 - To aid public officials in targeting public investments from the private sector to areas where they are needed.
-
 - The FIRREA amendments of 1989 require the collection and disclosure of data about applicant and borrower characteristics to assist in identifying possible discriminatory lending patterns and enforcing antidiscrimination statutes.
 
 ## HMDA Datasets
 
-Three raw data files are published annually under HMDA authority. File formats (and schemas) vary by data source. The National Archives (NARA) use a .DAT format, the FFIEC site maintained by the Federal Reserve Board (FRB) use a .CSV format (with Census data appended) and the FFIEC site maintained by the BCFP use a pipe-delimited .TXT format (with Census data appended). Links to HMDA datasets are available in this [file](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
+Three raw data files are published annually under HMDA authority. File formats (and schemas) vary by data source. The National Archives (NARA) use a .DAT format, the FFIEC site maintained by the Federal Reserve Board (FRB) use a .CSV format (with Census data appended) and the FFIEC site maintained by the CFPB use a pipe-delimited .TXT format (with Census data appended). Links to HMDA datasets are available in this [file](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
 
 These datasets include:
 - The Loan Application Register (LAR): This dataset contains application and origination activity on covered transactions made by covered institutions. The LAR is distinct from many other mortgage datasets as it includes both application and origination data as well as borrower demographic information. The LAR has had several distinct schemas including a change from aggregate to transaction level data in 1990. LAR schemas are available in this [folder](https://github.com/cfpb/HMDA_Data_Science_Kit/tree/master/documentation_resources/schemas/lar) 
@@ -52,6 +51,10 @@ The [HMDA-Census](https://github.com/cfpb/hmda-census) repository contains code 
 
 ## HMDA Data Documentation
 [**FIGs**](https://ffiec.cfpb.gov/documentation/faq/data-collection-timelines#filing-instructions-guide-fig)
+- [2024 Filing Instruction Guide (FIG)](https://ffiec.cfpb.gov/documentation/fig/overview): Outlines the file format, data fields, business rules, and valid values for data submitted in 2024.
+- [2023 Filing Instruction Guide (FIG)](https://ffiec.cfpb.gov/documentation/fig/2023/overview): Outlines the file format, data fields, business rules, and valid values for data submitted in 2023.
+- [2022 Filing Instruction Guide (FIG)](https://ffiec.cfpb.gov/documentation/fig/2022/overview): Outlines the file format, data fields, business rules, and valid values for data submitted in 2022.
+- [2021 Filing Instruction Guide (FIG)](https://ffiec.cfpb.gov/documentation/fig/2021/overview): Outlines the file format, data fields, business rules, and valid values for data submitted in 2021.
 - [2020 Filing Instruction Guide (FIG)](https://s3.amazonaws.com/cfpb-hmda-public/prod/help/2020-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2020.
 - [2019 Filing Instruction Guide (FIG)](https://s3.amazonaws.com/cfpb-hmda-public/prod/help/2019-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2019.
 - [2018 Filing Instruction Guide (FIG)](https://www.consumerfinance.gov/data-research/hmda/static/for-filers/2018/2018-hmda-fig.pdf): Outlines the file format, data fields, business rules, and valid values for data submitted in 2018.
@@ -72,12 +75,14 @@ The [HMDA-Census](https://github.com/cfpb/hmda-census) repository contains code 
 
 
 **Transactional Coverage Charts**
+- [2023 Transaction Coverage](https://files.consumerfinance.gov/f/documents/cfpb_hmda-transactional-coverage_2023.pdf): Outlines which transactions are covered by Regulation C.
 - [2022 Transaction Coverage](https://www.consumerfinance.gov/documents/8725/cfpb_2022-hmda-transactional-coverage.pdf): Outlines which transactions are covered by Regulation C.
 - [2020 Transaction Coverage](https://www.consumerfinance.gov/documents/8724/cfpb_2020-hmda-transactional-coverage.pdf): Outlines which transactions are covered by Regulation C.
 - [2018 Transaction Coverage](https://s3.amazonaws.com/files.consumerfinance.gov/f/documents/201709_cfpb_2018-hmda-institutional-coverage.pdf): Outlines which transactions are covered by Regulation C.
 
 
 **Institutional Coverage Charts**
+- [2023 Institution Coverage](https://files.consumerfinance.gov/f/documents/cfpb_hmda-institutional-coverage_2023.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2023.
 - [2022 Institution Coverage](https://www.consumerfinance.gov/documents/8723/cfpb_2022-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2022.
 - [2020 Institution Coverage](https://www.consumerfinance.gov/documents/8722/cfpb_2020-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2020.
 - [2018 Institution Coverage](https://www.consumerfinance.gov/documents/5630/201709_cfpb_2018-hmda-institutional-coverage.pdf): A flow chart showing whicn institutions are covered by Regulation C in 2018.
@@ -85,9 +90,12 @@ The [HMDA-Census](https://github.com/cfpb/hmda-census) repository contains code 
 
 
 **Reportable Data**
-- [2020](https://www.consumerfinance.gov/documents/8129/cfpb_2020-reportable-hmda-data.pdf)
-- [2019](https://www.consumerfinance.gov/documents/7219/cfpb_reportable-hmda-data_regulatory-and-reporting-overview-reference-chart-2019.pdf)
-- [2018](https://www.consumerfinance.gov/documents/5710/201710_cfpb_reportable-hmda-data_regulatory-and-reporting-overview-reference-chart.pdf)
+- [2023](https://files.consumerfinance.gov/f/documents/cfpb_reportable-hmda-data_regulatory-and-reporting-overview-reference-chart_2023-02.pdf): Reference tool for HMDA data required to be collected and recorded in 2023 and reported in 2024, as well as when and how to report HMDA data as "not applicable."
+- [2022](https://files.consumerfinance.gov/f/documents/2022_cfpb_reportable-hmda-data_regulatory-and-reporting-overview-reference-chart.pdf): Reference tool for HMDA data required to be collected and recorded in 2022 and reported in 2023, as well as when and how to report HMDA data as "not applicable."
+- [2021](https://files.consumerfinance.gov/f/documents/202010_cfpb_reportable-hmda-data_regulatory-and-reporting-overview-reference-chart.pdf): Reference tool for HMDA data required to be collected and recorded in 2021 and reported in 2022, as well as when and how to report HMDA data as "not applicable."
+- [2020](https://www.consumerfinance.gov/documents/8129/cfpb_2020-reportable-hmda-data.pdf): Reference tool for HMDA data required to be collected and recorded in 2020 and reported in 2021, as well as when and how to report HMDA data as "not applicable."
+- [2019](https://www.consumerfinance.gov/documents/7219/cfpb_reportable-hmda-data_regulatory-and-reporting-overview-reference-chart-2019.pdf): Reference tool for HMDA data required to be collected and recorded in 2019 and reported in 2020, as well as when and how to report HMDA data as "not applicable."
+- [2018](https://www.consumerfinance.gov/documents/5710/201710_cfpb_reportable-hmda-data_regulatory-and-reporting-overview-reference-chart.pdf): Reference tool for HMDA data required to be collected and recorded in 2018 and reported in 2019, as well as when and how to report HMDA data as "not applicable."
 
 
 **Other**
@@ -111,7 +119,7 @@ For a list of HMDA publications, see [here](https://github.com/cfpb/HMDA_Data_Sc
 #### Requirements
 The resources in this repository assume that a database has been installed and is functioning properly. The SQL code is written for [PostgreSQL](https://www.postgresql.org/), other SQL versions may require modification to the code.
 
-The Python resources assume that a functioning installation of [Python 3.5 or greater](https://www.python.org/downloads/) or greater is present. Convention in these instructions and code resources will use python3 to invoke python scripts. If two versions of Python are not present, this command may need to be changed to python, without the 3.
+The Python resources assume that a functioning installation of [Python 3.5 or greater](https://www.python.org/downloads/) is present. Convention in these instructions and code resources will use python3 to invoke python scripts. If two versions of Python are not present, this command may need to be changed to python, without the 3.
 
 This repository has a requirements.txt file that can be used to install the Python libraries used in the repository:
 - `pip install -r requirements.txt`
@@ -121,9 +129,11 @@ This repository has a requirements.txt file that can be used to install the Pyth
 To begin using the HMDA data you will first need to download the data. A list of data resources is available in [HMDA data links](https://github.com/cfpb/HMDA_Data_Science_Kit/blob/master/hmda_data_links.md).
 
 These data can be downloaded manually from the links listed or the following script can be run from the HMDA_Data_Science_Kit directory:  
-- `bash download_scripts/download_hmda.sh`
+- `bash download_scripts/download_hmda.sh` 
 
-The script can download HMDA ultimate data files for LAR, Transmittal Sheet, and Panel for the years 2004 through 2017.
+Fair warning, these are very large files (each LAR zip file is ~500mb) and will take a substantial amount of time to download. 
+
+The script can download HMDA ultimate data files for LAR, Transmittal Sheet, and Panel for the years 2004 through 2022.
 
 Running the script without flags will download all LAR, Transmittal Sheet, and Panel files that are not present.
 
@@ -152,6 +162,8 @@ The script accepts the following option flags:
 Sometimes files from the National Archives fail to download correctly. An indicator that this happens is the presence of a file with the correct name (such as LAR_20013.zip) that has a filesize of 4kb. In these cases the file must be deleted and redownloaded. One way to do this is:
  - `bash download_scripts/download_hmda.sh -Fs <filename>`.
 
+A note on 2015-2016 data: the FFIEC website where these files are held cannot be scraped using the utility in this codebase. We recommend that you manually download the panel, TS, and LAR files for those years from the links in the code. All code calling 2015-2016 data will simply be skipped if the files are not present. 
+
 **Unzipping Compressed Files**
 
 All of the LAR files, and several of the Panel and Transmittal Sheets download as zip files. Prior to loading these data the files must be unzipped. To do so, run the following script:
@@ -167,7 +179,7 @@ Alternatively, the LAR, Panel, and Transmittal Sheet files can be unzipped as gr
 
 ### Creating Postgres Tables and Loading Data
 
-The default installation of Postgres should create both a Postgres role (superuser account) and a Postgres database. The default behavior of the load scripts uses these for login. If the role or the database are not present then a user and/or database will need to be specified when running the load scripts. Examples are provided later in this section.
+The default installation of Postgres should create both a Postgres role (superuser account) and a Postgres database. The default behavior of the load scripts uses these for login. If the role or the database are not present then a user and/or database will need to be specified when running the load scripts. Examples are provided later in this section. Fair warning that creating the postgres tables will take a very long time. 
 
 Available option flags for the load scripts are as follows:
 - `-u`: Sets the user role for the Postgres connection, default is postgres.

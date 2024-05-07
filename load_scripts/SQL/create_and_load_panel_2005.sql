@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS hmda_public.panel_2005;
+DROP TABLE IF EXISTS panel_load; 
 CREATE TABLE hmda_public.panel_2005 (
     respondent_id VARCHAR,
     msa VARCHAR,

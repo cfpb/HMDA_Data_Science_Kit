@@ -72,7 +72,7 @@ EOF
 echo "removing extra tab in ts 2016"
 python3 load_scripts/remove_tab_ts_2016.py
 
-echo "creating HMDA tables for 2004-2017"
+echo "creating HMDA tables for 2004-2020"
 psql $PGDATABASE $PGUSER << EOF
 	\c hmda;
 	set schema 'hmda_public';

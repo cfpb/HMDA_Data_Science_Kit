@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS hmda_public.lar_2019;
-CREATE TABLE hmda_public.lar_2019 (
+DROP TABLE IF EXISTS hmda_public.lar_2022;
+CREATE TABLE hmda_public.lar_2022 (
     activity_year VARCHAR,
     lei VARCHAR,
     derived_msa_md VARCHAR(5),
@@ -14,10 +14,10 @@ CREATE TABLE hmda_public.lar_2019 (
     derived_sex VARCHAR,
     action_taken VARCHAR,
     purchaser_type VARCHAR(2),
-    preapproval VARCHAR,
-    loan_type VARCHAR,
+    preapproval VARCHAR(1),
+    loan_type VARCHAR(1),
     loan_purpose VARCHAR(2),
-    lien_status VARCHAR,
+    lien_status VARCHAR(1),
     reverse_mortgage VARCHAR(4),
     open_end_line_of_credit VARCHAR(4),
     business_or_commercial_purpose VARCHAR(4),
@@ -39,8 +39,8 @@ CREATE TABLE hmda_public.lar_2019 (
     balloon_paymnet VARCHAR(4),
     other_non_amortizing_features VARCHAR(4),
     property_value VARCHAR,
-    construction_method VARCHAR,
-    occupancy_type VARCHAR,
+    construction_method VARCHAR(1),
+    occupancy_type VARCHAR(1),
     manufactured_home_secured_property_type VARCHAR(4),
     manufactured_home_land_property_interest VARCHAR(4),
     total_units VARCHAR,
@@ -59,8 +59,8 @@ CREATE TABLE hmda_public.lar_2019 (
     co_applicant_ethnicity_3 VARCHAR(2),
     co_applicant_ethnicity_4 VARCHAR(2),
     co_applicant_ethnicity_5 VARCHAR(2),
-    applicant_ethnicity_observed VARCHAR,
-    co_applicant_ethnicity_observed VARCHAR,
+    applicant_ethnicity_observed VARCHAR(1),
+    co_applicant_ethnicity_observed VARCHAR(1),
     applicant_race_1 VARCHAR(2),
     applicant_race_2 VARCHAR(2),
     applicant_race_3 VARCHAR(2),
@@ -71,12 +71,12 @@ CREATE TABLE hmda_public.lar_2019 (
     co_applicant_race_3 VARCHAR(2),
     co_applicant_race_4 VARCHAR(2),
     co_applicant_race_5 VARCHAR(2),
-    applicant_race_observed VARCHAR,
-    co_applicant_race_observed VARCHAR,
-    applicant_sex VARCHAR,
-    co_applicant_sex VARCHAR,
-    applicant_sex_observed VARCHAR,
-    co_applicant_sex_observed VARCHAR,
+    applicant_race_observed VARCHAR(1),
+    co_applicant_race_observed VARCHAR(1),
+    applicant_sex VARCHAR(1),
+    co_applicant_sex VARCHAR(1),
+    applicant_sex_observed VARCHAR(1),
+    co_applicant_sex_observed VARCHAR(1),
     applicant_age VARCHAR,
     co_applicant_age VARCHAR,
     applicant_age_above_62 VARCHAR(3),
@@ -84,14 +84,14 @@ CREATE TABLE hmda_public.lar_2019 (
     submission_of_application VARCHAR(4),
     initially_payable_to_institution VARCHAR(4),
     aus_1 VARCHAR(4),
-    aus_2 VARCHAR,
-    aus_3 VARCHAR,
-    aus_4 VARCHAR,
-    aus_5 VARCHAR,
+    aus_2 VARCHAR(1),
+    aus_3 VARCHAR(1),
+    aus_4 VARCHAR(1),
+    aus_5 VARCHAR(1),
     denial_reason_1 VARCHAR(4),
-    denial_reason_2 VARCHAR,
-    denial_reason_3 VARCHAR,
-    denial_reason_4 VARCHAR,
+    denial_reason_2 VARCHAR(1),
+    denial_reason_3 VARCHAR(1),
+    denial_reason_4 VARCHAR(1),
     tract_population VARCHAR,
     tract_minority_population_percent VARCHAR,
     ffiec_msa_md_median_family_income VARCHAR,
@@ -102,8 +102,8 @@ CREATE TABLE hmda_public.lar_2019 (
     );
 
 
-COPY hmda_public.lar_2019
+COPY hmda_public.lar_2022
 
-FROM '{data_path}/data/lar/lar_2019.txt'
+FROM '{data_path}/data/lar/lar_2022.txt'
 
 DELIMITER '|' ENCODING 'latin1' CSV HEADER;

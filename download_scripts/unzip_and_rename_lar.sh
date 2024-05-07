@@ -2,6 +2,8 @@
 
 #This file unzips and renames the LAR files in the data/lar directory.
 #unzip and rename files
+unzip data/lar/lar_2022.zip -d data/lar
+unzip data/lar/lar_2021.zip -d data/lar
 unzip data/lar/lar_2020.zip -d data/lar
 unzip data/lar/lar_2019.zip -d data/lar
 unzip data/lar/lar_2018.zip -d data/lar
@@ -20,13 +22,15 @@ unzip data/lar/lar_2006.zip -d data/lar
 unzip data/lar/lar_2005.zip -d data/lar
 unzip data/lar/lar_2004.zip -d data/lar
 
+mv data/lar/2022_public_lar_pipe.txt data/lar/lar_2022.txt 
+mv data/lar/2021_public_lar_psv.txt data/lar/lar_2021.txt
 mv data/lar/2020_lar_pipe.txt data/lar/lar_2020.txt
-mv data/lar/2019_public_lar_pipe.txt data/lar/lar_2019.txt
-mv data/lar/2018_public_lar_pipe.txt data/lar/lar_2018.txt
-mv data/lar/dynamic_lar_ultimate_2017.txt data/lar/lar_2017.txt
+mv data/lar/2019_public_lar_three_year_pipe.txt data/lar/lar_2019.txt
+mv data/lar/2018_public__lar_three_year_psv.txt data/lar/lar_2018.txt
+mv data/lar/2017_public_lar_three_year.txt data/lar/lar_2017.txt
 mv data/lar/2016HMDALAR\ -\ National.csv data/lar/lar_2016.csv
 mv data/lar/2015HMDALAR\ -\ National.csv data/lar/lar_2015.csv
-mv data/lar/2014HMDALAR\ -\ National.csv data/lar/lar_2014.csv
+mv data/lar/Lars_ultimate_2014.txt data/lar/lar_2014.txt
 mv data/lar/Lars.ultimate.2013.dat data/lar/lar_2013.dat
 mv data/lar/Lars.ultimate.2012.dat data/lar/lar_2012.dat
 mv data/lar/Lars.ultimate.2011.dat data/lar/lar_2011.dat
