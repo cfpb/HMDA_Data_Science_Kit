@@ -5,6 +5,7 @@ CREATE TABLE hmda_public.panel_2021 (
 	tax_id VARCHAR(10),
 	agency_code VARCHAR(1),
 	id_2017 VARCHAR(10),
+	arid_2017 VARCHAR(11),
 	respondent_rssd VARCHAR,
 	respondent_name VARCHAR,
 	respondent_state VARCHAR,
